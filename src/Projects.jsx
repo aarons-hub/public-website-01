@@ -9,6 +9,17 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+const appBase = import.meta.env.BASE_URL;
+
+function withBase(path) {
+  if (!path) return path;
+  if (/^https?:\/\//i.test(path) || path.startsWith("data:")) return path;
+
+  const base = appBase.endsWith("/") ? appBase : `${appBase}/`;
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${base}${cleanPath}`;
+}
+
 function TransformLayer({ layer }) {
   if (!layer?.src) return null;
 
@@ -26,7 +37,7 @@ function TransformLayer({ layer }) {
       }}
     >
       <img
-        src={layer.src}
+        src={withBase(layer.src)}
         alt=""
         style={{
           pointerEvents: "none",
@@ -64,7 +75,7 @@ function VideoOverlay({
         }}
       >
         <img
-          src={resolvedThumbnail}
+          src={withBase(resolvedThumbnail)}
           alt=""
           className="item-video-thumb"
           loading="lazy"
@@ -92,7 +103,7 @@ function VideoOverlay({
         playsInline
         style={{ width: "100%", height: "auto", display: "block" }}
       >
-        <source src={movieFile.src} type="video/mp4" />
+        <source src={withBase(movieFile.src)} type="video/mp4" />
       </video>
     </div>
   );
@@ -165,7 +176,7 @@ function Projects() {
   };
 
   useEffect(() => {
-    fetch("/data/projects-data.json")
+    fetch(`${appBase}data/projects-data.json`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(
@@ -290,13 +301,16 @@ function Projects() {
                 className="hero-wrapper"
                 key={`${activeGroup}-${activeItem.id}`}
               >
-                <img src={activeItem["base-img"]} alt={activeItem.title} />
+                <img
+                  src={withBase(activeItem["base-img"])}
+                  alt={activeItem.title}
+                />
                 <TransformLayer layer={activeItem["image-one"]} />
                 <TransformLayer layer={activeItem["image-two"]} />
                 <VideoOverlay movieFile={activeItem.movieFile} />
                 {activeItem["mask-img"] && (
                   <img
-                    src={activeItem["mask-img"]}
+                    src={withBase(activeItem["mask-img"])}
                     alt={`${activeItem.id} mask`}
                     className="mix"
                   />
@@ -334,7 +348,7 @@ function Projects() {
                     <div className="inner-slide">
                       <img
                         className="base-img-001"
-                        src={item["base-img"]}
+                        src={withBase(item["base-img"])}
                         alt={item.id}
                       />
                       <TransformLayer layer={item["image-one"]} />
@@ -352,7 +366,7 @@ function Projects() {
                       />
                       {item["mask-img"] && (
                         <img
-                          src={item["mask-img"]}
+                          src={withBase(item["mask-img"])}
                           alt={`${item.id} mask`}
                           className="mix"
                         />
