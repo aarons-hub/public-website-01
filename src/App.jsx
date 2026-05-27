@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 import "./Style.scss";
 
 function App() {
+  const appBase = import.meta.env.BASE_URL;
+
   const form = useRef();
   const [done, setDone] = useState(false);
 
@@ -246,19 +248,19 @@ function App() {
               <img
                 ref={img01}
                 className="stage-img-01"
-                src="homepage-images/iphone-001.png"
+                src={`${appBase}homepage-images/iphone-001.png`}
                 alt="Decorative image"
               />
               <img
                 ref={img02}
                 className="stage-img-02"
-                src="homepage-images/iphone-panel-001.png"
+                src={`${appBase}homepage-images/iphone-panel-001.png`}
                 alt="Decorative image"
               />
               <img
                 ref={img03}
                 className="stage-img-03"
-                src="homepage-images/iphone-panel-002.png"
+                src={`${appBase}homepage-images/iphone-panel-002.png`}
                 alt="Decorative image"
               />
             </div>

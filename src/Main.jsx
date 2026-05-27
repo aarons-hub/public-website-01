@@ -15,6 +15,8 @@ import Footer from "./Footer.jsx";
 
 import PerspectiveTest from "./PerspectiveTest.jsx";
 
+const appBase = import.meta.env.BASE_URL;
+
 export function RootPageClassName() {
   const location = useLocation();
 
@@ -111,13 +113,23 @@ function CoverBgHeightSync() {
   return null;
 }
 
-createRoot(document.getElementById("root")).render(
+const rootElement = document.getElementById("root");
+
+if (!rootElement) {
+  throw new Error("Root element not found");
+}
+
+const existingRoot = window.__appRoot;
+const appRoot = existingRoot || createRoot(rootElement);
+window.__appRoot = appRoot;
+
+appRoot.render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={appBase}>
       <RootPageClassName />
       <CoverBgHeightSync />
       <img
-        src="images/cover.jpg"
+        src={`${appBase}images/cover.jpg`}
         alt="decorative background"
         className="cover-bg"
       />
