@@ -329,7 +329,7 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src="./images/sticker-web-001.png"
+                      src={`${appBase}images/sticker-web-001.png`}
                       alt="Swiper slide 1"
                     />
                   </div>
@@ -348,7 +348,7 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src="./images/uclean-bcard-001.png"
+                      src={`${appBase}images/uclean-bcard-001.png`}
                       alt="Swiper slide 2"
                     />
                   </div>
@@ -367,7 +367,7 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src="./images/reclaim-web-006.png"
+                      src={`${appBase}images/reclaim-web-006.png`}
                       alt="Swiper slide 3"
                     />
                   </div>
@@ -385,7 +385,10 @@ function App() {
               <div className="swiper-slide">
                 <div className="container">
                   <div className="content">
-                    <img src="./images/lime-web-002.png" alt="Swiper slide 4" />
+                    <img
+                      src={`${appBase}images/lime-web-002.png`}
+                      alt="Swiper slide 4"
+                    />
                   </div>
                   <div className="description">
                     <h3>
@@ -402,7 +405,7 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src="./images/langford-web-001.png"
+                      src={`${appBase}images/langford-web-001.png`}
                       alt="Swiper slide 5"
                     />
                   </div>
@@ -421,7 +424,7 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src="./images/langford-web-001.png"
+                      src={`${appBase}images/langford-web-001.png`}
                       alt="Swiper slide 5"
                     />
                   </div>
