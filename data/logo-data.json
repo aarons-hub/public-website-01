@@ -1,0 +1,2410 @@
+{
+  "$schema": "./schema.json",
+  "defaultGroup": "Hydromet",
+  "groups": [
+    {
+      "name": "Hydromet",
+      "thumbnail": "/images/hydromet-thumb.png",
+      "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Hydromet",
+          "category": "Website",
+          "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development",
+            "Unique map design"
+          ],
+          "url": "",
+          "base-img": "/images/dtop-computer-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [159, 46],
+              [770, 46],
+              [770, 396],
+              [159, 396]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 429],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          },
+          "video": {
+            "src": "/images/hydromet-web-001.mp4",
+            "draw": [[43, 128, 244, 159]],
+            "draw-slide": [[14, 38, 72, 48]],
+            "screenshot": "/images/hydromet-web-001.png"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Hydromet",
+          "category": "Website",
+          "tags": [
+            "Responsive design",
+            "Wordpress platform",
+            "Graphic design",
+            "Logo design"
+          ],
+          "url": "",
+          "base-img": "/images/iphone-mock-001.jpg",
+          "mask-img": "/images/iphone-mock-overlay-001.png",
+          "image-one": {
+            "src": "/images/hydromet-mobile.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [260, 88],
+              [469, 50],
+              [653, 514],
+              [435, 578]
+            ],
+            "draw-slide": [
+              [79, 28],
+              [142, 17],
+              [193, 151],
+              [130, 171]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Hydromet",
+          "category": "Website",
+          "tags": ["Website analytics", "Data Studio dashboard"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/hydromet-report.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [136, 69],
+              [763, 69],
+              [763, 571],
+              [136, 571]
+            ],
+            "draw-slide": [
+              [41, 20],
+              [230, 20],
+              [230, 172],
+              [41, 172]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "title": "Hydromet",
+          "category": "Logo design",
+          "tags": ["Logo design", "Pipe element rendering", "Branding"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/hydromet-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/hydromet-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "title": "Hydromet",
+          "category": "Logo design",
+          "tags": ["Logo design", "Pipe element rendering", "Branding"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mix.png",
+          "image-one": {
+            "src": "/images/hydromet-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/hydromet-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 7,
+          "title": "Hydromet",
+          "category": "Logo design",
+          "tags": ["Logo design", "Pipe element rendering", "Branding"],
+          "url": "",
+          "base-img": "/images/lhead-img-001.jpg",
+          "mask-img": "/images/lhead-img-001-mix.png",
+          "image-one": {
+            "src": "/images/hydromet-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [28, 182],
+              [317, 98],
+              [470, 457],
+              [154, 570]
+            ],
+            "draw-slide": [
+              [7, 55],
+              [95, 30],
+              [141, 142],
+              [46, 170]
+            ]
+          },
+          "image-two": {
+            "src": "/images/hydromet-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "title": "Hydromet",
+          "category": "Logo design",
+          "tags": ["Logo design", "Pipe element rendering", "Branding"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/hydromet-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/hydromet-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lime Recruiting",
+      "thumbnail": "/images/lime-thumb.png",
+      "description": "Lime Recruiting. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Lime Recruiting",
+          "category": "Branding",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/dtop-computer-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [159, 46],
+              [770, 46],
+              [770, 396],
+              [159, 396]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 429],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          },
+          "video": {
+            "src": "/images/lime-web-001.mp4",
+            "draw": [[43, 128, 244, 159]],
+            "draw-slide": [[14, 38, 72, 48]],
+            "screenshot": "/images/lime-web-001.png"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Lime Recruiting",
+          "category": "Branding",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/iphone-mock-001.jpg",
+          "mask-img": "/images/iphone-mock-overlay-001.png",
+          "image-one": {
+            "src": "/images/lime-mobile.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [260, 88],
+              [469, 50],
+              [653, 514],
+              [435, 578]
+            ],
+            "draw-slide": [
+              [79, 28],
+              [142, 17],
+              [193, 151],
+              [130, 171]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Lime Recruiting",
+          "category": "Branding",
+          "tags": ["Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mix.png",
+          "image-one": {
+            "src": "/images/lime-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/lime-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "title": "Lime Recruiting",
+          "category": "Branding",
+          "tags": ["Brand design", "Letterhead"],
+          "url": "",
+          "base-img": "/images/lhead-img-001.jpg",
+          "mask-img": "/images/lhead-img-001-mix.png",
+          "image-one": {
+            "src": "/images/lime-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [28, 182],
+              [317, 98],
+              [470, 457],
+              [154, 570]
+            ],
+            "draw-slide": [
+              [7, 55],
+              [95, 30],
+              [141, 142],
+              [46, 170]
+            ]
+          },
+          "image-two": {
+            "src": "/images/lime-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reclaim Health and Rehabilitation",
+      "thumbnail": "/images/reclaim-thumb.png",
+      "description": "Reclaim Health and Rehabilitation Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Reclaim Health and Rehabilitation",
+          "category": "Website",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/dtop-computer-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [159, 46],
+              [770, 46],
+              [770, 396],
+              [159, 396]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 429],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          },
+          "video": {
+            "src": "/images/reclaim-web-001.mp4",
+            "draw": [[43, 128, 244, 159]],
+            "draw-slide": [[14, 38, 72, 48]],
+            "screenshot": "/images/reclaim-web-001.png"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Reclaim Health and Rehabilitation",
+          "category": "Website",
+          "tags": [
+            "Responsive design",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/iphone-mock-001.jpg",
+          "mask-img": "/images/iphone-mock-overlay-001.png",
+          "image-one": {
+            "src": "/images/reclaim-mobile.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [260, 88],
+              [469, 50],
+              [653, 514],
+              [435, 578]
+            ],
+            "draw-slide": [
+              [79, 28],
+              [142, 17],
+              [193, 151],
+              [130, 171]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Reclaim Health and Rehabilitation",
+          "category": "Logo design",
+          "tags": ["Branding", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mix.png",
+          "image-one": {
+            "src": "/images/reclaim-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/reclaim-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "title": "Reclaim Health and Rehabilitation",
+          "category": "Logo design",
+          "tags": ["Branding", "Letterhead"],
+          "url": "",
+          "base-img": "/images/lhead-img-001.jpg",
+          "mask-img": "/images/lhead-img-001-mix.png",
+          "image-one": {
+            "src": "/images/reclaim-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [28, 182],
+              [317, 98],
+              [470, 457],
+              [154, 570]
+            ],
+            "draw-slide": [
+              [7, 55],
+              [95, 30],
+              [141, 142],
+              [46, 170]
+            ]
+          },
+          "image-two": {
+            "src": "/images/reclaim-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kaizen Services Group",
+      "thumbnail": "/images/ksg-thumb.png",
+      "items": [
+        {
+          "id": 1,
+          "title": "Kaizen Services Group",
+          "category": "Website",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development",
+            "Unique map design"
+          ],
+          "url": "",
+          "base-img": "/images/dtop-computer-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [159, 46],
+              [770, 46],
+              [770, 396],
+              [159, 396]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 429],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          },
+          "video": {
+            "src": "/images/ksg-web-001.mp4",
+            "draw": [[43, 128, 244, 159]],
+            "draw-slide": [[14, 38, 72, 48]],
+            "screenshot": "/images/ksg-web-001.png"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Kaizen Services Group",
+          "category": "Branding",
+          "tags": [
+            "Responsive design",
+            "Wordpress platform",
+            "Custom theme development",
+            "Unique map design"
+          ],
+          "url": "",
+          "base-img": "/images/iphone-mock-001.jpg",
+          "mask-img": "/images/iphone-mock-overlay-001.png",
+          "image-one": {
+            "src": "/images/ksg-mobile.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [260, 88],
+              [469, 50],
+              [653, 514],
+              [435, 578]
+            ],
+            "draw-slide": [
+              [79, 28],
+              [142, 17],
+              [193, 151],
+              [130, 171]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        }
+      ],
+      "description": "Kaizen Services Group Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui."
+    },
+    {
+      "name": "Sticker Fit",
+      "thumbnail": "/images/sticker-thumb.png",
+      "description": "Sticker Fit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Sticker Fit",
+          "category": "Branding",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/dtop-computer-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [159, 46],
+              [770, 46],
+              [770, 396],
+              [159, 396]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 429],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          },
+          "video": {
+            "src": "/images/sticker-web-001.mp4",
+            "draw": [[43, 128, 244, 159]],
+            "draw-slide": [[14, 38, 72, 48]],
+            "screenshot": "/images/sticker-web-001.png"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Sticker Fit",
+          "category": "Branding",
+          "tags": ["Responsive design", "Custom theme development"],
+          "url": "",
+          "base-img": "/images/iphone-mock-001.jpg",
+          "mask-img": "/images/iphone-mock-overlay-001.png",
+          "image-one": {
+            "src": "/images/sticker-mobile.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [260, 88],
+              [469, 50],
+              [653, 514],
+              [435, 578]
+            ],
+            "draw-slide": [
+              [79, 28],
+              [142, 17],
+              [193, 151],
+              [130, 171]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kate Langford",
+      "thumbnail": "/images/langford-thumb.png",
+      "description": "Langford Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Kate Langford",
+          "category": "Branding",
+          "tags": [
+            "Custom website",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/dtop-computer-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [159, 46],
+              [770, 46],
+              [770, 396],
+              [159, 396]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 429],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          },
+          "video": {
+            "src": "/images/langford-web-001.mp4",
+            "draw": [[43, 128, 244, 159]],
+            "draw-slide": [[14, 38, 72, 48]],
+            "screenshot": "/images/langford-web-001.png"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Kate Langford",
+          "category": "Branding",
+          "tags": [
+            "Responsive design",
+            "Wordpress platform",
+            "Custom theme development"
+          ],
+          "url": "",
+          "base-img": "/images/iphone-mock-001.jpg",
+          "mask-img": "/images/iphone-mock-overlay-001.png",
+          "image-one": {
+            "src": "/images/langford-mobile.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [260, 88],
+              [469, 50],
+              [653, 514],
+              [435, 578]
+            ],
+            "draw-slide": [
+              [79, 28],
+              [142, 17],
+              [193, 151],
+              [130, 171]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Isaso Vehicle Compliance",
+      "thumbnail": "/images/isaso-thumb.png",
+      "description": "Isaso Vehicle Compliance. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Isaso",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/isaso-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/isaso-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Isaso Vehicle Compliance",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mix.png",
+          "image-one": {
+            "src": "/images/isaso-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/isaso-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Isaso Vehicle Compliance",
+          "category": "Branding",
+          "tags": ["Brand design", "Letterhead"],
+          "url": "",
+          "base-img": "/images/lhead-img-001.jpg",
+          "mask-img": "/images/lhead-img-001-mix.png",
+          "image-one": {
+            "src": "/images/isaso-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [30, 182],
+              [317, 98],
+              [470, 457],
+              [154, 570]
+            ],
+            "draw-slide": [
+              [7, 55],
+              [95, 32],
+              [141, 142],
+              [46, 170]
+            ]
+          },
+          "image-two": {
+            "src": "/images/isaso-lh-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [439, 133],
+              [707, 250],
+              [500, 615],
+              [203, 468]
+            ],
+            "draw-slide": [
+              [130, 40],
+              [213, 76],
+              [155, 184],
+              [60, 141]
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "title": "Isaso Vehicle Compliance",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/isaso-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/isaso-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Urban Clean",
+      "thumbnail": "/images/uclean-thumb.png",
+      "description": "Urban Clean. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 3,
+          "title": "Urban Clean",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/uclean-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/uclean-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "title": "Urban Clean",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mask.png",
+          "image-one": {
+            "src": "/images/uclean-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/uclean-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Urban Clean",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/uclean-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/uclean-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Queensland Ultrasound",
+      "thumbnail": "/images/qufw-thumb.png",
+      "description": "Queensland Ultrasound. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Queensland Ultrasound",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/qufw-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/qufw-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Queensland Ultrasound",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mask.png",
+          "image-one": {
+            "src": "/images/qufw-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/qufw-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Queensland Ultrasound",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/qufw-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/qufw-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sierra Office Furniture",
+      "thumbnail": "/images/sierra-thumb.png",
+      "description": "Sierra Office Furniture. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 3,
+          "title": "Sierra Office Furniture",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/sierra-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/sierra-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "title": "Sierra Office Furniture",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mask.png",
+          "image-one": {
+            "src": "/images/sierra-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/sierra-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Sierra Office Furniture",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/sierra-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/sierra-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Capital Home Loans",
+      "thumbnail": "/images/capital-thumb.png",
+      "description": "Capital Home Loans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Capital Home Loans",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/capital-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/capital-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Capital Home Loans",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mask.png",
+          "image-one": {
+            "src": "/images/capital-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/capital-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Capital Home Loans",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/capital-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/capital-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ANSA Plumbing",
+      "thumbnail": "/images/ansa-thumb.png",
+      "description": "ANSA Plumbing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "ANSA Plumbing",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/ansa-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/ansa-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "ANSA Plumbing",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mask.png",
+          "image-one": {
+            "src": "/images/ansa-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/ansa-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "ANSA Plumbing",
+          "category": "Branding",
+          "tags": ["Logo design", "Brand design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/ansa-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/ansa-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "title": "ANSA Plumbing",
+          "category": "Branding",
+          "tags": ["Logo design", "T-shirt mockup"],
+          "url": "",
+          "base-img": "/images/shirt-img-001.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/ansa-shirt-logo.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [246, 250],
+              [370, 250],
+              [370, 297],
+              [246, 297]
+            ],
+            "draw-slide": [
+              [73, 74],
+              [110, 74],
+              [110, 88],
+              [73, 88]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Life Change Therapies",
+      "thumbnail": "/images/lct-thumb.png",
+      "description": "Life Change Therapies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Life Change Therapies",
+          "category": "Branding",
+          "tags": ["Logo design", "Branding"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/lct-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/lct-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Life Change Therapies",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mix.png",
+          "image-one": {
+            "src": "/images/lct-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/lct-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Industrial Sugar Mills",
+      "thumbnail": "/images/ism-thumb.png",
+      "description": "Industrial Sugar Mills. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Industrial Sugar Mills",
+          "category": "Branding",
+          "tags": ["Logo design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/ism-thumb.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/ism-thumb-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Industrial Sugar Mills",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-001.jpg",
+          "mask-img": "/images/bcard-img-001-mix.png",
+          "image-one": {
+            "src": "/images/ism-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [200, 477],
+              [398, 374],
+              [474, 467],
+              [274, 576]
+            ],
+            "draw-slide": [
+              [59, 142],
+              [118, 112],
+              [141, 140],
+              [82, 173]
+            ]
+          },
+          "image-two": {
+            "src": "/images/ism-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [436, 250],
+              [644, 323],
+              [590, 420],
+              [378, 345]
+            ],
+            "draw-slide": [
+              [129, 74],
+              [193, 97],
+              [179, 127],
+              [113, 105]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Industrial Sugar Mills",
+          "category": "Branding",
+          "tags": ["Logo design", "Business card"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "/images/bcard-img-002-mask.png",
+          "image-one": {
+            "src": "/images/ism-bcard-001.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [83, 345],
+              [507, 345],
+              [507, 588],
+              [83, 588]
+            ],
+            "draw-slide": [
+              [26, 104],
+              [157, 104],
+              [154, 178],
+              [26, 178]
+            ]
+          },
+          "image-two": {
+            "src": "/images/ism-bcard-002.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [460, 12],
+              [800, 224],
+              [674, 428],
+              [329, 213]
+            ],
+            "draw-slide": [
+              [138, 3],
+              [247, 70],
+              [203, 136],
+              [95, 70]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Studio",
+      "thumbnail": "/images/studio-with-photography-lighting.jpg",
+      "description": "Studio photography",
+      "items": [
+        {
+          "id": 1,
+          "title": "Rallings Print Group",
+          "category": "Studio",
+          "tags": ["On location photography"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSC1862.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [68, 53],
+              [429, 53],
+              [429, 504],
+              [68, 504]
+            ],
+            "draw-slide": [
+              [20, 16],
+              [127, 16],
+              [127, 150],
+              [20, 150]
+            ]
+          },
+          "image-two": {
+            "src": "/images/DSC_3023_025.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "title": "Brisbane Urology Clinic",
+          "category": "Studio",
+          "tags": ["On location photography"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSCF8684.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [68, 53],
+              [429, 53],
+              [429, 504],
+              [68, 504]
+            ],
+            "draw-slide": [
+              [20, 16],
+              [127, 16],
+              [127, 150],
+              [20, 150]
+            ]
+          },
+          "image-two": {
+            "src": "/images/DSCF86952.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "title": "Brisbane Urology Clinic",
+          "category": "Studio",
+          "tags": ["On location photography", "Photoshop editing"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSCF8695.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [136, 69],
+              [763, 69],
+              [763, 571],
+              [136, 571]
+            ],
+            "draw-slide": [
+              [41, 20],
+              [230, 20],
+              [230, 172],
+              [41, 172]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "title": "Photography",
+          "category": "Studio",
+          "tags": ["Studio photography", "Photoshop editing"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/confirmation.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [68, 53],
+              [429, 53],
+              [429, 504],
+              [68, 504]
+            ],
+            "draw-slide": [
+              [20, 16],
+              [127, 16],
+              [127, 150],
+              [20, 150]
+            ]
+          },
+          "image-two": {
+            "src": "/images/DSCF7051.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "title": "Photography",
+          "category": "Studio",
+          "tags": ["Studio photography", "Photoshop editing"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSCF6777.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [136, 69],
+              [763, 69],
+              [763, 571],
+              [136, 571]
+            ],
+            "draw-slide": [
+              [41, 20],
+              [230, 20],
+              [230, 172],
+              [41, 172]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "title": "Photography",
+          "category": "Studio",
+          "tags": ["Studio photography", "Photoshop editing"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSCF6449.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [136, 69],
+              [763, 69],
+              [763, 571],
+              [136, 571]
+            ],
+            "draw-slide": [
+              [41, 20],
+              [230, 20],
+              [230, 172],
+              [41, 172]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "title": "Torrisi Coffee",
+          "category": "Studio",
+          "tags": ["Studio photography", "Photoshop editing"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSCF0252.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [179, 57],
+              [720, 57],
+              [720, 584],
+              [179, 584]
+            ],
+            "draw-slide": [
+              [54, 17],
+              [217, 17],
+              [217, 175],
+              [54, 175]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        },
+        {
+          "id": 7,
+          "title": "Photography",
+          "category": "Studio",
+          "tags": ["Studio photography", "Photoshop editing"],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "/images/transparency.png",
+          "image-one": {
+            "src": "/images/DSCF0603.jpg",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [136, 69],
+              [763, 69],
+              [763, 571],
+              [136, 571]
+            ],
+            "draw-slide": [
+              [41, 20],
+              [230, 20],
+              [230, 172],
+              [41, 172]
+            ]
+          },
+          "image-two": {
+            "src": "/images/transparency.png",
+            "_note": "top-left, top-right, bottom-right, bottom-left",
+            "draw": [
+              [471, 53],
+              [832, 53],
+              [832, 504],
+              [471, 504]
+            ],
+            "draw-slide": [
+              [140, 16],
+              [247, 16],
+              [247, 150],
+              [140, 150]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
