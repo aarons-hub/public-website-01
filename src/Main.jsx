@@ -117,7 +117,7 @@ createRoot(document.getElementById("root")).render(
       <RootPageClassName />
       <CoverBgHeightSync />
       <img
-        src="./images/cover.jpg"
+        src="images/cover.jpg"
         alt="decorative background"
         className="cover-bg"
       />
