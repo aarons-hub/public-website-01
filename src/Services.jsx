@@ -10,6 +10,17 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+const appBase = import.meta.env.BASE_URL;
+
+function withBase(path) {
+  if (!path) return path;
+  if (/^https?:\/\//i.test(path) || path.startsWith("data:")) return path;
+
+  const base = appBase.endsWith("/") ? appBase : `${appBase}/`;
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${base}${cleanPath}`;
+}
+
 function TransformLayer({ layer }) {
   if (!layer?.src) return null;
 
@@ -27,7 +38,7 @@ function TransformLayer({ layer }) {
       }}
     >
       <img
-        src={layer.src}
+        src={withBase(layer.src)}
         alt=""
         style={{
           pointerEvents: "none",
@@ -64,7 +75,7 @@ function VideoOverlay({ movieFile, autoPlay = true }) {
         playsInline
         style={{ width: "100%", height: "auto", display: "block" }}
       >
-        <source src={movieFile.src} type="video/mp4" />
+        <source src={withBase(movieFile.src)} type="video/mp4" />
       </video>
     </div>
   );
@@ -106,7 +117,7 @@ function Services() {
   }, [webItems, activeThumbUid]);
 
   useEffect(() => {
-    fetch("/data/projects-data.json")
+    fetch(`${appBase}data/projects-data.json`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(
@@ -239,13 +250,16 @@ function Services() {
           <div className="hero-outer">
             {activeItem && (
               <div className="hero-wrapper" key={activeItem.uid}>
-                <img src={activeItem["base-img"]} alt={`id-${activeItem.id}`} />
+                <img
+                  src={withBase(activeItem["base-img"])}
+                  alt={`id-${activeItem.id}`}
+                />
                 <TransformLayer layer={activeItem["image-one"]} />
                 <TransformLayer layer={activeItem["image-two"]} />
                 <VideoOverlay movieFile={activeItem.movieFile} />
                 {activeItem["mask-img"] && (
                   <img
-                    src={activeItem["mask-img"]}
+                    src={withBase(activeItem["mask-img"])}
                     alt={`id-${activeItem.id}-mask`}
                     className="mix"
                   />
@@ -284,7 +298,7 @@ function Services() {
                   <div className="inner-slide">
                     <img
                       className="base-img-001"
-                      src={item["base-img"]}
+                      src={withBase(item["base-img"])}
                       alt={`id-${item.id}-thumb`}
                     />
                     <TransformLayer layer={item["image-one"]} />
@@ -292,7 +306,7 @@ function Services() {
                     <VideoOverlay movieFile={item.movieFile} autoPlay={false} />
                     {item["mask-img"] && (
                       <img
-                        src={item["mask-img"]}
+                        src={withBase(item["mask-img"])}
                         alt={`id-${item.id}-mask`}
                         className="mix"
                       />

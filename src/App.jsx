@@ -13,9 +13,9 @@ import "swiper/css/pagination";
 
 import "./Style.scss";
 
-function App() {
-  const appBase = import.meta.env.BASE_URL;
+const appBase = import.meta.env.BASE_URL;
 
+function App() {
   const form = useRef();
   const [done, setDone] = useState(false);
 
