@@ -1,0 +1,318 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/navigation";
+
+function TransformLayer({ layer }) {
+  if (!layer?.src) return null;
+
+  return (
+    <div
+      style={{
+        perspective: "2000px",
+        position: "absolute",
+        pointerEvents: "none",
+        top: layer.parentWrapper?.top || "0",
+        left: layer.parentWrapper?.left || "0",
+        width: layer.parentWrapper?.width || "100%",
+        height: layer.parentWrapper?.height || "100%",
+        transform: layer.parentWrapper?.transform || "none",
+      }}
+    >
+      <img
+        src={layer.src}
+        alt=""
+        style={{
+          pointerEvents: "none",
+          width: layer.imageTransform?.width || "100%",
+          transform: layer.imageTransform?.transform || "none",
+          display: "block",
+          transformOrigin: "center center",
+          transformStyle: "preserve-3d",
+        }}
+      />
+    </div>
+  );
+}
+
+function VideoOverlay({ movieFile, autoPlay = true }) {
+  if (!movieFile?.src) return null;
+
+  return (
+    <div
+      className="video-wrapper"
+      style={{
+        top: movieFile.videoWrapper?.top || "0",
+        left: movieFile.videoWrapper?.left || "0",
+        width: movieFile.videoWrapper?.width || "100%",
+        height: movieFile.videoWrapper?.height || "100%",
+      }}
+    >
+      <video
+        key={movieFile.src}
+        className="item-video"
+        autoPlay={autoPlay}
+        muted
+        loop
+        playsInline
+        style={{ width: "100%", height: "auto", display: "block" }}
+      >
+        <source src={movieFile.src} type="video/mp4" />
+      </video>
+    </div>
+  );
+}
+
+function getPhotographyThumbnailItems(group) {
+  const groupItems = group.items || [];
+
+  const featuredByFlag = groupItems.filter(
+    (item) =>
+      item.featuredPhotoItem === true || item.featuredPhotoItem === "true",
+  );
+  return featuredByFlag;
+}
+
+function Photography() {
+  const [groups, setGroups] = useState([]);
+  const [activeThumbUid, setActiveThumbUid] = useState("");
+  const swiperRootRef = useRef(null);
+  const swiperPrevRef = useRef(null);
+  const swiperNextRef = useRef(null);
+  const swiperInstanceRef = useRef(null);
+
+  const photographyItems = useMemo(() => {
+    return groups.flatMap((group) => {
+      const selectedItems = getPhotographyThumbnailItems(group);
+
+      return selectedItems.map((selectedItem, index) => ({
+        ...selectedItem,
+        groupName: group.name,
+        groupThumbnail: group.thumbnail || selectedItem["base-img"] || "",
+        uid: `${group.name}-${selectedItem.id}-${index}`,
+      }));
+    });
+  }, [groups]);
+
+  const activeItem = useMemo(() => {
+    if (!photographyItems.length) return null;
+    return (
+      photographyItems.find((item) => item.uid === activeThumbUid) ||
+      photographyItems[0]
+    );
+  }, [photographyItems, activeThumbUid]);
+
+  useEffect(() => {
+    fetch("/data/projects-data.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(
+            `Failed to load data: ${res.status} ${res.statusText}`,
+          );
+        }
+        return res.json();
+      })
+      .then((data) => {
+        const nextGroups = Array.isArray(data)
+          ? [{ name: "Default", items: data }]
+          : data.groups || [];
+
+        setGroups(nextGroups);
+
+        const initialPhotographyItems = nextGroups.flatMap((group) => {
+          const selectedItems = getPhotographyThumbnailItems(group);
+
+          return selectedItems.map((selectedItem, index) => ({
+            ...selectedItem,
+            groupName: group.name,
+            groupThumbnail: group.thumbnail || selectedItem["base-img"] || "",
+            uid: `${group.name}-${selectedItem.id}-${index}`,
+          }));
+        });
+
+        setActiveThumbUid(initialPhotographyItems[0]?.uid ?? "");
+      })
+      .catch((err) => {
+        console.error("[Photography] data fetch error:", err);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!photographyItems.length || !swiperRootRef.current) return undefined;
+
+    if (swiperInstanceRef.current) {
+      swiperInstanceRef.current.destroy(true, true);
+      swiperInstanceRef.current = null;
+    }
+
+    swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
+      modules: [Navigation],
+      slidesPerView: 2.2,
+      spaceBetween: 12,
+      slidesOffsetAfter: 20,
+      navigation: {
+        nextEl: swiperNextRef.current,
+        prevEl: swiperPrevRef.current,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2.2,
+          spaceBetween: 16,
+          slidesOffsetAfter: 40,
+        },
+        1024: {
+          slidesPerView: 3.3,
+          spaceBetween: 20,
+          slidesOffsetAfter: 100,
+        },
+      },
+    });
+
+    return () => {
+      swiperInstanceRef.current?.destroy(true, true);
+      swiperInstanceRef.current = null;
+    };
+  }, [photographyItems]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      swiperInstanceRef.current?.update();
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const section = useRef(null);
+
+  useEffect(() => {
+    if (!section.current) return undefined;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.from(section.current, {
+        filter: "blur(30px)",
+        y: 50,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    }, section.current);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section ref={section} className="photography pb40">
+      <div className="col left">
+        <h1 className="med-heading mt10">Services</h1>
+        <h2>Photography</h2>
+        <p>
+          We capture stunning images that tell your brand's story and leave a
+          lasting impression.
+        </p>
+        <div className="services-list">
+          <Link to="/services" className="service-btn">
+            Web design
+          </Link>
+          <Link to="/logo-design" className="service-btn">
+            Logo design
+          </Link>
+          <Link to="/photography" className="service-btn active">
+            Photography
+          </Link>
+        </div>
+      </div>
+      <div className="col right mt10">
+        <div className="section-inner">
+          <div className="hero-outer">
+            {activeItem && (
+              <div className="hero-wrapper" key={activeItem.uid}>
+                <img src={activeItem["base-img"]} alt={`id-${activeItem.id}`} />
+                <TransformLayer layer={activeItem["image-one"]} />
+                <TransformLayer layer={activeItem["image-two"]} />
+                <VideoOverlay movieFile={activeItem.movieFile} />
+                {activeItem["mask-img"] && (
+                  <img
+                    src={activeItem["mask-img"]}
+                    alt={`id-${activeItem.id}-mask`}
+                    className="mix"
+                  />
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="swiper-wrapper-outer">
+          <div className="swiper swiperOneThumbs" ref={swiperRootRef}>
+            <div className="swiper-wrapper">
+              {photographyItems.map((item) => (
+                <div
+                  key={item.uid}
+                  className={`swiper-slide${activeItem?.uid === item.uid ? " active" : ""}`}
+                  onClick={() => setActiveThumbUid(item.uid)}
+                >
+                  <span className="badge">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z"
+                        fill="#D6FD70"
+                      />
+                      <path
+                        d="M9.33333 19.3332L4 13.9998L6 11.9998L9.33333 15.3332L18 6.6665L20 8.6665L9.33333 19.3332Z"
+                        fill="#000"
+                      />
+                    </svg>
+                  </span>
+                  <div className="inner-slide">
+                    <img
+                      className="base-img-001"
+                      src={item["base-img"]}
+                      alt={`id-${item.id}-thumb`}
+                    />
+                    <TransformLayer layer={item["image-one"]} />
+                    <TransformLayer layer={item["image-two"]} />
+                    <VideoOverlay movieFile={item.movieFile} autoPlay={false} />
+                    {item["mask-img"] && (
+                      <img
+                        src={item["mask-img"]}
+                        alt={`id-${item.id}-mask`}
+                        className="mix"
+                      />
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="swiper-button-prev" ref={swiperPrevRef}></div>
+            <div className="swiper-button-next" ref={swiperNextRef}></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Photography;

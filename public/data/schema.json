@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schema.json",
+  "title": "Portfolio Database",
+  "type": "object",
+  "required": ["defaultGroup", "groups"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "defaultGroup": {
+      "type": "string",
+      "minLength": 1
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "insetPoint": {
+      "type": "array",
+      "description": "[top, right, bottom, left] pixel inset values",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "imageConfig": {
+      "type": "object",
+      "required": ["src", "draw", "draw-slide"],
+      "additionalProperties": false,
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1
+        },
+        "_note": {
+          "type": "string"
+        },
+        "draw": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "draw-slide": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "category",
+        "url",
+        "base-img",
+        "mask-img",
+        "image-one",
+        "image-two"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string"
+        },
+        "base-img": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mask-img": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image-one": {
+          "$ref": "#/$defs/imageConfig"
+        },
+        "image-two": {
+          "$ref": "#/$defs/imageConfig"
+        },
+        "video": {
+          "$ref": "#/$defs/videoConfig"
+        }
+      }
+    },
+    "videoConfig": {
+      "type": "object",
+      "required": ["src", "draw", "draw-slide"],
+      "additionalProperties": false,
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1
+        },
+        "screenshot": {
+          "type": "string",
+          "minLength": 1
+        },
+        "_note": {
+          "type": "string"
+        },
+        "draw": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/insetPoint" },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "draw-slide": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/insetPoint" },
+          "minItems": 1,
+          "maxItems": 1
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": ["name", "thumbnail", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "thumbnail": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          }
+        }
+      }
+    }
+  }
+}
