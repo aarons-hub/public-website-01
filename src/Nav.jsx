@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./Style.scss";
 
+const appBase = import.meta.env.BASE_URL;
+
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
@@ -13,8 +15,8 @@ function Nav() {
     <>
       <nav ref={menuRef} className="horizontal-nav" aria-label="Primary">
         <div className="horizontal-nav-brand">
-          <a href="/">
-            <img src="./ad-logo-01.svg" alt="Aaronline Design Logo" />
+          <a href={appBase}>
+            <img src={`${appBase}ad-logo-01.svg`} alt="Aaronline Design Logo" />
           </a>
         </div>
         <div className="horizontal-nav-links">
@@ -44,8 +46,11 @@ function Nav() {
       <nav className="mobile-nav" aria-label="Mobile Primary">
         <div className="mobile-nav-inner">
           <div className="horizontal-nav-brand mobile">
-            <a href="/">
-              <img src="./ad-logo-01.svg" alt="Aaronline Design Logo" />
+            <a href={appBase}>
+              <img
+                src={`${appBase}ad-logo-01.svg`}
+                alt="Aaronline Design Logo"
+              />
             </a>
           </div>
           <button
@@ -54,20 +59,18 @@ function Nav() {
             aria-expanded={isOpen}
             aria-label="Toggle menu"
           >
-            <img src="./menu-icon-01.svg" alt="Menu icon" />
+            <img src={`${appBase}menu-icon-01.svg`} alt="Menu icon" />
           </button>
         </div>
 
         <nav className={`mobile-menu ${isOpen ? "open" : ""}`}>
-          <a href="/">Home</a>
-          <a href="/projects">Projects</a>
-          <a href="/projects-backup">Projects Backup</a>
-          <a href="/services">Services</a>
-          <a href="/about">About</a>
-          <a href="/privacy">Privacy</a>
-          <a className="contactBtn" href="/contact">
+          <a className="contactBtn" href={`${appBase}contact`}>
             Contact
           </a>
+          <a href={appBase}>Home</a>
+          <a href={`${appBase}services`}>Services</a>
+          <a href={`${appBase}projects`}>Projects</a>
+          <a href={`${appBase}about`}>About</a>
         </nav>
       </nav>
     </>

@@ -794,7 +794,7 @@ body {
       .section-inner {
         margin-left: -40px;
         .swiper {
-          width: 99vw;
+          width: calc(100vw - 20px);
 
           .swiper-slide {
             .container {
@@ -967,7 +967,7 @@ section {
     display: none;
     margin-top: 20px;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     height: inherit;
     a {
       font-size: 18px;
@@ -978,6 +978,19 @@ section {
     }
     &.open {
       display: flex;
+    }
+    .contactBtn {
+      background-color: var(--base-green);
+      color: var(--text-h);
+      padding: var(--btn-padding);
+      border-radius: 999px;
+      border: none;
+      width: fit-content;
+      margin-left: auto;
+      &:hover {
+        background-color: var(--text-h);
+        color: var(--base-white);
+      }
     }
   }
   &:has(.mobile-menu.open) {
@@ -1186,6 +1199,13 @@ section {
     cursor: pointer;
     position: relative;
     z-index: 10;
+    &:hover {
+      svg {
+        rect {
+          fill: var(--grey-600);
+        }
+      }
+    }
   }
 }
 
@@ -1215,6 +1235,7 @@ section {
 .row {
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   gap: 20px;
 }

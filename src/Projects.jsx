@@ -447,7 +447,7 @@ function Projects() {
                       </span>
                       {thumbnail && (
                         <img
-                          src={thumbnail}
+                          src={withBase(thumbnail)}
                           alt={group.name}
                           className="tile-thumb"
                         />
