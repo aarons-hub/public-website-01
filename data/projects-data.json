@@ -8,6 +8,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Hydromet",
           "category": "Website",
           "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
@@ -576,6 +577,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Lime Recruiting",
           "category": "Website",
           "tags": [
@@ -1039,6 +1041,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Reclaim Health and Rehabilitation",
           "category": "Website",
           "tags": [
@@ -1507,6 +1510,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Kaizen Services Group",
           "category": "Website",
           "tags": [
@@ -1721,6 +1725,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Sticker Fit",
           "category": "Website",
           "tags": [
@@ -1935,6 +1940,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Kate Langford",
           "category": "Website",
           "tags": [
