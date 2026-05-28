@@ -16,7 +16,7 @@ function Nav() {
       <nav ref={menuRef} className="horizontal-nav" aria-label="Primary">
         <div className="horizontal-nav-brand">
           <a href={appBase}>
-            <img src={`${appBase}ad-logo-01.svg`} alt="Aaronline Design Logo" />
+            <img src={`${appBase}ad-logo-02.svg`} alt="Aaronline Design logo" />
           </a>
         </div>
         <div className="horizontal-nav-links">
@@ -31,6 +31,9 @@ function Nav() {
           </NavLink>
           <NavLink to="/about" className={navLinkClass}>
             About
+          </NavLink>
+          <NavLink to="/pricing" className={navLinkClass}>
+            Pricing
           </NavLink>
         </div>
         <div className="horizontal-nav-cta">
@@ -71,6 +74,7 @@ function Nav() {
           <a href={`${appBase}services`}>Services</a>
           <a href={`${appBase}projects`}>Projects</a>
           <a href={`${appBase}about`}>About</a>
+          <a href={`${appBase}pricing`}>Pricing</a>
         </nav>
       </nav>
     </>

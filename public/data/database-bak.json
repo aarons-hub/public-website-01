@@ -7,6 +7,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Hydromet",
           "category": "Website",
           "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
@@ -54,11 +56,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "/images/hydromet-web-006.png",
             "src": "/images/hydromet-web-001.mp4"
           }
         },
         {
           "id": 8,
+          "featuredLogoItem": "",
           "title": "Hydromet",
           "category": "Website",
           "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
@@ -106,11 +110,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 9,
+          "featuredLogoItem": "",
           "title": "Hydromet",
           "category": "Website",
           "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
@@ -158,11 +164,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
           "title": "Hydromet",
           "category": "Website",
           "tags": [
@@ -210,11 +218,14 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 3,
+          "featuredLogoItem": "",
+          "featuredWebItem": "",
           "title": "Hydromet",
           "category": "Website",
           "tags": ["Analytics report", "Google Data Studio"],
@@ -257,11 +268,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Hydromet",
           "category": "Branding",
           "tags": ["Branding", "Pipe element rendering"],
@@ -304,11 +317,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Hydromet",
           "category": "Branding",
           "tags": ["Branding", "Pipe element rendering"],
@@ -316,7 +331,7 @@
           "base-img": "/images/bcard-img-002.jpg",
           "mask-img": "",
           "image-one": {
-            "src": "/images/hydromet-thumb.png",
+            "src": "/images/hydromet-bcard-001.png",
             "parentWrapper": {
               "top": "54%",
               "left": "9.5%",
@@ -330,13 +345,13 @@
             }
           },
           "image-two": {
-            "src": "/images/hydromet-bcard-001.png",
+            "src": "/images/hydromet-thumb.png",
             "parentWrapper": {
               "top": "31.5%",
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -351,11 +366,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Hydromet",
           "category": "Branding",
           "tags": ["Branding", "Stationery design"],
@@ -383,7 +400,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -398,11 +415,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 7,
+          "featuredLogoItem": "",
           "title": "Hydromet",
           "category": "Branding",
           "tags": ["Branding", "Stationery design"],
@@ -445,6 +464,107 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 10,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Hydromet",
+          "category": "Website",
+          "tags": ["Branding", "Stationery design"],
+          "url": "",
+          "base-img": "/images/hydromet-web-004.png",
+          "mask-img": "",
+          "image-one": {
+            "src": "",
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "src": "",
+            "parentWrapper": {
+              "top": "41.7%",
+              "left": "24.8%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(29deg)"
+            },
+            "imageTransform": {
+              "width": "35%",
+              "transform": "rotateX(21deg) rotateY(-7deg)"
+            }
+          },
+          "description": "",
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 11,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Hydromet",
+          "category": "Website",
+          "tags": ["Branding", "Stationery design"],
+          "url": "",
+          "base-img": "/images/hydromet-web-005.png",
+          "mask-img": "",
+          "image-one": {
+            "src": "",
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "src": "",
+            "parentWrapper": {
+              "top": "41.7%",
+              "left": "24.8%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(29deg)"
+            },
+            "imageTransform": {
+              "width": "35%",
+              "transform": "rotateX(21deg) rotateY(-7deg)"
+            }
+          },
+          "description": "",
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -456,6 +576,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Lime Recruiting",
           "category": "Website",
           "tags": [
@@ -502,11 +624,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "/images/lime-web-001.png",
             "src": "/images/lime-web-001.mp4"
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
           "title": "Lime Recruiting",
           "category": "Website",
           "tags": ["Responsive design", "Wordpress platform"],
@@ -549,11 +673,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
-          "id": 9,
+          "id": 3,
+          "featuredLogoItem": "",
           "title": "Lime Recruiting",
           "category": "Website",
           "description": "",
@@ -601,11 +727,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
-          "id": 8,
+          "id": 4,
+          "featuredLogoItem": "",
           "title": "Lime Recruiting",
           "category": "Website",
           "description": "",
@@ -653,11 +781,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
-          "id": 4,
+          "id": 5,
+          "featuredLogoItem": "",
           "title": "Lime Recruiting",
           "category": "Branding",
           "tags": ["Stationery design"],
@@ -700,11 +830,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
-          "id": 5,
+          "id": 6,
+          "featuredLogoItem": "",
           "title": "Lime Recruiting",
           "category": "Branding",
           "tags": ["Stationery design"],
@@ -732,7 +864,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -747,11 +879,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
-          "id": 6,
+          "id": 7,
+          "featuredLogoItem": "",
           "title": "Lime Recruiting",
           "category": "Branding",
           "description": "",
@@ -794,6 +928,107 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 8,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Lime Recruiting",
+          "category": "Branding",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/lime-web-004.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 9,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Lime Recruiting",
+          "category": "Branding",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/lime-web-005.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -805,6 +1040,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Reclaim Health and Rehabilitation",
           "category": "Website",
           "tags": [
@@ -851,11 +1088,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "/images/reclaim-web-006.png",
             "src": "/images/reclaim-web-001.mp4"
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
           "title": "Reclaim Health and Rehabilitation",
           "category": "Website",
           "tags": [
@@ -903,11 +1142,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 9,
+          "featuredLogoItem": "",
           "title": "Reclaim Health and Rehabilitation",
           "category": "Website",
           "description": "",
@@ -955,11 +1196,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 10,
+          "featuredLogoItem": "",
           "title": "Reclaim Health and Rehabilitation",
           "category": "Website",
           "description": "",
@@ -1007,11 +1250,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Reclaim Health and Rehabilitation",
           "category": "Branding",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1054,11 +1299,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Reclaim Health and Rehabilitation",
           "category": "Branding",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1086,7 +1333,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1101,11 +1348,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 7,
+          "featuredLogoItem": "",
           "title": "Reclaim Health and Rehabilitation",
           "category": "Branding",
           "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
@@ -1148,6 +1397,107 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 8,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Reclaim Health and Rehabilitation",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/reclaim-web-004.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 9,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Reclaim Health and Rehabilitation",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/reclaim-web-005.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1159,6 +1509,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Kaizen Services Group",
           "category": "Website",
           "tags": [
@@ -1206,11 +1558,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "/images/ksg-web-004.png",
             "src": "/images/ksg-web-001.mp4"
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
           "title": "Kaizen Services Group",
           "category": "Website",
           "tags": [
@@ -1258,6 +1612,107 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 3,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Kaizen Services Group",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/ksg-web-002.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 4,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Kaizen Services Group",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/ksg-web-003.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1269,6 +1724,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Sticker Fit",
           "category": "Website",
           "tags": [
@@ -1316,11 +1773,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "/images/sticker-web-004.png",
             "src": "/images/sticker-web-001.mp4"
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
           "title": "Sticker Fit",
           "category": "Website",
           "tags": [
@@ -1368,6 +1827,107 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 3,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Sticker Fit",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/sticker-web-002.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 4,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Sticker Fit",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/sticker-web-003.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1379,6 +1939,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Kate Langford",
           "category": "Website",
           "tags": [
@@ -1426,11 +1988,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "/images/langford-web-001.png",
             "src": "/images/langford-web-001.mp4"
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
           "title": "Kate Langford",
           "category": "Website",
           "tags": [
@@ -1478,6 +2042,107 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 3,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Kate Langford",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/langford-web-002.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 4,
+          "featuredLogoItem": "",
+          "featuredWebItem": true,
+          "title": "Kate Langford",
+          "category": "Website",
+          "description": "",
+          "tags": ["Stationery design"],
+          "url": "",
+          "base-img": "/images/langford-web-003.png",
+          "mask-img": "",
+          "image-one": {
+            "parentWrapper": {
+              "top": "-5%",
+              "left": "10.7%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-24deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "parentWrapper": {
+              "top": "0%",
+              "left": "0%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "src": "",
+            "imageTransform": {
+              "width": "100%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1489,6 +2154,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Isaso",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1516,7 +2182,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1531,11 +2197,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Isaso",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1578,11 +2246,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 7,
+          "featuredLogoItem": "",
           "title": "Isaso",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1625,11 +2295,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Isaso",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1657,7 +2329,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1672,6 +2344,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1683,6 +2356,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Urban Clean",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1710,7 +2384,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1725,11 +2399,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Urban Clean",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1772,11 +2448,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Urban Clean",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1804,7 +2482,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1819,6 +2497,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1830,6 +2509,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Queensland Ultrasound",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1857,7 +2537,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1872,11 +2552,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "false",
           "title": "Queensland Ultrasound",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1919,11 +2601,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Queensland Ultrasound",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -1951,7 +2635,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -1966,6 +2650,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -1977,6 +2662,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Sierra Office Furniture",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2004,7 +2690,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2019,11 +2705,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Sierra Office Furniture",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2066,11 +2754,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Sierra Office Furniture",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2098,7 +2788,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2113,6 +2803,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -2124,6 +2815,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Capital Home Loans",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2151,7 +2843,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2166,11 +2858,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Capital Home Loans",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2213,11 +2907,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Capital Home Loans",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2245,7 +2941,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2260,6 +2956,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -2271,6 +2968,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "ANSA Plumbing",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2298,7 +2996,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2313,11 +3011,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "ANSA Plumbing",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2360,11 +3060,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "ANSA Plumbing",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2392,7 +3094,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2407,11 +3109,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 7,
+          "featuredLogoItem": "",
           "title": "ANSA Plumbing",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2439,7 +3143,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2454,6 +3158,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -2465,6 +3170,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Life Change Therapies",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2492,7 +3198,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2507,11 +3213,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Life Change Therapies",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2554,6 +3262,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -2565,6 +3274,7 @@
       "items": [
         {
           "id": 5,
+          "featuredLogoItem": "true",
           "title": "Industrial Sugar Mills",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2592,7 +3302,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2607,11 +3317,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
           "title": "Industrial Sugar Mills",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2654,11 +3366,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Industrial Sugar Mills",
           "category": "Logo design",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2686,7 +3400,7 @@
               "left": "24%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(32deg)"
+              "transform": "rotate(32.3deg)"
             },
             "imageTransform": {
               "width": "45.5%",
@@ -2701,6 +3415,7 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         }
@@ -2712,6 +3427,8 @@
       "items": [
         {
           "id": 1,
+          "featuredLogoItem": "",
+          "featuredPhotoItem": "true",
           "title": "Photography",
           "category": "Photography",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2754,11 +3471,14 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 2,
+          "featuredLogoItem": "",
+          "featuredPhotoItem": "true",
           "title": "Photography",
           "category": "Photography",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2801,11 +3521,14 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 3,
+          "featuredLogoItem": "",
+          "featuredPhotoItem": "false",
           "title": "Photography",
           "category": "Photography",
           "tags": [
@@ -2853,11 +3576,14 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 4,
+          "featuredLogoItem": "",
+          "featuredPhotoItem": "true",
           "title": "Photography",
           "category": "Photography",
           "tags": ["Logo design", "Pipe element rendering", "Branding"],
@@ -2900,11 +3626,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 5,
+          "featuredLogoItem": "",
           "title": "Photography",
           "category": "Photography",
           "tags": [
@@ -2952,11 +3680,13 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
           "id": 6,
+          "featuredLogoItem": "",
           "title": "Photography",
           "category": "Photography",
           "tags": [
@@ -3004,11 +3734,14 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
             "src": ""
           }
         },
         {
-          "id": 67,
+          "id": 7,
+          "featuredLogoItem": "",
+          "featuredPhotoItem": "false",
           "title": "Photography",
           "category": "Photography",
           "tags": [
@@ -3056,6 +3789,62 @@
               "width": "68%",
               "height": "55%"
             },
+            "thumbnail": "",
+            "src": ""
+          }
+        },
+        {
+          "id": 8,
+          "featuredLogoItem": "",
+          "featuredPhotoItem": "true",
+          "title": "Photography",
+          "category": "Photography",
+          "tags": [
+            "Responsive design",
+            "Wordpress platform",
+            "Graphic design",
+            "Logo design"
+          ],
+          "url": "",
+          "base-img": "/images/white-wall.jpg",
+          "mask-img": "",
+          "image-one": {
+            "src": "/images/CFA-Cat-2007-01.jpg",
+            "parentWrapper": {
+              "top": "8%",
+              "left": "15%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "imageTransform": {
+              "width": "70%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "src": "",
+            "parentWrapper": {
+              "top": "41.7%",
+              "left": "24.8%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(-29deg)"
+            },
+            "imageTransform": {
+              "width": "35%",
+              "transform": "rotateX(21deg) rotateY(-7deg)"
+            }
+          },
+          "description": "Logo design, web design and branding for Hydromet, a company that provides weather and water data services.",
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
             "src": ""
           }
         }

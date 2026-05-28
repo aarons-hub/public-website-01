@@ -225,102 +225,122 @@ function Services() {
   }, []);
 
   return (
-    <section ref={section} className="web-design pb40">
-      <div className="col left">
-        <h1 className="med-heading mt20">Services</h1>
-        <h2>Web design</h2>
-        <p>
-          We create visually appealing and user-friendly websites that drive
-          engagement and conversions.
-        </p>
-        <div className="services-list">
-          <Link to="/services" className="service-btn active">
-            Web design
-          </Link>
-          <Link to="/logo-design" className="service-btn">
-            Logo design
-          </Link>
-          <Link to="/photography" className="service-btn">
-            Photography
-          </Link>
+    <>
+      <section ref={section} className="web-design pb40">
+        <div className="col left">
+          <h1 className="med-heading mt20">Services</h1>
+          <h2>Web design</h2>
+          <p>
+            We create visually appealing and user-friendly websites that drive
+            engagement and conversions.
+          </p>
+          <div className="services-list">
+            <Link to="/services" className="service-btn active">
+              Web design
+            </Link>
+            <Link to="/logo-design" className="service-btn">
+              Logo design
+            </Link>
+            <Link to="/photography" className="service-btn">
+              Photography
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="col right mt10">
-        <div className="section-inner">
-          <div className="hero-outer">
-            {activeItem && (
-              <div className="hero-wrapper" key={activeItem.uid}>
-                <img
-                  src={withBase(activeItem["base-img"])}
-                  alt={`id-${activeItem.id}`}
-                />
-                <TransformLayer layer={activeItem["image-one"]} />
-                <TransformLayer layer={activeItem["image-two"]} />
-                <VideoOverlay movieFile={activeItem.movieFile} />
-                {activeItem["mask-img"] && (
+        <div className="col right mt10">
+          <div className="section-inner">
+            <div className="hero-outer">
+              {activeItem && (
+                <div className="hero-wrapper" key={activeItem.uid}>
                   <img
-                    src={withBase(activeItem["mask-img"])}
-                    alt={`id-${activeItem.id}-mask`}
-                    className="mix"
+                    src={withBase(activeItem["base-img"])}
+                    alt={`id-${activeItem.id}`}
                   />
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="swiper-wrapper-outer">
-          <div className="swiper swiperOneThumbs" ref={swiperRootRef}>
-            <div className="swiper-wrapper">
-              {webItems.map((item) => (
-                <div
-                  key={item.uid}
-                  className={`swiper-slide${activeItem?.uid === item.uid ? " active" : ""}`}
-                  onClick={() => setActiveThumbUid(item.uid)}
-                >
-                  <span className="badge">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z"
-                        fill="#9ACD32"
-                      />
-                      <path
-                        d="M9.33333 19.3332L4 13.9998L6 11.9998L9.33333 15.3332L18 6.6665L20 8.6665L9.33333 19.3332Z"
-                        fill="#000"
-                      />
-                    </svg>
-                  </span>
-                  <div className="inner-slide">
+                  <TransformLayer layer={activeItem["image-one"]} />
+                  <TransformLayer layer={activeItem["image-two"]} />
+                  <VideoOverlay movieFile={activeItem.movieFile} />
+                  {activeItem["mask-img"] && (
                     <img
-                      className="base-img-001"
-                      src={withBase(item["base-img"])}
-                      alt={`id-${item.id}-thumb`}
+                      src={withBase(activeItem["mask-img"])}
+                      alt={`id-${activeItem.id}-mask`}
+                      className="mix"
                     />
-                    <TransformLayer layer={item["image-one"]} />
-                    <TransformLayer layer={item["image-two"]} />
-                    <VideoOverlay movieFile={item.movieFile} autoPlay={false} />
-                    {item["mask-img"] && (
-                      <img
-                        src={withBase(item["mask-img"])}
-                        alt={`id-${item.id}-mask`}
-                        className="mix"
-                      />
-                    )}
-                  </div>
+                  )}
                 </div>
-              ))}
+              )}
             </div>
-            <div className="swiper-button-prev" ref={swiperPrevRef}></div>
-            <div className="swiper-button-next" ref={swiperNextRef}></div>
+          </div>
+          <div className="swiper-wrapper-outer">
+            <div className="swiper swiperOneThumbs" ref={swiperRootRef}>
+              <div className="swiper-wrapper">
+                {webItems.map((item) => (
+                  <div
+                    key={item.uid}
+                    className={`swiper-slide${activeItem?.uid === item.uid ? " active" : ""}`}
+                    onClick={() => setActiveThumbUid(item.uid)}
+                  >
+                    <span className="badge">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z"
+                          fill="#9ACD32"
+                        />
+                        <path
+                          d="M9.33333 19.3332L4 13.9998L6 11.9998L9.33333 15.3332L18 6.6665L20 8.6665L9.33333 19.3332Z"
+                          fill="#000"
+                        />
+                      </svg>
+                    </span>
+                    <div className="inner-slide">
+                      <img
+                        className="base-img-001"
+                        src={withBase(item["base-img"])}
+                        alt={`id-${item.id}-thumb`}
+                      />
+                      <TransformLayer layer={item["image-one"]} />
+                      <TransformLayer layer={item["image-two"]} />
+                      <VideoOverlay
+                        movieFile={item.movieFile}
+                        autoPlay={false}
+                      />
+                      {item["mask-img"] && (
+                        <img
+                          src={withBase(item["mask-img"])}
+                          alt={`id-${item.id}-mask`}
+                          className="mix"
+                        />
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="swiper-button-prev" ref={swiperPrevRef}></div>
+              <div className="swiper-button-next" ref={swiperNextRef}></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section>
+        <div className="row">
+          <div className="col">
+            <h1>Web services</h1>
+          </div>
+          <div className="col pt40">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              incidunt laboriosam voluptatibus voluptatem distinctio, sed
+              quaerat doloribus fugit cumque vel repellat vitae odio porro
+              eveniet omnis impedit, quas ullam? Sequi!
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

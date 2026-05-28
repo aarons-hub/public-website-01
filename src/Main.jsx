@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import App from "./App.jsx";
 import Projects from "./Projects.jsx";
-import ProjectsBack from "./ProjectsBack.jsx";
 import Services from "./Services.jsx";
 import LogoDesign from "./LogoDesign.jsx";
 import Photography from "./Photography.jsx";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 import Privacy from "./Privacy.jsx";
+import Pricing from "./Pricing.jsx";
 import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
 
@@ -48,6 +48,7 @@ function CoverBgHeightSync() {
       "/about": "section.about",
       "/contact": "section.contact",
       "/privacy": ".privacy-page section.privacy",
+      "/pricing": ".pricing-page section.pricing",
       "/test-canvas": ".test-canvas-page section",
     };
 
@@ -138,7 +139,6 @@ appRoot.render(
         <main className="app-main">
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="/projects-backup" element={<ProjectsBack />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/services" element={<Services />} />
             <Route path="/logo-design" element={<LogoDesign />} />
@@ -146,6 +146,7 @@ appRoot.render(
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/test-canvas" element={<PerspectiveTest />} />
           </Routes>
         </main>

@@ -7,17 +7,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "./Style.scss";
 
 const appBase = import.meta.env.BASE_URL;
+const isDev = import.meta.env.DEV;
 
 function App() {
   const form = useRef();
   const [done, setDone] = useState(false);
+  const scrollContactFormRef = useRef();
+
+  const handleContactBtnClick = (e) => {
+    e.preventDefault();
+    scrollContactFormRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -96,7 +106,7 @@ function App() {
 
   const intro = useRef();
   const heading01 = useRef();
-  const p01 = useRef();
+  const subheading = useRef();
   const ctaWrapper = useRef();
   const featured = useRef();
   const featuredSwiper = useRef();
@@ -124,7 +134,7 @@ function App() {
           ease: "power2.out",
         })
         .from(
-          p01.current,
+          subheading.current,
           {
             filter: "blur(30px)",
             y: 50,
@@ -186,10 +196,13 @@ function App() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperInstanceRef = useRef(null);
+  const PAUSE_SWIPER_AUTOPLAY_IN_DEV = false;
 
   useEffect(() => {
     if (!swiperRootRef.current || !prevRef.current || !nextRef.current)
       return undefined;
+
+    const shouldAutoplay = !(isDev && PAUSE_SWIPER_AUTOPLAY_IN_DEV);
 
     if (swiperInstanceRef.current) {
       swiperInstanceRef.current.destroy(true, true);
@@ -197,13 +210,19 @@ function App() {
     }
 
     swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
-      modules: [Navigation],
-      slidesPerView: 3.5,
+      modules: [Navigation, Autoplay],
+      autoplay: shouldAutoplay
+        ? {
+            delay: 0,
+            disableOnInteraction: false,
+          }
+        : false,
+      slidesPerView: 4.5,
       spaceBetween: 30,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
       centeredSlides: false,
-      speed: 600,
+      speed: 6000,
       loop: true,
       navigation: {
         prevEl: prevRef.current,
@@ -222,23 +241,32 @@ function App() {
       <section className="hero">
         <div className="hero-wrapper">
           <div ref={intro} className="col left">
-            <h1 ref={heading01} className="lg-heading">
-              Design that works <span>for you.</span>
+            <h1 ref={heading01} className="lg-heading mb20">
+              Websites that <span className="opacity75">work</span>{" "}
+              for&nbsp;you.
             </h1>
-            <p ref={p01} className="hero-subheading">
-              We create custom websites and digital solutions that help your
-              business thrive online. Our designs are tailored to your unique
-              needs, ensuring a seamless user experience that drives results.
-              Custom reports and analytics are available to track your website's
-              performance and make data-driven decisions for your business
-              growth.
-            </p>
+            <span ref={subheading}>
+              <h2>
+                We take care of your website,
+                <br />
+                so you can take care of your business.
+              </h2>
+              <p className="hero-subheading displaynone">
+                We build custom websites and digital solutions that help your
+                business grow online, with tailored designs and analytics to
+                track what's working.
+              </p>
+            </span>
 
             <div ref={ctaWrapper} className="cta-wrapper">
               <a href="/projects" className="btn hero-btn projects-btn">
                 View projects
               </a>
-              <a href="#contact-form" className="btn hero-btn contact-btn">
+              <a
+                href="#contact-form"
+                className="btn hero-btn contact-btn"
+                onClick={handleContactBtnClick}
+              >
                 Get in touch
               </a>
             </div>
@@ -285,7 +313,7 @@ function App() {
             </p>
           </div>
           <div className="col">
-            <div className="controls">
+            <div className="controls displaynone">
               <button ref={prevRef} className="prev">
                 <svg
                   width="48"
@@ -297,7 +325,7 @@ function App() {
                   <rect width="48" height="48" rx="8" fill="#9ACD32" />
                   <path
                     d="M16.4 24.6977L21.6526 30.0893C22.1451 30.6369 23.0068 30.6369 23.4993 30.0893C24.0327 29.5838 24.0327 28.6993 23.4993 28.1938L20.5036 25.0768H30.6869C31.4255 25.0768 32 24.4871 32 23.7289C32 22.9286 31.4255 22.381 30.6869 22.381H20.5036L23.4993 19.3062C24.0327 18.8007 24.0327 17.9161 23.4993 17.4107C23.0068 16.8631 22.1451 16.8631 21.6526 17.4107L16.4 22.8023C15.8667 23.3077 15.8667 24.1923 16.4 24.6977Z"
-                    fill="white"
+                    fill="#1a1a1a"
                   />
                 </svg>
               </button>
@@ -312,7 +340,7 @@ function App() {
                   <rect width="48" height="48" rx="8" fill="#9ACD32" />
                   <path
                     d="M31.6 24.6977L26.3474 30.0893C25.8549 30.6369 24.9932 30.6369 24.5007 30.0893C23.9673 29.5838 23.9673 28.6993 24.5007 28.1938L27.4964 25.0768H17.3131C16.5745 25.0768 16 24.4871 16 23.7289C16 22.9286 16.5745 22.381 17.3131 22.381H27.4964L24.5007 19.3062C23.9673 18.8007 23.9673 17.9161 24.5007 17.4107C24.9932 16.8631 25.8549 16.8631 26.3474 17.4107L31.6 22.8023C32.1333 23.3077 32.1333 24.1923 31.6 24.6977Z"
-                    fill="white"
+                    fill="#1a1a1a"
                   />
                 </svg>
               </button>
@@ -329,17 +357,15 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/sticker-web-001.png`}
+                      src={`${appBase}images/lime-web-002.png`}
                       alt="Swiper slide 1"
                     />
                   </div>
                   <div className="description">
-                    <h3>
-                      How to create a website that converts visitors into
-                      customers
-                    </h3>
+                    <h3>Web design</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Professional, mobile-friendly websites built to impress
+                      your customers from the very first click.
                     </p>
                   </div>
                 </div>
@@ -348,17 +374,15 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/uclean-bcard-001.png`}
+                      src={`${appBase}images/web-reporting.jpg`}
                       alt="Swiper slide 2"
                     />
                   </div>
                   <div className="description">
-                    <h3>
-                      How to create a website that converts visitors into
-                      customers
-                    </h3>
+                    <h3>Data Studio website reporting</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Monthly reports give you an overview of your website's
+                      performance.
                     </p>
                   </div>
                 </div>
@@ -367,17 +391,15 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/reclaim-web-006.png`}
+                      src={`${appBase}images/web-maintenance.jpg`}
                       alt="Swiper slide 3"
                     />
                   </div>
                   <div className="description">
-                    <h3>
-                      How to create a website that converts visitors into
-                      customers
-                    </h3>
+                    <h3>Web maintenance</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      We keep your website running smoothly, securely, and up to
+                      date — always.
                     </p>
                   </div>
                 </div>
@@ -386,17 +408,16 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/lime-web-002.png`}
+                      src={`${appBase}images/wordpress.jpg`}
                       alt="Swiper slide 4"
                     />
                   </div>
                   <div className="description">
-                    <h3>
-                      How to create a website that converts visitors into
-                      customers
-                    </h3>
+                    <h3>Wordpress custom themes</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      WordPress gives your website the speed, flexibility, and
+                      reliability it needs — we just make sure it's set up
+                      right.
                     </p>
                   </div>
                 </div>
@@ -405,17 +426,15 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/langford-web-001.png`}
+                      src={`${appBase}images/updates-tile.jpg`}
                       alt="Swiper slide 5"
                     />
                   </div>
                   <div className="description">
-                    <h3>
-                      How to create a website that converts visitors into
-                      customers
-                    </h3>
+                    <h3>Content management and updates</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Need a refresh? We'll update your text, images, and pages
+                      quickly so your site stays current.
                     </p>
                   </div>
                 </div>
@@ -424,27 +443,49 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/langford-web-001.png`}
+                      src={`${appBase}images/responsive.jpg`}
                       alt="Swiper slide 5"
                     />
                   </div>
                   <div className="description">
-                    <h3>
-                      How to create a website that converts visitors into
-                      customers
-                    </h3>
+                    <h3>Responsive optimization</h3>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      We make sure your site looks and works perfectly on every
+                      device.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="container">
+                  <div className="content">
+                    <img
+                      src={`${appBase}images/on-brand.png`}
+                      alt="Swiper slide 5"
+                    />
+                  </div>
+                  <div className="description">
+                    <h3>On brand design</h3>
+                    <p>
+                      Your website should feel like an extension of your
+                      business — not a template. We combine design and
+                      development to create something that's uniquely yours.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="gradient left"></div>
+          <div className="gradient right"></div>
         </div>
       </section>
 
-      <section ref={contactForm} className="home-contact" id="contact-form">
+      <section
+        ref={scrollContactFormRef}
+        className="home-contact"
+        id="contact-form"
+      >
         <h1 className="med-heading">
           Reach out
           <br />
