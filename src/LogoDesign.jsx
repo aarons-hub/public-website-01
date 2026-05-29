@@ -91,6 +91,37 @@ function getLogoDesignThumbnailItems(group) {
   return featuredByFlag;
 }
 
+async function loadProjectsData() {
+  const requestedPath = "data/projects-data.json";
+  const candidateUrls = [
+    `${appBase}data/projects-data.json`,
+    "/data/projects-data.json",
+    "./data/projects-data.json",
+  ].filter((value, index, array) => array.indexOf(value) === index);
+
+  let lastError = null;
+
+  for (const url of candidateUrls) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return { data, loadedFrom: url };
+    } catch (error) {
+      lastError = error;
+      console.warn(`[LogoDesign] data load attempt failed: ${url}`, error);
+    }
+  }
+
+  const reason =
+    lastError instanceof Error ? lastError.message : String(lastError);
+  throw new Error(`Unable to load ${requestedPath}. Last failure: ${reason}`);
+}
+
 function LogoDesign() {
   const [groups, setGroups] = useState([]);
   const [activeThumbUid, setActiveThumbUid] = useState("");
@@ -121,21 +152,14 @@ function LogoDesign() {
   }, [logoDesignItems, activeThumbUid]);
 
   useEffect(() => {
-    fetch(`${appBase}data/projects-data.json`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(
-            `Failed to load data: ${res.status} ${res.statusText}`,
-          );
-        }
-        return res.json();
-      })
-      .then((data) => {
+    loadProjectsData()
+      .then(({ data, loadedFrom }) => {
         const nextGroups = Array.isArray(data)
           ? [{ name: "Default", items: data }]
           : data.groups || [];
 
         setGroups(nextGroups);
+        console.info(`[LogoDesign] data loaded from: ${loadedFrom}`);
 
         const initialLogoDesignItems = nextGroups.flatMap((group) => {
           const selectedItems = getLogoDesignThumbnailItems(group);
@@ -151,7 +175,11 @@ function LogoDesign() {
         setActiveThumbUid(initialLogoDesignItems[0]?.uid ?? "");
       })
       .catch((err) => {
-        console.error("[LogoDesign] data fetch error:", err);
+        console.error("[LogoDesign] data fetch error:", {
+          message: err instanceof Error ? err.message : String(err),
+          appBase,
+          location: window.location.href,
+        });
       });
   }, []);
 

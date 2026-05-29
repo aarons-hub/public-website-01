@@ -109,6 +109,37 @@ function VideoOverlay({
   );
 }
 
+async function loadProjectsData() {
+  const requestedPath = "data/projects-data.json";
+  const candidateUrls = [
+    `${appBase}data/projects-data.json`,
+    "/data/projects-data.json",
+    "./data/projects-data.json",
+  ].filter((value, index, array) => array.indexOf(value) === index);
+
+  let lastError = null;
+
+  for (const url of candidateUrls) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return { data, loadedFrom: url };
+    } catch (error) {
+      lastError = error;
+      console.warn(`[Projects] data load attempt failed: ${url}`, error);
+    }
+  }
+
+  const reason =
+    lastError instanceof Error ? lastError.message : String(lastError);
+  throw new Error(`Unable to load ${requestedPath}. Last failure: ${reason}`);
+}
+
 function Projects() {
   const [groups, setGroups] = useState([]);
   const [activeGroup, setActiveGroup] = useState("");
@@ -176,28 +207,26 @@ function Projects() {
   };
 
   useEffect(() => {
-    fetch(`${appBase}data/projects-data.json`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(
-            `Failed to load data: ${res.status} ${res.statusText}`,
-          );
-        }
-        return res.json();
-      })
-      .then((data) => {
+    loadProjectsData()
+      .then(({ data, loadedFrom }) => {
         const nextGroups = Array.isArray(data)
           ? [{ name: "Default", items: data }]
           : data.groups || [];
         const defaultGroup = data.defaultGroup || nextGroups[0]?.name || "";
         const defaultGroupItems =
           nextGroups.find((group) => group.name === defaultGroup)?.items || [];
+
         setGroups(nextGroups);
         setActiveGroup(defaultGroup);
         setActiveItemId(defaultGroupItems[0]?.id ?? null);
+        console.info(`[Projects] data loaded from: ${loadedFrom}`);
       })
       .catch((err) => {
-        console.error("[Projects] data fetch error:", err);
+        console.error("[Projects] data fetch error:", {
+          message: err instanceof Error ? err.message : String(err),
+          appBase,
+          location: window.location.href,
+        });
       });
   }, []);
 
