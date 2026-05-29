@@ -1,6 +1,12 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useLocation,
+  HashRouter,
+} from "react-router-dom";
 import App from "./App.jsx";
 import Projects from "./Projects.jsx";
 import Services from "./Services.jsx";
@@ -126,7 +132,7 @@ window.__appRoot = appRoot;
 
 appRoot.render(
   <StrictMode>
-    <BrowserRouter basename={appBase}>
+    <HashRouter basename={appBase}>
       <RootPageClassName />
       <CoverBgHeightSync />
       <img
@@ -152,6 +158,6 @@ appRoot.render(
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 );
