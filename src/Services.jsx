@@ -230,10 +230,10 @@ function Services() {
         <div className="col left">
           <h1 className="med-heading mt20">Services</h1>
           <h2>Web services</h2>
+          <p>Launching your website is just the beginning.</p>
           <p>
-            Launching your website is just the beginning. We're here for the
-            long haul, taking care of everything behind the scenes so you can
-            focus on running your business.
+            We're here for the long haul, taking care of everything behind the
+            scenes so you can focus on running your business.
           </p>
           <div className="services-list">
             <Link to="/services" className="service-btn active">

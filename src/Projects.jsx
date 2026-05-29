@@ -384,23 +384,7 @@ function Projects() {
       <section className="partners-section">
         <div className="partners-inner">
           <div className="row">
-            <div className="col left">
-              <h3 className="heading">Partners</h3>
-            </div>
-            <div className="col right">
-              <div className="filters">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    type="button"
-                    className={`filter-button ${activeCategory === category ? "active" : ""}`}
-                    onClick={() => handleCategoryChange(category)}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
+            <h3 className="heading">Partners</h3>
           </div>
           <div className="tiles-wrapper">
             <div className="tiles">
@@ -461,6 +445,20 @@ function Projects() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+          <div className="row">
+            <div className="filters">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  type="button"
+                  className={`filter-button ${activeCategory === category ? "active" : ""}`}
+                  onClick={() => handleCategoryChange(category)}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
         </div>
