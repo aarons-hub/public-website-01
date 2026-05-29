@@ -233,13 +233,14 @@ function LogoDesign() {
       <div className="col left">
         <h1 className="med-heading mt10">Services</h1>
         <h2>Logo design</h2>
+        <p>Let us make your mark.</p>
         <p>
-          We create unique and memorable logos that capture the essence of your
-          brand and resonate with your target audience.
+          We take the time to understand your business, your values, and your
+          audience — then craft something that feels unmistakably you.
         </p>
         <div className="services-list">
           <Link to="/services" className="service-btn">
-            Web design
+            Web services
           </Link>
           <Link to="/logo-design" className="service-btn active">
             Logo design

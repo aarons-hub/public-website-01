@@ -278,7 +278,7 @@ function Projects() {
     <>
       <section ref={section} className="projects-hero">
         <div className="col left">
-          <h1 className="med-heading mt0">Projects</h1>
+          <h1 className="med-heading mt20">Projects</h1>
           <div className="item-details">
             <h4 className="heading">{activeItem?.title}</h4>
             <p className="description">{activeItem?.description}</p>
@@ -294,7 +294,7 @@ function Projects() {
           </div>
         </div>
 
-        <div className="col right">
+        <div className="col right mt10">
           <div className="hero-outer">
             {activeItem && (
               <div

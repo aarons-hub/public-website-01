@@ -18,31 +18,39 @@ function Footer() {
   useEffect(() => {
     if (!scrollFooterRef.current || !scrollBtnRef.current) return undefined;
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        scrollBtnRef.current,
-        {
-          opacity: 0,
-          y: 20,
-          filter: "blur(4px)",
-        },
-        {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: scrollFooterRef.current,
-            start: "top 50%",
-            toggleActions: "play none none reverse",
-            markers: false,
+    let ctx;
+    const timeoutId = setTimeout(() => {
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          scrollBtnRef.current,
+          {
+            opacity: 0,
+            y: 20,
+            filter: "blur(4px)",
           },
-        },
-      );
-    }, scrollFooterRef);
+          {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            duration: 2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: scrollFooterRef.current,
+              start: "top bottom",
+              end: "bottom bottom",
+              toggleActions: "play none none reverse",
+              scrub: true,
+              markers: false,
+            },
+          },
+        );
+      }, scrollFooterRef);
+    }, 1000);
 
-    return () => ctx.revert();
+    return () => {
+      clearTimeout(timeoutId);
+      ctx?.revert();
+    };
   }, []);
 
   return (

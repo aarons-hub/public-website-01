@@ -233,13 +233,15 @@ function Photography() {
       <div className="col left">
         <h1 className="med-heading mt10">Services</h1>
         <h2>Photography</h2>
+        <p>Not pretty pictures but powerful persuaders.</p>
         <p>
-          We capture stunning images that tell your brand's story and leave a
-          lasting impression.
+          We believe great photography does both. Our product images are crafted
+          to stop the scroll, build trust, and give your customers every reason
+          to say yes.
         </p>
         <div className="services-list">
           <Link to="/services" className="service-btn">
-            Web design
+            Web services
           </Link>
           <Link to="/logo-design" className="service-btn">
             Logo design

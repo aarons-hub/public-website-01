@@ -16,7 +16,7 @@ function Nav() {
       <nav ref={menuRef} className="horizontal-nav" aria-label="Primary">
         <div className="horizontal-nav-brand">
           <a href={appBase}>
-            <img src={`${appBase}ad-logo-02.svg`} alt="Aaronline Design logo" />
+            <img src={`${appBase}ad-logo-03.svg`} alt="Aaronline Design logo" />
           </a>
         </div>
         <div className="horizontal-nav-links">
@@ -51,7 +51,7 @@ function Nav() {
           <div className="horizontal-nav-brand mobile">
             <a href={appBase}>
               <img
-                src={`${appBase}ad-logo-01.svg`}
+                src={`${appBase}ad-logo-03.svg`}
                 alt="Aaronline Design Logo"
               />
             </a>

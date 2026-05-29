@@ -15,6 +15,7 @@ import "./Style.scss";
 
 const appBase = import.meta.env.BASE_URL;
 const isDev = import.meta.env.DEV;
+const PAUSE_SWIPER_AUTOPLAY_IN_DEV = false;
 
 function App() {
   const form = useRef();
@@ -196,13 +197,12 @@ function App() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperInstanceRef = useRef(null);
-  const PAUSE_SWIPER_AUTOPLAY_IN_DEV = false;
 
   useEffect(() => {
-    if (!swiperRootRef.current || !prevRef.current || !nextRef.current)
-      return undefined;
+    if (!swiperRootRef.current) return undefined;
 
     const shouldAutoplay = !(isDev && PAUSE_SWIPER_AUTOPLAY_IN_DEV);
+    const hasNavButtons = Boolean(prevRef.current && nextRef.current);
 
     if (swiperInstanceRef.current) {
       swiperInstanceRef.current.destroy(true, true);
@@ -217,17 +217,30 @@ function App() {
             disableOnInteraction: false,
           }
         : false,
-      slidesPerView: 4.5,
-      spaceBetween: 30,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
-      centeredSlides: false,
+      slidesPerView: 2.1,
+      spaceBetween: 12,
       speed: 6000,
       loop: true,
-      navigation: {
-        prevEl: prevRef.current,
-        nextEl: nextRef.current,
+      breakpoints: {
+        480: {
+          slidesPerView: 2.1,
+          spaceBetween: 14,
+        },
+        768: {
+          slidesPerView: 2.6,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 4.5,
+          spaceBetween: 30,
+        },
       },
+      navigation: hasNavButtons
+        ? {
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }
+        : false,
     });
 
     return () => {
@@ -242,8 +255,8 @@ function App() {
         <div className="hero-wrapper">
           <div ref={intro} className="col left">
             <h1 ref={heading01} className="lg-heading mb20">
-              Websites that <span className="opacity75">work</span>{" "}
-              for&nbsp;you.
+              Websites that <span className="opacity75">work&nbsp;</span>
+              for you.
             </h1>
             <span ref={subheading}>
               <h2>
@@ -259,7 +272,10 @@ function App() {
             </span>
 
             <div ref={ctaWrapper} className="cta-wrapper">
-              <a href="/projects" className="btn hero-btn projects-btn">
+              <a
+                href={`${appBase}projects`}
+                className="btn hero-btn projects-btn"
+              >
                 View projects
               </a>
               <a
@@ -299,52 +315,18 @@ function App() {
       <section ref={featured} className="featured">
         <div className="row">
           <div className="col">
-            <h1 className="med-heading mb0">
-              Stories, tips and smart workflows.
+            <h4 className="mt50">EXPERTISE</h4>
+          </div>
+          <div className="col">
+            <h1 className="med-heading mt50 mb30">
+              One team. <br />
+              Every solution.
             </h1>
-          </div>
-          <div className="col"></div>
-        </div>
-        <div className="row mb40">
-          <div className="col">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-              facilis dolore laudantium molestiae incidunt quod eos consectetur.
-            </p>
-          </div>
-          <div className="col">
-            <div className="controls displaynone">
-              <button ref={prevRef} className="prev">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="48" height="48" rx="8" fill="#9ACD32" />
-                  <path
-                    d="M16.4 24.6977L21.6526 30.0893C22.1451 30.6369 23.0068 30.6369 23.4993 30.0893C24.0327 29.5838 24.0327 28.6993 23.4993 28.1938L20.5036 25.0768H30.6869C31.4255 25.0768 32 24.4871 32 23.7289C32 22.9286 31.4255 22.381 30.6869 22.381H20.5036L23.4993 19.3062C24.0327 18.8007 24.0327 17.9161 23.4993 17.4107C23.0068 16.8631 22.1451 16.8631 21.6526 17.4107L16.4 22.8023C15.8667 23.3077 15.8667 24.1923 16.4 24.6977Z"
-                    fill="#1a1a1a"
-                  />
-                </svg>
-              </button>
-              <button ref={nextRef} className="next">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="48" height="48" rx="8" fill="#9ACD32" />
-                  <path
-                    d="M31.6 24.6977L26.3474 30.0893C25.8549 30.6369 24.9932 30.6369 24.5007 30.0893C23.9673 29.5838 23.9673 28.6993 24.5007 28.1938L27.4964 25.0768H17.3131C16.5745 25.0768 16 24.4871 16 23.7289C16 22.9286 16.5745 22.381 17.3131 22.381H27.4964L24.5007 19.3062C23.9673 18.8007 23.9673 17.9161 24.5007 17.4107C24.9932 16.8631 25.8549 16.8631 26.3474 17.4107L31.6 22.8023C32.1333 23.3077 32.1333 24.1923 31.6 24.6977Z"
-                    fill="#1a1a1a"
-                  />
-                </svg>
-              </button>
-            </div>
+            <h4 className="mb60 fw400">
+              From your first website to ongoing support, we handle everything —
+              so&nbsp;you never have to juggle multiple agencies or wonder who
+              to call.
+            </h4>
           </div>
         </div>
       </section>
@@ -379,7 +361,7 @@ function App() {
                     />
                   </div>
                   <div className="description">
-                    <h3>Data Studio website reporting</h3>
+                    <h3>Data Studio reporting</h3>
                     <p>
                       Monthly reports give you an overview of your website's
                       performance.
@@ -387,23 +369,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="swiper-slide">
-                <div className="container">
-                  <div className="content">
-                    <img
-                      src={`${appBase}images/web-maintenance.jpg`}
-                      alt="Swiper slide 3"
-                    />
-                  </div>
-                  <div className="description">
-                    <h3>Web maintenance</h3>
-                    <p>
-                      We keep your website running smoothly, securely, and up to
-                      date — always.
-                    </p>
-                  </div>
-                </div>
-              </div>
+
               <div className="swiper-slide">
                 <div className="container">
                   <div className="content">
@@ -413,7 +379,7 @@ function App() {
                     />
                   </div>
                   <div className="description">
-                    <h3>Wordpress custom themes</h3>
+                    <h3>WordPress experts</h3>
                     <p>
                       WordPress gives your website the speed, flexibility, and
                       reliability it needs — we just make sure it's set up
@@ -431,7 +397,7 @@ function App() {
                     />
                   </div>
                   <div className="description">
-                    <h3>Content management and updates</h3>
+                    <h3>Content management</h3>
                     <p>
                       Need a refresh? We'll update your text, images, and pages
                       quickly so your site stays current.
@@ -444,7 +410,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/responsive.jpg`}
-                      alt="Swiper slide 5"
+                      alt="Swiper slide 6"
                     />
                   </div>
                   <div className="description">
@@ -460,16 +426,54 @@ function App() {
                 <div className="container">
                   <div className="content">
                     <img
-                      src={`${appBase}images/on-brand.png`}
-                      alt="Swiper slide 5"
+                      src={`${appBase}images/on-brand.jpg`}
+                      alt="Swiper slide 7"
                     />
                   </div>
                   <div className="description">
-                    <h3>On brand design</h3>
+                    <h3>On brand</h3>
                     <p>
-                      Your website should feel like an extension of your
-                      business — not a template. We combine design and
-                      development to create something that's uniquely yours.
+                      We make sure your website honours your corporate image.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="container">
+                  <div className="content">
+                    <video
+                      className="video"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source
+                        src={`${appBase}images/hydromet-web-001.mp4`}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div className="description">
+                    <h3>Web development</h3>
+                    <p>Tailored sites to meet your business needs.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="swiper-slide">
+                <div className="container">
+                  <div className="content">
+                    <img
+                      src={`${appBase}images/web-maintenance.jpg`}
+                      alt="Swiper slide 3"
+                    />
+                  </div>
+                  <div className="description">
+                    <h3>Web maintenance</h3>
+                    <p>
+                      We keep your website running smoothly, securely, and up to
+                      date — always.
                     </p>
                   </div>
                 </div>
@@ -491,7 +495,7 @@ function App() {
           <br />
           today.
         </h1>
-        <div className="formwrapper">
+        <div ref={contactForm} className="formwrapper">
           <form ref={form} onSubmit={sendEmail}>
             <div className="formgroup">
               <label htmlFor="inputName" className="form-label">
@@ -550,6 +554,7 @@ function App() {
                 name="message"
                 className="form-control message align-self-stretch"
                 id="inputMessage"
+                required
               />
               <button type="submit" className="btn contact-btn" disabled={done}>
                 {done ? "Sent" : "Submit"}

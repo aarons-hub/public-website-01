@@ -103,6 +103,7 @@ function Contact() {
                 name="message"
                 className="form-control message align-self-stretch"
                 id="inputMessage"
+                required
               />
               <button type="submit" className="btn contact-btn" disabled={done}>
                 {done ? "Sent" : "Submit"}

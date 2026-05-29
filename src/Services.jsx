@@ -229,14 +229,15 @@ function Services() {
       <section ref={section} className="web-design pb40">
         <div className="col left">
           <h1 className="med-heading mt20">Services</h1>
-          <h2>Web design</h2>
+          <h2>Web services</h2>
           <p>
-            We create visually appealing and user-friendly websites that drive
-            engagement and conversions.
+            Launching your website is just the beginning. We're here for the
+            long haul, taking care of everything behind the scenes so you can
+            focus on running your business.
           </p>
           <div className="services-list">
             <Link to="/services" className="service-btn active">
-              Web design
+              Web services
             </Link>
             <Link to="/logo-design" className="service-btn">
               Logo design
@@ -322,21 +323,6 @@ function Services() {
               <div className="swiper-button-prev" ref={swiperPrevRef}></div>
               <div className="swiper-button-next" ref={swiperNextRef}></div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="row">
-          <div className="col">
-            <h1>Web services</h1>
-          </div>
-          <div className="col pt40">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-              incidunt laboriosam voluptatibus voluptatem distinctio, sed
-              quaerat doloribus fugit cumque vel repellat vitae odio porro
-              eveniet omnis impedit, quas ullam? Sequi!
-            </p>
           </div>
         </div>
       </section>
