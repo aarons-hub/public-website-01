@@ -1,12 +1,6 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  useLocation,
-  HashRouter,
-} from "react-router-dom";
+import { Route, Routes, useLocation, HashRouter } from "react-router-dom";
 import App from "./App.jsx";
 import Projects from "./Projects.jsx";
 import Services from "./Services.jsx";
