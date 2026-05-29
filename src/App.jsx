@@ -259,7 +259,7 @@ function App() {
               Websites that <span className="opacity75">work&nbsp;</span>
               for you.
             </h1>
-            <span ref={subheading}>
+            <div ref={subheading}>
               <h2>
                 We take care of your website,
                 <br />
@@ -270,7 +270,7 @@ function App() {
                 business grow online, with tailored designs and analytics to
                 track what's working.
               </p>
-            </span>
+            </div>
 
             <div ref={ctaWrapper} className="cta-wrapper">
               <Link to="/projects" className="btn hero-btn projects-btn">

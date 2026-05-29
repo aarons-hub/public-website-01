@@ -634,7 +634,7 @@ mb50 {
     .tag-pill {
       font-size: var(--step--1);
       background-color: var(--base-white);
-      padding: var(--btn-padding);
+      padding: 10px 20px;
       border-radius: 999px;
       display: flex;
       align-items: center;
@@ -984,9 +984,10 @@ section {
     border: 1px solid rgba(0, 0, 0, 0.07);
     width: 100%;
     .row {
-      justify-content: flex-start;
+      justify-content: center;
       h3 {
         margin: 10px 0px 10px 0px;
+        text-align: center;
       }
     }
   }
@@ -1454,8 +1455,6 @@ section {
       gap: 0px;
       .row {
         h3 {
-          margin: 10px 0px 10px 0px;
-          text-align: center;
         }
         .col.left {
         }
