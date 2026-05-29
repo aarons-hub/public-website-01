@@ -1,4 +1,6 @@
 // CSS perspective transform test for mobile/iPhone validation
+const appBase = import.meta.env.BASE_URL;
+
 export default function PerspectiveTest() {
   return (
     <div
@@ -24,7 +26,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/iphone-mock-001.jpg"
+          src={`${appBase}images/iphone-mock-001.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -43,7 +45,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/lime-mobile.png"
+            src={`${appBase}images/lime-mobile.png`}
             alt="test"
             style={{
               width: "26.5%",
@@ -55,7 +57,7 @@ export default function PerspectiveTest() {
           />
         </div>
         <img
-          src="/images/iphone-mock-overlay-001.png"
+          src={`${appBase}images/iphone-mock-overlay-001.png`}
           alt="overlay"
           style={{
             width: "100%",
@@ -82,7 +84,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/lhead-img-001.jpg"
+          src={`${appBase}images/lhead-img-001.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -102,7 +104,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/lime-lh-001.png"
+            src={`${appBase}images/lime-lh-001.png`}
             alt="test"
             style={{
               width: "35%",
@@ -126,7 +128,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/hydromet-lh-001.png"
+            src={`${appBase}images/hydromet-lh-001.png`}
             alt="test"
             style={{
               width: "35%",
@@ -138,7 +140,7 @@ export default function PerspectiveTest() {
           />
         </div>
         <img
-          src="/images/lhead-img-001-mix.png"
+          src={`${appBase}images/lhead-img-001-mix.png`}
           alt="overlay"
           style={{
             width: "100%",
@@ -165,7 +167,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/bcard-img-001.jpg"
+          src={`${appBase}images/bcard-img-001.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -185,7 +187,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/hydromet-bcard-001.png"
+            src={`${appBase}images/hydromet-bcard-001.png`}
             alt="test"
             style={{
               width: "25%",
@@ -209,7 +211,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/hydromet-bcard-002.png"
+            src={`${appBase}images/hydromet-bcard-002.png`}
             alt="test"
             style={{
               width: "26%",
@@ -221,7 +223,7 @@ export default function PerspectiveTest() {
           />
         </div>
         <img
-          src="/images/bcard-img-001-mix.png"
+          src={`${appBase}images/bcard-img-001-mix.png`}
           alt="overlay"
           style={{
             width: "100%",
@@ -248,7 +250,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/bcard-img-002.jpg"
+          src={`${appBase}images/bcard-img-002.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -268,7 +270,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/hydromet-thumb.png"
+            src={`${appBase}images/hydromet-thumb.png`}
             alt="test"
             style={{
               width: "47%",
@@ -292,7 +294,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/hydromet-bcard-001.png"
+            src={`${appBase}images/hydromet-bcard-001.png`}
             alt="test"
             style={{
               width: "45.5%",
@@ -304,7 +306,7 @@ export default function PerspectiveTest() {
           />
         </div>
         <img
-          src="/images/bcard-img-002-mask.png"
+          src={`${appBase}images/bcard-img-002-mask.png`}
           alt="overlay"
           style={{
             width: "100%",
@@ -329,7 +331,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/dtop-computer-001.jpg"
+          src={`${appBase}images/dtop-computer-001.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -349,7 +351,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/transparent.png"
+            src={`${appBase}images/transparent.png`}
             alt="test"
             style={{
               width: "47%",
@@ -373,7 +375,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/transparent.png"
+            src={`${appBase}images/transparent.png`}
             alt="test"
             style={{
               width: "45.5%",
@@ -386,7 +388,7 @@ export default function PerspectiveTest() {
         </div>
 
         <img
-          src="/images/transparent.png"
+          src={`${appBase}images/transparent.png`}
           alt="overlay"
           style={{
             width: "100%",
@@ -415,7 +417,10 @@ export default function PerspectiveTest() {
             playsInline
             style={{ width: "100%", height: "auto", display: "block" }}
           >
-            <source src="/images/lime-web-001.mp4" type="video/mp4" />
+            <source
+              src={`${appBase}images/lime-web-001.mp4`}
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>
@@ -432,7 +437,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/white-wall.jpg"
+          src={`${appBase}images/white-wall.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -452,7 +457,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/DSC1862.jpg"
+            src={`${appBase}images/DSC1862.jpg`}
             alt="test"
             style={{
               width: "43%",
@@ -476,7 +481,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/DSC_3023_025.jpg"
+            src={`${appBase}images/DSC_3023_025.jpg`}
             alt="test"
             style={{
               width: "43%",
@@ -489,7 +494,7 @@ export default function PerspectiveTest() {
         </div>
 
         <img
-          src="/images/transparent.png"
+          src={`${appBase}images/transparent.png`}
           alt="overlay"
           style={{
             width: "100%",
@@ -514,7 +519,7 @@ export default function PerspectiveTest() {
         }}
       >
         <img
-          src="/images/white-wall.jpg"
+          src={`${appBase}images/white-wall.jpg`}
           alt="test"
           style={{
             width: "100%",
@@ -534,7 +539,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/DSCF6777.jpg"
+            src={`${appBase}images/DSCF6777.jpg`}
             alt="test"
             style={{
               width: "70%",
@@ -558,7 +563,7 @@ export default function PerspectiveTest() {
           }}
         >
           <img
-            src="/images/transparent.png"
+            src={`${appBase}images/transparent.png`}
             alt="test"
             style={{
               width: "43%",
@@ -571,7 +576,7 @@ export default function PerspectiveTest() {
         </div>
 
         <img
-          src="/images/transparent.png"
+          src={`${appBase}images/transparent.png`}
           alt="overlay"
           style={{
             width: "100%",

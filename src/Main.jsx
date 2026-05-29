@@ -126,7 +126,7 @@ window.__appRoot = appRoot;
 
 appRoot.render(
   <StrictMode>
-    <HashRouter basename={appBase}>
+    <HashRouter>
       <RootPageClassName />
       <CoverBgHeightSync />
       <img

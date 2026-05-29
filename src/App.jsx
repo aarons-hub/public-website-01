@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -272,12 +273,9 @@ function App() {
             </span>
 
             <div ref={ctaWrapper} className="cta-wrapper">
-              <a
-                href={`${appBase}projects`}
-                className="btn hero-btn projects-btn"
-              >
+              <Link to="/projects" className="btn hero-btn projects-btn">
                 View projects
-              </a>
+              </Link>
               <a
                 href="#contact-form"
                 className="btn hero-btn contact-btn"

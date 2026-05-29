@@ -15,9 +15,9 @@ function Nav() {
     <>
       <nav ref={menuRef} className="horizontal-nav" aria-label="Primary">
         <div className="horizontal-nav-brand">
-          <a href={appBase}>
+          <NavLink to="/" end>
             <img src={`${appBase}ad-logo-03.svg`} alt="Aaronline Design logo" />
-          </a>
+          </NavLink>
         </div>
         <div className="horizontal-nav-links">
           <NavLink to="/" className={navLinkClass} end>
@@ -49,12 +49,12 @@ function Nav() {
       <nav className="mobile-nav" aria-label="Mobile Primary">
         <div className="mobile-nav-inner">
           <div className="horizontal-nav-brand mobile">
-            <a href={appBase}>
+            <NavLink to="/" end>
               <img
                 src={`${appBase}ad-logo-03.svg`}
                 alt="Aaronline Design Logo"
               />
-            </a>
+            </NavLink>
           </div>
           <button
             className="menu-toggle"
@@ -67,14 +67,28 @@ function Nav() {
         </div>
 
         <nav className={`mobile-menu ${isOpen ? "open" : ""}`}>
-          <a className="contactBtn" href={`${appBase}contact`}>
+          <NavLink
+            className="contactBtn"
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+          >
             Contact
-          </a>
-          <a href={appBase}>Home</a>
-          <a href={`${appBase}services`}>Services</a>
-          <a href={`${appBase}projects`}>Projects</a>
-          <a href={`${appBase}about`}>About</a>
-          <a href={`${appBase}pricing`}>Pricing</a>
+          </NavLink>
+          <NavLink to="/" end onClick={() => setIsOpen(false)}>
+            Home
+          </NavLink>
+          <NavLink to="/services" onClick={() => setIsOpen(false)}>
+            Services
+          </NavLink>
+          <NavLink to="/projects" onClick={() => setIsOpen(false)}>
+            Projects
+          </NavLink>
+          <NavLink to="/about" onClick={() => setIsOpen(false)}>
+            About
+          </NavLink>
+          <NavLink to="/pricing" onClick={() => setIsOpen(false)}>
+            Pricing
+          </NavLink>
         </nav>
       </nav>
     </>
