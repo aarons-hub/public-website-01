@@ -203,6 +203,7 @@ function Photography() {
         disableOnInteraction: false,
       },
       navigation: {
+        enabled: false,
         nextEl: swiperNextRef.current,
         prevEl: swiperPrevRef.current,
       },

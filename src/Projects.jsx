@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -238,11 +238,18 @@ function Projects() {
     }
 
     swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       slidesPerView: 2.2,
       spaceBetween: 12,
       slidesOffsetAfter: 20,
+      speed: 3000,
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
       navigation: {
+        enabled: false,
         nextEl: swiperNextRef.current,
         prevEl: swiperPrevRef.current,
       },

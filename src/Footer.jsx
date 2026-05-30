@@ -39,7 +39,7 @@ function Footer() {
               start: "top bottom",
               end: "bottom bottom",
               toggleActions: "play none none reverse",
-              scrub: true,
+              scrub: false,
               markers: false,
             },
           },

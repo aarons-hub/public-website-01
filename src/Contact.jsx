@@ -39,8 +39,7 @@ function Contact() {
         <p className="contact-subheading">
           Have a project in mind? We'd love to hear from you! Whether you have
           questions, want to discuss a potential collaboration, or just want to
-          say hello, feel free to reach out. Our team is here to help and
-          provide you with the best solutions for your design needs.
+          say hello, feel free to reach out.
         </p>
       </div>
       <div className="col right">

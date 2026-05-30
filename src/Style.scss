@@ -220,7 +220,6 @@ mb50 {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   width: fit-content;
-  // min-height: 640px;
 
   .hero-wrapper {
     position: relative;
@@ -1337,16 +1336,16 @@ section {
     position: absolute;
   }
   .stage-img-01 {
-    left: 193px;
-    top: 64px;
+    left: 0px;
+    top: 34px;
   }
   .stage-img-02 {
-    left: 56px;
-    top: 306px;
+    left: -90px;
+    top: 225px;
   }
   .stage-img-03 {
-    left: 365px;
-    top: 194px;
+    left: 238px;
+    top: 117px;
   }
 }
 
@@ -1425,6 +1424,9 @@ section {
       padding: 0px;
       .formgroup {
         padding: 20px;
+        .contact-btn {
+          width: 100%;
+        }
       }
     }
     section.featured-swiper {
@@ -1444,18 +1446,28 @@ section {
 
   .site-footer {
     padding: 30px;
-    min-height: 345px;
+    min-height: 408px;
   }
 
   .hero-outer {
     padding: 4px;
-    border-radius: 25px;
+    border-radius: 13px;
     .hero-wrapper {
       max-width: calc(100vw - 70px);
+      border-radius: 10px;
     }
   }
+
   .swiper-wrapper-outer .swiper {
     width: calc(100vw - 70px);
+    .swiper-wrapper {
+      .swiper-slide {
+        border-radius: 6px;
+        .inner-slide {
+          border-radius: 5px;
+        }
+      }
+    }
   }
 
   .projects-page {
@@ -1491,6 +1503,22 @@ section {
       }
       .tiles-wrapper .tiles .tile-card .tile-info {
         display: none;
+      }
+    }
+  }
+
+  .contact-page {
+    .formwrapper {
+      padding: 0px;
+      border: none;
+      background: transparent;
+      border-radius: 0px;
+      .formgroup {
+        padding: 20px;
+        border-radius: 26px;
+        .contact-btn {
+          width: 100%;
+        }
       }
     }
   }

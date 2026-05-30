@@ -269,8 +269,9 @@ function App() {
         <div className="hero-wrapper">
           <div ref={intro} className="col left">
             <h1 ref={heading01} className="lg-heading mb20">
-              Websites that <span className="opacity75">work&nbsp;</span>
-              for you.
+              <span className="opacity75">Your</span> website,
+              <br />
+              in <span className="opacity75">good</span> hands.
             </h1>
             <div ref={subheading}>
               <h2>
