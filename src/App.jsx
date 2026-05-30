@@ -14,8 +14,7 @@ import "swiper/css/pagination";
 
 import "./Style.scss";
 
-import ReactGA from "react-ga4";
-ReactGA.initialize("G-56ZJCW1W79");
+const GA_MEASUREMENT_ID = "G-56ZJCW1W79";
 
 const appBase = import.meta.env.BASE_URL;
 const isDev = import.meta.env.DEV;
@@ -28,7 +27,13 @@ function App() {
   const scrollContactFormRef = useRef();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    if (typeof window.gtag !== "function") return;
+
+    window.gtag("config", GA_MEASUREMENT_ID, {
+      page_path: `${location.pathname}${location.search}${location.hash}`,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
   }, [location]);
 
   const handleContactBtnClick = (e) => {
