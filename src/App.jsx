@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocaton } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -14,14 +14,22 @@ import "swiper/css/pagination";
 
 import "./Style.scss";
 
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-56ZJCW1W79");
+
 const appBase = import.meta.env.BASE_URL;
 const isDev = import.meta.env.DEV;
 const PAUSE_SWIPER_AUTOPLAY_IN_DEV = false;
 
 function App() {
+  const location = useLocation();
   const form = useRef();
   const [done, setDone] = useState(false);
   const scrollContactFormRef = useRef();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
 
   const handleContactBtnClick = (e) => {
     e.preventDefault();

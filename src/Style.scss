@@ -289,7 +289,7 @@ mb50 {
         &.active {
           border: 2px solid var(--base-green);
           .badge {
-            display: block;
+            display: flex;
           }
         }
         .badge {
@@ -372,7 +372,7 @@ mb50 {
         width: 12px;
         height: 12px;
         path {
-          stroke: var(--text);
+          stroke: var(--grey-800);
           stroke-width: 2px;
         }
       }
@@ -399,7 +399,7 @@ mb50 {
         width: 12px;
         height: 12px;
         path {
-          stroke: var(--text);
+          stroke: var(--grey-800);
           stroke-width: 2px;
         }
       }
@@ -1382,6 +1382,11 @@ section {
   }
   .swiper-wrapper {
     margin-top: 10px;
+
+    .badge {
+      width: 12px !important;
+      height: 12px !important;
+    }
   }
 
   .home-page {
