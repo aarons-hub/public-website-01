@@ -955,7 +955,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 40px;
+  gap: 15px;
   .col {
     flex-basis: 50%;
     &.left {
@@ -1387,6 +1387,14 @@ section {
       width: 12px !important;
       height: 12px !important;
     }
+  }
+
+  .tag-list {
+    display: none !important;
+  }
+
+  .services-list {
+    display: none !important;
   }
 
   .home-page {

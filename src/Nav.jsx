@@ -78,7 +78,13 @@ function Nav() {
             Home
           </NavLink>
           <NavLink to="/services" onClick={() => setIsOpen(false)}>
-            Services
+            Web services
+          </NavLink>
+          <NavLink to="/logo-design" onClick={() => setIsOpen(false)}>
+            Logo design
+          </NavLink>
+          <NavLink to="/photography" onClick={() => setIsOpen(false)}>
+            Photography
           </NavLink>
           <NavLink to="/projects" onClick={() => setIsOpen(false)}>
             Projects

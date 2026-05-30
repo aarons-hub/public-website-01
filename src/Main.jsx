@@ -49,7 +49,6 @@ function CoverBgHeightSync() {
       "/contact": "section.contact",
       "/privacy": ".privacy-page section.privacy",
       "/pricing": ".pricing-page section.pricing",
-      "/test-canvas": ".test-canvas-page section",
     };
 
     const getTargetSection = () => {

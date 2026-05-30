@@ -208,7 +208,7 @@ function Projects() {
 
   useEffect(() => {
     loadProjectsData()
-      .then(({ data, loadedFrom }) => {
+      .then(({ data }) => {
         const nextGroups = Array.isArray(data)
           ? [{ name: "Default", items: data }]
           : data.groups || [];
@@ -219,7 +219,6 @@ function Projects() {
         setGroups(nextGroups);
         setActiveGroup(defaultGroup);
         setActiveItemId(defaultGroupItems[0]?.id ?? null);
-        console.info(`[Projects] data loaded from: ${loadedFrom}`);
       })
       .catch((err) => {
         console.error("[Projects] data fetch error:", {

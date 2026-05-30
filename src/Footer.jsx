@@ -69,7 +69,15 @@ function Footer() {
           <div className="site-footer-links" aria-label="Footer links">
             <NavLink to="/services" className={utilityLinkClass}>
               <span className="footer-link-prefix"></span>
-              Services
+              Web services
+            </NavLink>
+            <NavLink to="/logo-design" className={utilityLinkClass}>
+              <span className="footer-link-prefix"></span>
+              Logo design
+            </NavLink>
+            <NavLink to="/photography" className={utilityLinkClass}>
+              <span className="footer-link-prefix"></span>
+              Photography
             </NavLink>
             <NavLink to="/projects" className={utilityLinkClass}>
               <span className="footer-link-prefix"></span>

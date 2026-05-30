@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -153,13 +153,12 @@ function LogoDesign() {
 
   useEffect(() => {
     loadProjectsData()
-      .then(({ data, loadedFrom }) => {
+      .then(({ data }) => {
         const nextGroups = Array.isArray(data)
           ? [{ name: "Default", items: data }]
           : data.groups || [];
 
         setGroups(nextGroups);
-        console.info(`[LogoDesign] data loaded from: ${loadedFrom}`);
 
         const initialLogoDesignItems = nextGroups.flatMap((group) => {
           const selectedItems = getLogoDesignThumbnailItems(group);
@@ -192,10 +191,16 @@ function LogoDesign() {
     }
 
     swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       slidesPerView: 2.2,
       spaceBetween: 12,
       slidesOffsetAfter: 20,
+      speed: 3000,
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: swiperNextRef.current,
         prevEl: swiperPrevRef.current,
