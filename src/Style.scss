@@ -954,7 +954,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 15px;
+  gap: 40px;
   .col {
     flex-basis: 50%;
     &.left {
@@ -1332,7 +1332,8 @@ section {
   position: relative;
   .stage-img-01,
   .stage-img-02,
-  .stage-img-03 {
+  .stage-img-03,
+  .stage-img-04 {
     position: absolute;
   }
   .stage-img-01 {
@@ -1346,6 +1347,10 @@ section {
   .stage-img-03 {
     left: 238px;
     top: 117px;
+  }
+  .stage-img-04 {
+    left: 0px;
+    top: 540px;
   }
 }
 

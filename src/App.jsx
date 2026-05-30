@@ -71,6 +71,7 @@ function App() {
   const img01 = useRef();
   const img02 = useRef();
   const img03 = useRef();
+  const img04 = useRef();
 
   useEffect(() => {
     if (!stage.current) return undefined;
@@ -94,7 +95,7 @@ function App() {
         ease: "power2.out",
       })
         .from(
-          [img02.current, img03.current],
+          [img02.current, img03.current, img04.current],
           {
             scale: 0.1,
             y: 50,
@@ -317,6 +318,12 @@ function App() {
                 ref={img03}
                 className="stage-img-03"
                 src={`${appBase}homepage-images/iphone-panel-002.png`}
+                alt="Decorative image"
+              />
+              <img
+                ref={img04}
+                className="stage-img-04"
+                src={`${appBase}homepage-images/iphone-panel-003.png`}
                 alt="Decorative image"
               />
             </div>
