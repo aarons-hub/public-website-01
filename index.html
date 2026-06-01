@@ -30,6 +30,24 @@
       gtag("js", new Date());
       gtag("config", "G-56ZJCW1W79", { send_page_view: false });
     </script>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirectedPath = params.get("p");
+
+        if (!redirectedPath) return;
+
+        params.delete("p");
+        var remainingQuery = params.toString();
+        var targetPath = decodeURIComponent(redirectedPath);
+        var separator = targetPath.indexOf("?") === -1 ? "?" : "&";
+        var finalPath = remainingQuery
+          ? targetPath + separator + remainingQuery
+          : targetPath;
+
+        window.history.replaceState(null, "", finalPath);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
