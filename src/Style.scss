@@ -632,6 +632,9 @@ mb50 {
 }
 
 .item-details {
+  .heading {
+    margin-bottom: 5px;
+  }
   .tag-list {
     display: flex;
     flex-wrap: wrap;
@@ -1051,10 +1054,6 @@ section {
 
 .partners-section {
   margin-top: 30px;
-  border-radius: 38px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.07);
   .partners-inner {
     padding: 20px;
     border-radius: 20px;
@@ -1414,9 +1413,11 @@ section {
 }
 
 .stage {
-  width: 100%;
+  width: fit-content;
   position: relative;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 
   .stage-img-01 {
     width: 100%;
@@ -1555,7 +1556,7 @@ section {
   z-index: 9999;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .horizontal-nav {
     display: none;
   }
@@ -1680,6 +1681,9 @@ section {
   }
 
   .projects-page {
+    .projects-hero {
+      gap: 0px;
+    }
     .partners-section {
       padding: 0px;
       margin-top: 10px;

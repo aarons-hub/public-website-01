@@ -278,7 +278,7 @@ function App() {
           <h2>
             We take care of your website,{" "}
             <span className="opacity75">
-              so you can take care of your business
+              so you can take&nbsp;care of your business
             </span>
             .
           </h2>
