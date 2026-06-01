@@ -92,12 +92,12 @@ p {
   line-height: 1.6;
   letter-spacing: inherit;
 }
-h1.med-heading {
-  font-size: var(--step-5);
-  line-height: 1;
-}
 h1.lg-heading {
   font-size: var(--step-7);
+  line-height: 0.9;
+}
+h1.med-heading {
+  font-size: var(--step-5);
   line-height: 1;
 }
 button {
@@ -756,6 +756,74 @@ body {
   .app-main {
     max-width: inherit !important;
 
+    .hero-container {
+      max-width: var(--sitewidth);
+      margin-left: auto;
+      margin-right: auto;
+      .heading {
+        h1 {
+          color: var(--base-white);
+        }
+      }
+      .subheading {
+        h2 {
+          color: var(--base-white);
+        }
+      }
+      .cta {
+        .cta-wrapper {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 40px;
+          .btn {
+            background-color: var(--purple);
+            color: var(--base-white);
+            &:hover {
+              background-color: var(--btn-hover);
+              color: var(--base-white);
+            }
+            &.contact-btn {
+              background-color: var(--lime-green);
+              color: var(--near-black);
+              &:hover {
+                background-color: var(--near-black);
+                color: var(--base-white);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Grid
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.5fr 0.5fr 1.4fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "heading stage"
+        "subheading stage"
+        "cta stage";
+    }
+
+    .heading {
+      grid-area: heading;
+    }
+
+    .subheading {
+      grid-area: subheading;
+    }
+
+    .cta {
+      grid-area: cta;
+    }
+
+    .stage {
+      grid-area: stage;
+    }
+
     .hero {
       max-width: var(--sitewidth);
       margin-left: auto;
@@ -1346,29 +1414,40 @@ section {
 
 .stage {
   width: 100%;
-  height: 640px;
   position: relative;
-  .stage-img-01,
+  margin-top: 40px;
+
+  .stage-img-01 {
+    width: 100%;
+    max-width: 582px;
+    height: auto;
+    display: block;
+    left: 0px;
+    top: 34px;
+  }
+
   .stage-img-02,
   .stage-img-03,
   .stage-img-04 {
     position: absolute;
-  }
-  .stage-img-01 {
-    left: 0px;
-    top: 34px;
+    width: 40vw;
+    height: auto;
+    display: block;
   }
   .stage-img-02 {
-    left: -90px;
-    top: 225px;
+    left: -3%;
+    top: 26%;
+    max-width: 320px;
   }
   .stage-img-03 {
-    left: 238px;
-    top: 117px;
+    left: 40%;
+    top: 10%;
+    max-width: 262px;
   }
   .stage-img-04 {
-    left: 141px;
-    top: 446px;
+    left: 42%;
+    top: 60%;
+    max-width: 262px;
   }
 }
 
@@ -1515,9 +1594,17 @@ section {
   }
 
   .home-page {
-    .stage {
-      display: none;
+    .hero-wrapper {
+      flex-direction: column;
+      .col.left {
+      }
+      .col.right {
+        .stage {
+          // display: none;
+        }
+      }
     }
+
     .swiper {
       .container {
         .description {
@@ -1641,6 +1728,22 @@ section {
           width: 100%;
         }
       }
+    }
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    grid-template-areas:
+      "heading"
+      "stage"
+      "subheading"
+      "cta" !important;
+    .lg-heading {
+      margin-top: 10px;
+    }
+    .stage {
+      margin-top: 0px;
     }
   }
 }

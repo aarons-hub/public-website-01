@@ -266,71 +266,65 @@ function App() {
 
   return (
     <>
-      <section className="hero">
-        <div className="hero-wrapper">
-          <div ref={intro} className="col left">
-            <h1 ref={heading01} className="lg-heading mb20">
-              <span className="opacity75">Your</span> website,
-              <br />
-              in <span className="opacity75">good</span> hands.
-            </h1>
-            <div ref={subheading}>
-              <h2>
-                We take care of your website,
-                <br />
-                so you can take care of your business.
-              </h2>
-              <p className="hero-subheading displaynone">
-                We build custom websites and digital solutions that help your
-                business grow online, with tailored designs and analytics to
-                track what's working.
-              </p>
-            </div>
-
-            <div ref={ctaWrapper} className="cta-wrapper">
-              <Link to="/projects" className="btn hero-btn projects-btn">
-                View projects
-              </Link>
-              <a
-                href="#contact-form"
-                className="btn hero-btn contact-btn"
-                onClick={handleContactBtnClick}
-              >
-                Get in touch
-              </a>
-            </div>
-          </div>
-          <div className="col right">
-            <div ref={stage} className="stage">
-              <img
-                ref={img01}
-                className="stage-img-01"
-                src={`${appBase}homepage-images/iphone-001.png`}
-                alt="Decorative image"
-              />
-              <img
-                ref={img02}
-                className="stage-img-02"
-                src={`${appBase}homepage-images/iphone-panel-001.png`}
-                alt="Decorative image"
-              />
-              <img
-                ref={img03}
-                className="stage-img-03"
-                src={`${appBase}homepage-images/iphone-panel-002.png`}
-                alt="Decorative image"
-              />
-              <img
-                ref={img04}
-                className="stage-img-04"
-                src={`${appBase}homepage-images/iphone-panel-003.png`}
-                alt="Decorative image"
-              />
-            </div>
+      <section ref={intro} className="hero-container">
+        <div ref={heading01} className="heading">
+          <h1 className="lg-heading mb20">
+            <span className="opacity75">Your</span> website,
+            <br />
+            in <span className="opacity75">good</span> hands.
+          </h1>
+        </div>
+        <div ref={subheading} className="subheading">
+          <h2>
+            We take care of your website,{" "}
+            <span className="opacity75">
+              so you can take care of your business
+            </span>
+            .
+          </h2>
+        </div>
+        <div className="cta">
+          <div ref={ctaWrapper} className="cta-wrapper">
+            <Link to="/projects" className="btn hero-btn projects-btn">
+              View projects
+            </Link>
+            <a
+              href="#contact-form"
+              className="btn hero-btn contact-btn"
+              onClick={handleContactBtnClick}
+            >
+              Get in touch
+            </a>
           </div>
         </div>
-        <div className="spacer"></div>
+        <div ref={stage} className="stage">
+          <img
+            ref={img01}
+            className="stage-img-01"
+            src={`${appBase}homepage-images/iphone-001.png`}
+            alt="Decorative image"
+          />
+          <img
+            ref={img02}
+            className="stage-img-02"
+            src={`${appBase}homepage-images/iphone-panel-001.png`}
+            alt="Decorative image"
+          />
+          <img
+            ref={img03}
+            className="stage-img-03"
+            src={`${appBase}homepage-images/iphone-panel-002.png`}
+            alt="Decorative image"
+          />
+          <img
+            ref={img04}
+            className="stage-img-04"
+            src={`${appBase}homepage-images/iphone-panel-003.png`}
+            alt="Decorative image"
+          />
+        </div>
       </section>
+
       <section ref={featured} className="featured">
         <div className="row">
           <div className="col">
