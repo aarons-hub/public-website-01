@@ -114,11 +114,11 @@
     </style>
     <script>
       (function () {
-        var path =
+        var targetPath =
           window.location.pathname +
           window.location.search +
           window.location.hash;
-        window.location.replace("/?p=" + encodeURIComponent(path));
+        window.location.replace("/?p=" + encodeURIComponent(targetPath));
       })();
     </script>
   </head>
