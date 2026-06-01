@@ -33,17 +33,18 @@
     <script>
       (function () {
         var params = new URLSearchParams(window.location.search);
-        var redirectedPath = params.get("p");
+        var p = params.get("p");
 
-        if (!redirectedPath) return;
+        if (!p) return;
 
         params.delete("p");
-        var remainingQuery = params.toString();
-        var targetPath = decodeURIComponent(redirectedPath);
-        var separator = targetPath.indexOf("?") === -1 ? "?" : "&";
-        var finalPath = remainingQuery
-          ? targetPath + separator + remainingQuery
-          : targetPath;
+        var restoredPath = decodeURIComponent(p);
+        var extraQuery = params.toString();
+        var finalPath = extraQuery
+          ? restoredPath +
+            (restoredPath.indexOf("?") === -1 ? "?" : "&") +
+            extraQuery
+          : restoredPath;
 
         window.history.replaceState(null, "", finalPath);
       })();
