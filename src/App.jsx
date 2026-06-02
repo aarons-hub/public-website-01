@@ -9,9 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-
+// import "swiper/css";
+// import "swiper/css/pagination";
 import "./Style.scss";
 
 const GA_MEASUREMENT_ID = "G-56ZJCW1W79";

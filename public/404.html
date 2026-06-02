@@ -1,139 +1,18 @@
 <!doctype html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found | Aaronline Design</title>
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #f4f7f0;
-        --text: #202a18;
-        --muted: #58644a;
-        --accent: #9acd32;
-        --surface: #ffffff;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(
-            circle at 15% 15%,
-            rgba(154, 205, 50, 0.2),
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at 85% 10%,
-            rgba(154, 205, 50, 0.15),
-            transparent 40%
-          ),
-          var(--bg);
-        display: grid;
-        place-items: center;
-        padding: 24px;
-      }
-
-      .card {
-        width: min(720px, 100%);
-        background: var(--surface);
-        border: 1px solid rgba(32, 42, 24, 0.1);
-        border-radius: 18px;
-        padding: clamp(24px, 5vw, 48px);
-        box-shadow: 0 24px 55px rgba(23, 31, 16, 0.12);
-      }
-
-      .code {
-        margin: 0;
-        font-size: clamp(42px, 12vw, 86px);
-        line-height: 0.95;
-        letter-spacing: 2px;
-        color: var(--accent);
-      }
-
-      h1 {
-        margin: 12px 0 0;
-        font-size: clamp(24px, 4vw, 40px);
-        line-height: 1.1;
-      }
-
-      p {
-        margin: 14px 0 0;
-        color: var(--muted);
-        font-size: clamp(15px, 2.2vw, 18px);
-      }
-
-      .actions {
-        margin-top: 28px;
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-
-      .button {
-        text-decoration: none;
-        display: inline-block;
-        padding: 12px 18px;
-        border-radius: 999px;
-        font-weight: 600;
-        transition:
-          transform 0.15s ease,
-          box-shadow 0.15s ease;
-      }
-
-      .button.primary {
-        background: var(--accent);
-        color: #102007;
-      }
-
-      .button.secondary {
-        border: 1px solid rgba(32, 42, 24, 0.2);
-        color: var(--text);
-      }
-
-      .button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-      }
-    </style>
     <script>
       (function () {
         var targetPath =
           window.location.pathname +
           window.location.search +
           window.location.hash;
+
         window.location.replace("/?p=" + encodeURIComponent(targetPath));
       })();
     </script>
   </head>
-  <body>
-    <main class="card">
-      <p class="code">404</p>
-      <h1>This page is missing.</h1>
-      <p>
-        The link may be outdated, moved, or typed incorrectly. You can return to
-        the homepage or contact us from there.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="./">Back to home</a>
-        <a class="button secondary" href="./contact">Contact us</a>
-      </div>
-    </main>
-  </body>
+  <body></body>
 </html>

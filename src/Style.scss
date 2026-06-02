@@ -24,10 +24,6 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   --sitefont: "Poppins", "Segoe UI", Roboto, sans-serif;
-  --heading: "Poppins", "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   --sitewidth: 1280px;
 
   --step--2: clamp(0.56rem, 0.6076rem + -0.0595vw, 0.6076rem);
@@ -89,17 +85,17 @@ body {
 }
 .services-page {
   .cover-bg {
-    background-color: var(--hot-pink);
+    background-color: var(--warm-peach);
   }
 }
 .logo-design-page {
   .cover-bg {
-    background-color: var(--hot-pink);
+    background-color: var(--warm-peach);
   }
 }
 .photography-page {
   .cover-bg {
-    background-color: var(--hot-pink);
+    background-color: var(--warm-peach);
   }
 }
 .projects-page {
@@ -218,9 +214,6 @@ button {
 }
 .mb40 {
   margin-bottom: 40px;
-}
-mb50 {
-  margin-bottom: 50px;
 }
 .mb50 {
   margin-bottom: 50px;
@@ -346,6 +339,23 @@ mb50 {
   right: anchor(right);
 }
 
+.swiper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .swiper-wrapper-outer {
   box-sizing: border-box;
   margin-top: 0px;
@@ -365,6 +375,7 @@ mb50 {
       .swiper-slide {
         border: 2px solid transparent;
         border-radius: 16px;
+        position: relative;
         &.active {
           border: 2px solid var(--lime-green);
           .badge {
@@ -445,6 +456,7 @@ mb50 {
       }
     }
     .swiper-button-next {
+      display: none;
       border: 2px solid var(--grey-800);
       background-color: var(--lime-green);
       border-radius: 50%;
@@ -472,6 +484,7 @@ mb50 {
       }
     }
     .swiper-button-prev {
+      display: none;
       border: 2px solid var(--grey-800);
       background-color: var(--lime-green);
       border-radius: 50%;
@@ -532,11 +545,11 @@ mb50 {
           justify-content: center;
           align-items: center;
           border: none;
-          background-color: var(--grey--grey-300);
+          background-color: var(--grey-300);
           cursor: pointer;
           &:hover {
             border-color: var(--purple-border);
-            background-color: var(--grey--grey-700);
+            background-color: var(--grey-700);
           }
         }
         [popover] {
@@ -1612,7 +1625,7 @@ section {
   z-index: 9999;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1170px) {
   .horizontal-nav {
     display: none;
   }
@@ -1741,8 +1754,6 @@ section {
       padding: 0px;
       gap: 0px;
       .row {
-        h3 {
-        }
         .col.left {
         }
         .col.right {
