@@ -243,9 +243,10 @@ function Projects() {
       modules: [Navigation, Autoplay],
       slidesPerView: 3.5,
       spaceBetween: 12,
+      slidesOffsetBefore: 20,
       slidesOffsetAfter: 20,
       speed: 3000,
-      loop: true,
+      loop: false,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
@@ -259,12 +260,14 @@ function Projects() {
         640: {
           slidesPerView: 3.5,
           spaceBetween: 16,
-          slidesOffsetAfter: 40,
+          slidesOffsetBefore: 20,
+          slidesOffsetAfter: 20,
         },
         1024: {
           slidesPerView: 4.5,
           spaceBetween: 20,
-          slidesOffsetAfter: 100,
+          slidesOffsetBefore: 20,
+          slidesOffsetAfter: 20,
         },
       },
     });

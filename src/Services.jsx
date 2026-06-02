@@ -190,11 +190,12 @@ function Services() {
 
     swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
       modules: [Navigation, Autoplay],
-      slidesPerView: 3.2,
+      slidesPerView: 3.5,
       spaceBetween: 12,
+      slidesOffsetBefore: 20,
       slidesOffsetAfter: 20,
       speed: 3000,
-      loop: true,
+      loop: false,
       autoplay: {
         enabled: false,
         delay: 0,
@@ -207,14 +208,16 @@ function Services() {
       },
       breakpoints: {
         640: {
-          slidesPerView: 3.2,
+          slidesPerView: 3.5,
           spaceBetween: 16,
-          slidesOffsetAfter: 40,
+          slidesOffsetBefore: 20,
+          slidesOffsetAfter: 20,
         },
         1024: {
-          slidesPerView: 4.3,
+          slidesPerView: 4.5,
           spaceBetween: 20,
-          slidesOffsetAfter: 100,
+          slidesOffsetBefore: 20,
+          slidesOffsetAfter: 20,
         },
       },
     });
