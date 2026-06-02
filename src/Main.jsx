@@ -36,7 +36,7 @@ function CoverBgHeightSync() {
 
   useEffect(() => {
     const horizontalNavEl = document.querySelector(".horizontal-nav");
-    const coverBgEl = document.querySelector("img.cover-bg");
+    const coverBgEl = document.querySelector(".cover-bg");
     if (!coverBgEl) return undefined;
 
     const selectorByPath = {
@@ -128,11 +128,7 @@ appRoot.render(
     <BrowserRouter>
       <RootPageClassName />
       <CoverBgHeightSync />
-      <img
-        src={`${appBase}images/cover.jpg`}
-        alt="decorative background"
-        className="cover-bg"
-      />
+      <div className="cover-bg"></div>
       <div className="app-shell">
         <Nav />
         <main className="app-main">

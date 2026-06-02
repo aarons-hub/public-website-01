@@ -98,8 +98,7 @@ function Footer() {
           </div>
 
           <div className="site-footer-brand-wrap">
-            <img src="./ad-logo-01.svg" alt="Aaronline Design Logo" />
-            <p className="site-footer-copy">Copyright {year}</p>
+            <img src="./ad-logo-03.svg" alt="Aaronline Design Logo" />
           </div>
         </div>
       </footer>

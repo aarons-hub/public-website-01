@@ -149,6 +149,8 @@ function Projects() {
   const swiperPrevRef = useRef(null);
   const swiperNextRef = useRef(null);
   const swiperInstanceRef = useRef(null);
+  const heroWrapperRef = useRef(null);
+  const swiperWrapperOuterRef = useRef(null);
 
   const categories = useMemo(() => {
     const nextCategories = new Set();
@@ -239,7 +241,7 @@ function Projects() {
 
     swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
       modules: [Navigation, Autoplay],
-      slidesPerView: 2.2,
+      slidesPerView: 3.5,
       spaceBetween: 12,
       slidesOffsetAfter: 20,
       speed: 3000,
@@ -255,12 +257,12 @@ function Projects() {
       },
       breakpoints: {
         640: {
-          slidesPerView: 2.2,
+          slidesPerView: 3.5,
           spaceBetween: 16,
           slidesOffsetAfter: 40,
         },
         1024: {
-          slidesPerView: 3.3,
+          slidesPerView: 4.5,
           spaceBetween: 20,
           slidesOffsetAfter: 100,
         },
@@ -274,13 +276,56 @@ function Projects() {
   }, [items]);
 
   useEffect(() => {
+    let animationFrameId = 0;
+
+    const syncSwiperOuterWidth = () => {
+      const heroWrapperEl = heroWrapperRef.current;
+      const swiperOuterEl = swiperWrapperOuterRef.current;
+      if (!heroWrapperEl || !swiperOuterEl) return false;
+
+      const heroWidth = heroWrapperEl.getBoundingClientRect().width;
+      if (heroWidth > 0) {
+        swiperOuterEl.style.width = `${heroWidth}px`;
+        return true;
+      }
+
+      return false;
+    };
+
+    const syncWidthWithRetry = (attempt = 0) => {
+      const applied = syncSwiperOuterWidth();
+      if (applied || attempt >= 8) return;
+
+      animationFrameId = window.requestAnimationFrame(() => {
+        syncWidthWithRetry(attempt + 1);
+      });
+    };
+
     const handleResize = () => {
+      syncWidthWithRetry();
       swiperInstanceRef.current?.update();
     };
 
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(() => {
+            syncSwiperOuterWidth();
+            swiperInstanceRef.current?.update();
+          })
+        : null;
+
+    if (heroWrapperRef.current && resizeObserver) {
+      resizeObserver.observe(heroWrapperRef.current);
+    }
+
+    syncWidthWithRetry();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [activeItem?.id]);
 
   const section = useRef(null);
 
@@ -330,7 +375,7 @@ function Projects() {
         </div>
 
         <div className="col right mt10">
-          <div className="hero-outer">
+          <div ref={heroWrapperRef} className="hero-outer">
             {activeItem && (
               <div
                 className="hero-wrapper"
@@ -353,7 +398,7 @@ function Projects() {
               </div>
             )}
           </div>
-          <div className="swiper-wrapper-outer">
+          <div className="swiper-wrapper-outer" ref={swiperWrapperOuterRef}>
             <div className="swiper" ref={swiperRootRef}>
               <div className="swiper-wrapper">
                 {items.map((item, index) => (
