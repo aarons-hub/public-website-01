@@ -196,7 +196,7 @@ function LogoDesign() {
       modules: [Navigation, Autoplay],
       slidesPerView: 3.5,
       spaceBetween: 12,
-      slidesOffsetBefore: 20,
+      slidesOffsetBefore: 0,
       slidesOffsetAfter: 20,
       speed: 3000,
       loop: false,
@@ -214,7 +214,7 @@ function LogoDesign() {
         640: {
           slidesPerView: 3.5,
           spaceBetween: 16,
-          slidesOffsetBefore: 20,
+          slidesOffsetBefore: 0,
           slidesOffsetAfter: 20,
         },
         1024: {

@@ -32,6 +32,9 @@ function Nav() {
           <NavLink to="/about" className={navLinkClass}>
             About
           </NavLink>
+          <NavLink to="/web-designer-brisbane" className={navLinkClass}>
+            New About
+          </NavLink>
           <NavLink to="/pricing" className={navLinkClass}>
             Pricing
           </NavLink>

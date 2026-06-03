@@ -118,6 +118,11 @@ body {
     background-color: var(--azure-blue);
   }
 }
+.web-designer-brisbane-page {
+  .cover-bg {
+    background-color: var(--azure-blue);
+  }
+}
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -292,16 +297,17 @@ button {
   border-bottom: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  width: fit-content;
+  margin-right: 1px;
 
   .hero-wrapper {
     position: relative;
     display: block;
     overflow: hidden;
     border-radius: 20px;
+    width: 100%;
     max-width: 900px;
+    animation: hero-fade-in 1.2s ease;
 
-    // outline: 2px solid var(--lime-green);
     > img {
       width: 100%;
       height: auto;
@@ -334,9 +340,13 @@ button {
     }
   }
 }
-@position-try --flip-horizontal {
-  left: unset;
-  right: anchor(right);
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .swiper {
@@ -391,15 +401,15 @@ button {
           border-radius: 999px;
           z-index: 10;
           display: none;
-          border: 2px solid var(--grey-800);
+          border: 2px solid var(--lime-green);
           svg {
             width: 100%;
             height: 100%;
             path {
-              fill: var(--base-white);
+              fill: var(--near-black);
             }
             path:nth-child(2) {
-              fill: var(--grey-800);
+              fill: var(--lime-green);
             }
           }
         }
@@ -518,67 +528,15 @@ button {
   .tiles {
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
+    gap: 3%;
     margin-top: 20px;
-    justify-content: center;
     .tile-card {
       position: relative;
       transition: transform 0.2s ease;
-      flex-basis: 18%;
+      flex-basis: 31%;
       margin-bottom: 10px;
       &.hideme {
         display: none;
-      }
-      .popoverContainer {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        display: none;
-        .popoverBtn {
-          padding: 2px 2px;
-          border-radius: 999px;
-          color: var(--base-white);
-          transition: border-color 0.2s ease;
-          display: flex;
-          width: 20px;
-          height: 20px;
-          justify-content: center;
-          align-items: center;
-          border: none;
-          background-color: var(--grey-300);
-          cursor: pointer;
-          &:hover {
-            border-color: var(--purple-border);
-            background-color: var(--grey-700);
-          }
-        }
-        [popover] {
-          inset: unset;
-          left: anchor(left);
-          top: anchor(bottom);
-          position-try-fallbacks: --flip-horizontal;
-          border-radius: 12px;
-          padding: 12px 16px;
-          max-width: 160px;
-          background: var(--base-white);
-          border: 1px solid var(--border);
-          box-shadow: var(--shadow);
-          p {
-            margin: 0;
-            color: var(--muted-mauve-grey);
-            font-size: var(--step--1);
-            line-height: 1.6;
-          }
-        }
-      }
-      &:hover {
-        transform: translateY(-2px);
-      }
-      &:hover .popoverContainer {
-        display: block;
-      }
-      &:hover .tile-info {
-        display: block;
       }
       .tile-info {
         padding: 12px;
@@ -586,11 +544,11 @@ button {
         position: absolute;
         bottom: 0px;
         left: 0px;
+        display: none;
         h3.name {
           margin: 0 0 4px;
           font-size: var(--step-1);
           color: var(--muted-mauve-grey);
-          display: none;
         }
         p.count {
           margin: 0;
@@ -605,8 +563,8 @@ button {
       }
       .tile {
         width: fit-content;
-        border: 1px solid var(--border);
-        border-radius: 14px;
+        border: 2px solid var(--base-white);
+        border-radius: 10px;
         background: var(--base-white);
         overflow: hidden;
         text-align: left;
@@ -637,20 +595,49 @@ button {
           right: 4px;
           width: 16px;
           height: 16px;
-          border: 2px solid var(--grey-800);
+          border: 2px solid var(--lime-green);
           border-radius: 999px;
           z-index: 10;
           display: none;
           svg {
             path {
-              fill: var(--base-white);
+              fill: var(--near-black);
             }
             path:nth-child(2) {
-              fill: var(--grey-800);
+              fill: var(--lime-green);
             }
           }
         }
       }
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+
+  .filter-button {
+    font-size: var(--step--1);
+    padding: 10px 23px;
+    border-radius: 999px;
+    color: var(--near-black);
+    background-color: var(--lime-green);
+    border: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--grey-800);
+      border-color: var(--grey-800);
+      color: var(--base-white);
+    }
+
+    &.active {
+      background-color: var(--grey-800);
+      border-color: var(--grey-800);
+      color: var(--base-white);
     }
   }
 }
@@ -1042,12 +1029,15 @@ button {
             transparent 100%
           );
           position: absolute;
-          top: 0px;
-          right: 92%;
+          top: 0%;
+          bottom: 0%;
+          width: 100%;
+          height: 100%;
+          max-width: 80px;
           left: 0%;
-          bottom: 0px;
+
           &.right {
-            left: 92%;
+            left: unset;
             right: 0%;
             background-image: linear-gradient(
               270deg,
@@ -1128,50 +1118,18 @@ section {
   .partners-inner {
     padding: 20px;
     border-radius: 20px;
-    background-color: var(--base-white);
-    border: 1px solid rgba(0, 0, 0, 0.07);
+    background-color: var(--blue-grey);
     width: 100%;
     .row {
       justify-content: center;
       h3 {
         margin: 10px 0px 10px 0px;
         text-align: center;
+        color: var(--base-white);
       }
     }
-  }
-}
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: var(--btn-padding);
-  width: fit-content;
-  border-radius: 999px;
-  justify-content: center;
-  margin: 10px auto 4px auto;
-  background-color: var(--base-white);
-  border: 1px solid var(--grey-200);
-
-  .filter-button {
-    font-size: var(--step-0);
-    padding: var(--btn-padding);
-    border-radius: 999px;
-    color: var(--base-white);
-    background-color: var(--blue-grey);
-    border: 1px solid var(--blue-grey);
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--grey-800);
-      border-color: var(--grey-800);
-      color: var(--base-white);
-    }
-
-    &.active {
-      background-color: var(--grey-800);
-      border-color: var(--grey-800);
-      color: var(--base-white);
+    &.mobile {
+      display: none;
     }
   }
 }
@@ -1707,6 +1665,15 @@ section {
     .cta-wrapper {
       flex-direction: column;
     }
+
+    .section-inner {
+      .swiper {
+        width: 100vw !important;
+      }
+      .gradient.right {
+        right: calc(0% - 40px) !important;
+      }
+    }
   }
 
   .row {
@@ -1722,16 +1689,16 @@ section {
   }
 
   .hero-outer {
-    padding: 4px;
-    border-radius: 13px;
+    padding: 0px;
+    border-radius: 0px;
+    border: none;
+    background: transparent;
     .hero-wrapper {
-      max-width: calc(100vw - 80px);
       border-radius: 10px;
     }
   }
 
   .swiper-wrapper-outer .swiper {
-    width: calc(100vw - 80px);
     .swiper-wrapper {
       .swiper-slide {
         border-radius: 6px;
@@ -1748,7 +1715,9 @@ section {
     }
     .partners-section {
       padding: 0px;
-      margin-top: 10px;
+      margin-top: -5px !important;
+      margin-left: -20px;
+      width: calc(100vw - 40px);
     }
     .partners-inner {
       padding: 0px;
@@ -1762,6 +1731,8 @@ section {
         .filters {
           border-radius: 20px;
           margin-top: 10px;
+          justify-content: center;
+          margin-bottom: 20px;
           .filter-button {
             font-size: var(--step--2);
           }
@@ -1776,6 +1747,12 @@ section {
       }
       .tiles-wrapper .tiles .tile-card .tile-info {
         display: none;
+      }
+      &.desktop {
+        display: none;
+      }
+      &.mobile {
+        display: block;
       }
     }
   }

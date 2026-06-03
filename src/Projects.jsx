@@ -6,8 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
 
 const appBase = import.meta.env.BASE_URL;
 
@@ -362,7 +360,87 @@ function Projects() {
       <section ref={section} className="projects-hero">
         <div className="col left">
           <h1 className="med-heading mt20">Projects</h1>
-          <div className="item-details">
+          <div className="partners-inner desktop">
+            <h3 className="heading">Partners</h3>
+
+            <div className="tiles-wrapper">
+              <div className="tiles">
+                {groups.map((group) => {
+                  const thumbnail =
+                    group.thumbnail || group.items?.[0]?.["base-img"] || "";
+                  const matchingItemCount =
+                    activeCategory === "All"
+                      ? group.items?.length || 0
+                      : group.items?.filter(
+                          (item) => item.category === activeCategory,
+                        ).length || 0;
+                  const isHidden = !groupMatchesCategory(group, activeCategory);
+
+                  return (
+                    <div
+                      key={group.name}
+                      className={`tile-card${isHidden ? " hideme" : ""}`}
+                    >
+                      <button
+                        type="button"
+                        className={`tile ${activeGroup === group.name ? "active" : ""}`}
+                        onClick={() => handleGroupChange(group.name)}
+                        aria-hidden={isHidden}
+                        tabIndex={isHidden ? -1 : 0}
+                      >
+                        <span className="badge">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z"
+                              fill="#9ACD32"
+                            />
+                            <path
+                              d="M9.33333 19.3332L4 13.9998L6 11.9998L9.33333 15.3332L18 6.6665L20 8.6665L9.33333 19.3332Z"
+                              fill="#000"
+                            />
+                          </svg>
+                        </span>
+                        {thumbnail && (
+                          <img
+                            src={withBase(thumbnail)}
+                            alt={group.name}
+                            className="tile-thumb"
+                          />
+                        )}
+                      </button>
+
+                      <div className="tile-info">
+                        <h3 className="name">{group.name}</h3>
+                        <p className="count">{matchingItemCount} items</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="row">
+              <div className="filters">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    className={`filter-button ${activeCategory === category ? "active" : ""}`}
+                    onClick={() => handleCategoryChange(category)}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="item-details mt40">
             <h4 className="heading">{activeItem?.title}</h4>
             <p className="description">{activeItem?.description}</p>
             {Array.isArray(activeItem?.tags) && activeItem.tags.length > 0 && (
@@ -465,7 +543,7 @@ function Projects() {
         </div>
       </section>
       <section className="partners-section">
-        <div className="partners-inner">
+        <div className="partners-inner mobile">
           <div className="row">
             <h3 className="heading">Partners</h3>
           </div>

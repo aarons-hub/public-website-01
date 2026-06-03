@@ -8,6 +8,7 @@ import LogoDesign from "./LogoDesign.jsx";
 import Photography from "./Photography.jsx";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
+import WebDesigner from "./WebDesigner.jsx";
 import Privacy from "./Privacy.jsx";
 import Pricing from "./Pricing.jsx";
 import Nav from "./Nav.jsx";
@@ -49,6 +50,7 @@ function CoverBgHeightSync() {
       "/contact": "section.contact",
       "/privacy": ".privacy-page section.privacy",
       "/pricing": ".pricing-page section.pricing",
+      "/web-designer-brisbane": "section.web-designer-brisbane",
     };
 
     const getTargetSection = () => {
@@ -142,7 +144,7 @@ appRoot.render(
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/test-canvas" element={<PerspectiveTest />} />
+            <Route path="/web-designer-brisbane" element={<WebDesigner />} />
           </Routes>
         </main>
         <Footer />
