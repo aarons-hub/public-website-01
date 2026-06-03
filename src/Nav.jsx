@@ -29,11 +29,8 @@ function Nav() {
           <NavLink to="/projects" className={navLinkClass}>
             Projects
           </NavLink>
-          <NavLink to="/about" className={navLinkClass}>
-            About
-          </NavLink>
           <NavLink to="/web-designer-brisbane" className={navLinkClass}>
-            New About
+            About us
           </NavLink>
           <NavLink to="/pricing" className={navLinkClass}>
             Pricing
@@ -92,8 +89,8 @@ function Nav() {
           <NavLink to="/projects" onClick={() => setIsOpen(false)}>
             Projects
           </NavLink>
-          <NavLink to="/about" onClick={() => setIsOpen(false)}>
-            About
+          <NavLink to="/web-designer-brisbane" onClick={() => setIsOpen(false)}>
+            About us
           </NavLink>
           <NavLink to="/pricing" onClick={() => setIsOpen(false)}>
             Pricing

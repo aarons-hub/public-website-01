@@ -83,9 +83,9 @@ function Footer() {
               <span className="footer-link-prefix"></span>
               Projects
             </NavLink>
-            <NavLink to="/about" className={utilityLinkClass}>
+            <NavLink to="/web-designer-brisbane" className={utilityLinkClass}>
               <span className="footer-link-prefix"></span>
-              About
+              About us
             </NavLink>
             <NavLink to="/contact" className={utilityLinkClass}>
               <span className="footer-link-prefix"></span>

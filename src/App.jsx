@@ -334,11 +334,10 @@ function App() {
               One team. <br />
               Every solution.
             </h1>
-            <h4 className="mb60 fw400">
-              From your first website to ongoing support, we handle everything —
-              so&nbsp;you never have to juggle multiple agencies or wonder who
-              to call.
-            </h4>
+            <h2 className="mb60 fw400">
+              Brisbane web designer helping small businesses build fast, modern
+              websites that convert visitors into customers.
+            </h2>
           </div>
         </div>
       </section>

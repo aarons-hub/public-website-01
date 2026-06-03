@@ -258,6 +258,16 @@ button {
 .pb40 {
   padding-bottom: 40px;
 }
+.pb50 {
+  padding-bottom: 50px;
+}
+.pb60 {
+  padding-bottom: 60px;
+}
+
+.white {
+  color: var(--base-white);
+}
 
 .fw400 {
   font-weight: 400;
@@ -970,6 +980,10 @@ button {
         letter-spacing: 0.3px;
         width: fit-content;
       }
+      h2 {
+        font-size: var(--step-2);
+        letter-spacing: -0.5px;
+      }
     }
 
     .featured-swiper {
@@ -1483,7 +1497,6 @@ section {
 .row {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: row;
   gap: 20px;
 }
@@ -1649,6 +1662,8 @@ section {
     }
     .formwrapper {
       padding: 0px;
+      background-color: transparent;
+      border: transparent;
       .formgroup {
         padding: 20px;
         .contact-btn {
@@ -1786,6 +1801,17 @@ section {
     }
     .stage {
       margin-top: 0px;
+    }
+  }
+}
+
+.web-designer-brisbane-page {
+  section.web-designer-brisbane {
+    flex-wrap: wrap;
+  }
+  section.approach {
+    .row {
+      gap: 80px;
     }
   }
 }
