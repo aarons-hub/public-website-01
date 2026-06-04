@@ -109,7 +109,7 @@ function Nav() {
           <NavLink to="/projects" onClick={() => setIsOpen(false)}>
             Projects
           </NavLink>
-          <NavLink to="/about" onClick={() => setIsOpen(false)}>
+          <NavLink to="/web-designer-brisbane" onClick={() => setIsOpen(false)}>
             About
           </NavLink>
           <NavLink to="/pricing" onClick={() => setIsOpen(false)}>
