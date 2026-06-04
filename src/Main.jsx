@@ -14,8 +14,6 @@ import Pricing from "./Pricing.jsx";
 import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
 
-import PerspectiveTest from "./PerspectiveTest.jsx";
-
 const appBase = import.meta.env.BASE_URL;
 
 export function RootPageClassName() {
@@ -43,9 +41,9 @@ function CoverBgHeightSync() {
     const selectorByPath = {
       "/": ".home-page section",
       "/projects": "section.projects-hero",
-      "/services": "section.services",
-      "/logo-design": "section.logo-design",
-      "/photography": "section.photography",
+      "/services/web-services": "section.web-design",
+      "/services/logo-design": "section.logo-design",
+      "/services/photography": "section.photography",
       "/about": "section.about",
       "/contact": "section.contact",
       "/privacy": ".privacy-page section.privacy",
@@ -78,11 +76,7 @@ function CoverBgHeightSync() {
 
       if (totalHeight <= 0) return;
 
-      coverBgEl.style.setProperty(
-        "max-height",
-        `${totalHeight}px`,
-        "important",
-      );
+      coverBgEl.style.setProperty("max-height", `${totalHeight}px`);
     };
 
     const syncOnNextFrame = () => {
@@ -137,9 +131,9 @@ appRoot.render(
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/logo-design" element={<LogoDesign />} />
-            <Route path="/photography" element={<Photography />} />
+            <Route path="/services/web-services" element={<Services />} />
+            <Route path="/services/logo-design" element={<LogoDesign />} />
+            <Route path="/services/photography" element={<Photography />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />

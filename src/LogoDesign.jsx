@@ -7,8 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
+
+import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
 
 const appBase = import.meta.env.BASE_URL;
 
@@ -131,6 +131,11 @@ function LogoDesign() {
   const swiperInstanceRef = useRef(null);
   const heroWrapperRef = useRef(null);
   const swiperWrapperOuterRef = useRef(null);
+  const servicesListRef = useMagneticEffectForChildren(
+    ".service-btn",
+    20,
+    false,
+  );
 
   const logoDesignItems = useMemo(() => {
     return groups.flatMap((group) => {
@@ -321,14 +326,14 @@ function LogoDesign() {
           We take the time to understand your business, your values, and your
           audience — then craft something that feels unmistakably you.
         </p>
-        <div className="services-list">
-          <Link to="/services" className="service-btn">
+        <div ref={servicesListRef} className="services-list">
+          <Link to="/services/web-services" className="service-btn">
             Web services
           </Link>
-          <Link to="/logo-design" className="service-btn active">
+          <Link to="/services/logo-design" className="service-btn active">
             Logo design
           </Link>
-          <Link to="/photography" className="service-btn">
+          <Link to="/services/photography" className="service-btn">
             Photography
           </Link>
         </div>

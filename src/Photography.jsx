@@ -7,8 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
+
+import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
 
 const appBase = import.meta.env.BASE_URL;
 
@@ -131,6 +131,11 @@ function Photography() {
   const swiperInstanceRef = useRef(null);
   const heroWrapperRef = useRef(null);
   const swiperWrapperOuterRef = useRef(null);
+  const servicesListRef = useMagneticEffectForChildren(
+    ".service-btn",
+    20,
+    false,
+  );
 
   const photographyItems = useMemo(() => {
     return groups.flatMap((group) => {
@@ -322,14 +327,14 @@ function Photography() {
           to stop the scroll, build trust, and give your customers every reason
           to say yes.
         </p>
-        <div className="services-list">
-          <Link to="/services" className="service-btn">
+        <div ref={servicesListRef} className="services-list">
+          <Link to="/services/web-services" className="service-btn">
             Web services
           </Link>
-          <Link to="/logo-design" className="service-btn">
+          <Link to="/services/logo-design" className="service-btn">
             Logo design
           </Link>
-          <Link to="/photography" className="service-btn active">
+          <Link to="/services/photography" className="service-btn active">
             Photography
           </Link>
         </div>

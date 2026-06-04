@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,9 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
+
 import "./Style.scss";
+
+import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
 
 const GA_MEASUREMENT_ID = "G-56ZJCW1W79";
 
@@ -20,8 +21,10 @@ const isDev = import.meta.env.DEV;
 const PAUSE_SWIPER_AUTOPLAY_IN_DEV = false;
 
 function App() {
+  const ctaRef = useMagneticEffectForChildren(".btn", 20, false);
+  const submitBtnRef = useMagneticEffectForChildren(".contact-btn", 20, false);
   const location = useLocation();
-  const form = useRef();
+  const formRef = useRef();
   const [done, setDone] = useState(false);
   const scrollContactFormRef = useRef();
 
@@ -47,7 +50,7 @@ function App() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_g21pr8h", "template_4m4a8ys", form.current, {
+      .sendForm("service_g21pr8h", "template_4m4a8ys", formRef.current, {
         publicKey: "WEnSV56Aows6oYiBB",
       })
       .then(
@@ -55,7 +58,7 @@ function App() {
           console.log("SUCCESS!");
           setDone(true);
           toast.success("Message sent successfully!");
-          form.current.reset();
+          formRef.current.reset();
 
           setTimeout(() => setDone(false), 5000);
         },
@@ -275,14 +278,14 @@ function App() {
         </div>
         <div ref={subheading} className="subheading">
           <h2>
-            We take care of your website,{" "}
+            We take care of your website,
             <span className="opacity75">
-              so you can take&nbsp;care of your business
+              &nbsp;so you can take&nbsp;care of your business
             </span>
             .
           </h2>
         </div>
-        <div className="cta">
+        <div ref={ctaRef} className="cta">
           <div ref={ctaWrapper} className="cta-wrapper">
             <Link to="/projects" className="btn hero-btn projects-btn">
               View projects
@@ -507,8 +510,8 @@ function App() {
           today.
         </h1>
         <div ref={contactForm} className="formwrapper">
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="formgroup">
+          <form ref={formRef} onSubmit={sendEmail}>
+            <div ref={submitBtnRef} className="formgroup">
               <label htmlFor="inputName" className="form-label">
                 Name <span className="req-symbol">*</span>
               </label>

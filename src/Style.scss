@@ -1,31 +1,4 @@
 :root {
-  --muted-mauve-grey: #6b6375;
-  --near-black: #1a1a1a;
-  --bg: #f5f5f5;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --lime-green: #d6fd70;
-  --purple: #aa3bff;
-  --purple-bg: rgba(170, 59, 255, 0.1);
-  --purple-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --nav-width: 160px;
-  --btn-padding: 14px 23px;
-  --yellow-green: #9acd32;
-  --base-white: #fff;
-  --grey-200: #ececec;
-  --grey-300: #c7c7c7;
-  --grey-400: #585858;
-  --grey-500: #474747;
-  --grey-600: #363636;
-  --grey-700: #2f2f2f;
-  --grey-800: #1a1a1a;
-  --btn-hover: #08060d;
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-  --sitefont: "Poppins", "Segoe UI", Roboto, sans-serif;
-  --sitewidth: 1280px;
-
   --step--2: clamp(0.56rem, 0.6076rem + -0.0595vw, 0.6076rem);
   --step--1: clamp(0.7rem, 0.7292rem + -0.0365vw, 0.7292rem);
   --step-0: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
@@ -39,89 +12,54 @@
   --step-8: clamp(3.7623rem, 3.7623rem + 1.8163vw, 5.2154rem);
   --step-9: clamp(4.5148rem, 4.5148rem + 2.5056vw, 6.5193rem);
 
+  --sitewidth: 1200px;
+  --btn-padding: 14px 23px;
+  --sitefont: "Poppins", "Segoe UI", Roboto, sans-serif;
+
   --azure-blue: #208dd2;
+  --bright-azure-blue: #1788d2;
+  --cornflower-blue: #6495ed;
   --warm-peach: #ffae91;
   --blue-grey: #769ca9;
   --pale-orange: #ffa656;
   --golden-yellow: #dec63e;
   --hot-pink: #ff88c8;
+  --deep-pink: #ff1493;
+  --sea-green: #2e8b57;
+  --green: #008000;
+  --dark-cyan-green: #008b8b;
+  --cadet-blue: #5f9ea0;
+  --steel-blue: #4682b4;
+  --muted-mauve-grey: #6b6375;
+  --near-black: #1a1a1a;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --purple: #aa3bff;
+  --purple-bg: rgba(170, 59, 255, 0.1);
+  --purple-border: rgba(170, 59, 255, 0.5);
+  --lime-green: #c8f461;
+  --yellow-green: #9acd32;
+  --medium-sea-green: #3cb371;
+  --teal-green: #008080;
+  --dark-teal: #116f76;
+  --dark-slate-grey: #2f4f4f;
+  --base-white: #ffffff;
+  --grey-100: #f5f5f5;
+  --grey-200: #ececec;
+  --grey-300: #c7c7c7;
+  --grey-400: #585858;
+  --grey-500: #474747;
+  --grey-600: #363636;
+  --grey-700: #2f2f2f;
+  --grey-800: #1a1a1a;
+  --btn-hover: #08060d;
+  --hero-bk: rgba(0, 0, 0, 0.7);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 }
 
-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#root {
-  position: relative;
-  margin: 20px;
-  padding: 20px;
-  .cover-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 880px;
-    z-index: -1;
-    border-radius: 20px;
-  }
-  .app-main {
-    width: 100%;
-    max-width: var(--sitewidth);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-}
-
-.home-page {
-  .cover-bg {
-    background-color: var(--azure-blue);
-    background-image: url("/cover.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-}
-.services-page {
-  .cover-bg {
-    background-color: var(--warm-peach);
-  }
-}
-.logo-design-page {
-  .cover-bg {
-    background-color: var(--warm-peach);
-  }
-}
-.photography-page {
-  .cover-bg {
-    background-color: var(--warm-peach);
-  }
-}
-.projects-page {
-  .cover-bg {
-    background-color: var(--blue-grey);
-  }
-}
-.about-page {
-  .cover-bg {
-    background-color: var(--golden-yellow);
-  }
-}
-.pricing-page {
-  .cover-bg {
-    background-color: var(--blue-grey);
-  }
-}
-.contact-page {
-  .cover-bg {
-    background-color: var(--azure-blue);
-  }
-}
-.web-designer-brisbane-page {
-  .cover-bg {
-    background-color: var(--azure-blue);
-  }
+.site-footer .footer-icon {
+  display: none;
 }
 
 html {
@@ -134,8 +72,91 @@ body {
   font-size: var(--step-0);
   margin: 0;
   padding: 0;
-  background: var(--bg);
-  line-height: 1.5;
+  background: var(--grey-100);
+  #root {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    .cover-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 20px;
+    }
+    .app-main {
+      width: 100%;
+      max-width: var(--sitewidth);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+.home-page {
+  .cover-bg {
+    background-color: var(--azure-blue);
+    background-image: url("/cover.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+.services-web-services-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.services-logo-design-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.services-photography-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.projects-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.about-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.pricing-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.contact-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.web-designer-brisbane-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
+}
+.privacy-page {
+  .cover-bg {
+    background-color: var(--grey-400);
+    background-image: url("/noise.png");
+  }
 }
 
 h1 {
@@ -203,6 +224,12 @@ button {
 }
 .mt60 {
   margin-top: 60px;
+}
+.mt70 {
+  margin-top: 70px;
+}
+.mt80 {
+  margin-top: 80px;
 }
 
 .mb0 {
@@ -302,8 +329,7 @@ button {
 .hero-outer {
   border-radius: 38px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--hero-bk);
   border-bottom: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -381,8 +407,7 @@ button {
   margin-top: 0px;
   margin-bottom: 30px;
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--hero-bk);
   border-top: transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -690,7 +715,7 @@ button {
         padding: 20px;
         border-radius: 30px;
         border: 1px solid var(--border);
-        background: var(--bg);
+        background: var(--grey-100);
         font-size: var(--step--1);
         transition:
           border-color 0.2s ease,
@@ -775,6 +800,10 @@ button {
     padding: var(--btn-padding);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    .horizontal-nav-link:nth-child(1) {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    }
     .horizontal-nav-link {
       display: flex;
       text-decoration: none;
@@ -835,6 +864,7 @@ button {
         }
       }
       .subheading {
+        margin-right: 10%;
         h2 {
           color: var(--base-white);
           line-height: 1.2;
@@ -1039,7 +1069,7 @@ button {
           z-index: 2;
           background-image: linear-gradient(
             90deg,
-            var(--bg) 0%,
+            var(--grey-100) 0%,
             transparent 100%
           );
           position: absolute;
@@ -1055,7 +1085,7 @@ button {
             right: 0%;
             background-image: linear-gradient(
               270deg,
-              var(--bg) 0%,
+              var(--grey-100) 0%,
               transparent 100%
             );
           }
@@ -1132,7 +1162,7 @@ section {
   .partners-inner {
     padding: 20px;
     border-radius: 20px;
-    background-color: var(--blue-grey);
+    background-color: var(--grey-400);
     width: 100%;
     .row {
       justify-content: center;
@@ -1362,14 +1392,13 @@ section {
 }
 
 .site-footer {
+  background-color: var(--grey-700);
   min-height: 500px;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 60px;
   border-radius: 20px;
   margin-left: -20px;
   margin-right: -20px;
-  color: var(--muted-mauve-grey);
-  background-color: var(--grey-800);
   position: relative;
   overflow: hidden;
   .footer-icon {
@@ -1639,6 +1668,9 @@ section {
     .hero-wrapper {
       flex-direction: column;
     }
+    section.hero-container .subheading {
+      margin-right: inherit !important;
+    }
 
     .swiper {
       .container {
@@ -1808,6 +1840,12 @@ section {
 .web-designer-brisbane-page {
   section.web-designer-brisbane {
     flex-wrap: wrap;
+    .sub-heading {
+      color: var(--lime-green);
+    }
+    p {
+      color: var(--base-white);
+    }
   }
   section.approach {
     .row {

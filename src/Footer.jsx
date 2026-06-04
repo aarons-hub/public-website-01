@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import "./Style.scss";
+import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
 
 function Footer() {
   const utilityLinkClass = ({ isActive }) =>
@@ -14,6 +14,12 @@ function Footer() {
 
   const scrollBtnRef = useRef();
   const scrollFooterRef = useRef();
+
+  const footerLinksRef = useMagneticEffectForChildren(
+    ".site-footer-link",
+    20,
+    false,
+  );
 
   useEffect(() => {
     if (!scrollFooterRef.current || !scrollBtnRef.current) return undefined;
@@ -66,7 +72,11 @@ function Footer() {
           alt="Decorative footer logo"
         />
         <div className="site-footer-inner">
-          <div className="site-footer-links" aria-label="Footer links">
+          <div
+            ref={footerLinksRef}
+            className="site-footer-links"
+            aria-label="Footer links"
+          >
             <NavLink to="/services" className={utilityLinkClass}>
               <span className="footer-link-prefix"></span>
               Web services

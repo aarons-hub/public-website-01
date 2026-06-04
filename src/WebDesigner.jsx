@@ -13,7 +13,7 @@ function WebDesigner() {
               Brisbane web designer focused on small business success
             </h2>
           </div>
-          <div className="col mb60">
+          <div className="col mt40 mb60">
             <p>
               At Aaronline Design, we help businesses across Brisbane, Australia
               establish a strong online presence with modern, user-friendly
@@ -153,12 +153,27 @@ function WebDesigner() {
           </div>
         </div>
       </section>
-      <section className="helping-businesses mt60">
+      <section className="helping-businesses mt60 mb60">
         <div className="row">
           <div className="col">
-            <h2>Helping Brisbane businesses grow online</h2>
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" rx="8" fill="#D6FD70" />
+              <path
+                d="M35 20C35 21.1 34.1 22 33 22C32.82 22 32.65 21.98 32.49 21.93L28.93 25.48C28.98 25.64 29 25.82 29 26C29 27.1 28.1 28 27 28C25.9 28 25 27.1 25 26C25 25.82 25.02 25.64 25.07 25.48L22.52 22.93C22.36 22.98 22.18 23 22 23C21.82 23 21.64 22.98 21.48 22.93L16.93 27.49C16.98 27.65 17 27.82 17 28C17 29.1 16.1 30 15 30C13.9 30 13 29.1 13 28C13 26.9 13.9 26 15 26C15.18 26 15.35 26.02 15.51 26.07L20.07 21.52C20.02 21.36 20 21.18 20 21C20 19.9 20.9 19 22 19C23.1 19 24 19.9 24 21C24 21.18 23.98 21.36 23.93 21.52L26.48 24.07C26.64 24.02 26.82 24 27 24C27.18 24 27.36 24.02 27.52 24.07L31.07 20.51C31.02 20.35 31 20.18 31 20C31 18.9 31.9 18 33 18C34.1 18 35 18.9 35 20Z"
+                fill="#1A1A1A"
+              />
+            </svg>
+            <h2 className="sub-heading">
+              Helping Brisbane businesses grow online
+            </h2>
           </div>
-          <div className="col">
+          <div className="col mt80">
             <p>
               Aaronline Design is committed to helping businesses across
               Brisbane, Australia succeed online through professional web design
