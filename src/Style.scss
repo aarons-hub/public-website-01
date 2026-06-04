@@ -1138,12 +1138,22 @@ section {
     &.left {
       flex: 1;
       > .med-heading {
-        color: var(--base-white);
+        color: var(--lime-green);
       }
       > h2 {
         line-height: 1.1;
+        color: var(--base-white);
+      }
+      h3 {
+        color: var(--base-white);
+      }
+      h4 {
+        color: var(--base-white);
       }
       > .lg-heading {
+        color: var(--base-white);
+      }
+      > p {
         color: var(--base-white);
       }
     }
@@ -1625,6 +1635,23 @@ section {
   z-index: 9999;
 }
 
+.web-designer-brisbane-page {
+  section.web-designer-brisbane {
+    flex-wrap: wrap;
+    .sub-heading {
+      color: var(--lime-green);
+    }
+    p {
+      color: var(--base-white);
+    }
+  }
+  section.approach {
+    .row {
+      gap: 80px;
+    }
+  }
+}
+
 @media (max-width: 1170px) {
   .horizontal-nav {
     display: none;
@@ -1833,23 +1860,6 @@ section {
     }
     .stage {
       margin-top: 0px;
-    }
-  }
-}
-
-.web-designer-brisbane-page {
-  section.web-designer-brisbane {
-    flex-wrap: wrap;
-    .sub-heading {
-      color: var(--lime-green);
-    }
-    p {
-      color: var(--base-white);
-    }
-  }
-  section.approach {
-    .row {
-      gap: 80px;
     }
   }
 }
