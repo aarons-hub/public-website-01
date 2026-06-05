@@ -7,18 +7,18 @@ function WebDesigner() {
         <div className="row">
           <h1 className="med-heading mt20 white">About Aaronline Design</h1>
         </div>
-        <div className="row">
-          <div className="col">
+        <div className="row about-intro">
+          <div className="col left">
             <h2 className="sub-heading">
-              Brisbane web designer focused on small business success
+              Brisbane web designer focused on small business success.
             </h2>
-          </div>
-          <div className="col mt40 mb60">
-            <p>
+            <h4>
               At Aaronline Design, we help businesses across Brisbane, Australia
               establish a strong online presence with modern, user-friendly
               websites.
-            </p>
+            </h4>
+          </div>
+          <div className="col right">
             <p>
               We believe every business deserves a website that looks
               professional, performs well on every device, and helps turn
@@ -50,8 +50,8 @@ function WebDesigner() {
                 fill="#1A1A1A"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M24.9167 14.8783C29.2474 15.3083 32.6906 18.7526 33.1206 23.0833H35V24.9167H33.1206C32.6906 29.2473 29.2473 32.6906 24.9167 33.1206V35H23.0833V33.1206C18.7527 32.6906 15.3094 29.2473 14.8794 24.9167H13V23.0833H14.8794C15.3094 18.7526 18.7526 15.3083 23.0833 14.8783V13H24.9167V14.8783ZM24.9167 18.5H23.0833V16.725C19.7664 17.1387 17.1398 19.7664 16.726 23.0833H18.5V24.9167H16.726C17.1398 28.2336 19.7664 30.8602 23.0833 31.274V29.5H24.9167V31.274C28.2336 30.8602 30.8602 28.2336 31.274 24.9167H29.5V23.0833H31.274C30.8602 19.7664 28.2336 17.1387 24.9167 16.725V18.5Z"
                 fill="#1A1A1A"
               />
@@ -153,27 +153,30 @@ function WebDesigner() {
           </div>
         </div>
       </section>
-      <section className="helping-businesses mt60 mb60">
+      <section className="helping-businesses">
         <div className="row">
-          <div className="col">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="48" height="48" rx="8" fill="#D6FD70" />
-              <path
-                d="M35 20C35 21.1 34.1 22 33 22C32.82 22 32.65 21.98 32.49 21.93L28.93 25.48C28.98 25.64 29 25.82 29 26C29 27.1 28.1 28 27 28C25.9 28 25 27.1 25 26C25 25.82 25.02 25.64 25.07 25.48L22.52 22.93C22.36 22.98 22.18 23 22 23C21.82 23 21.64 22.98 21.48 22.93L16.93 27.49C16.98 27.65 17 27.82 17 28C17 29.1 16.1 30 15 30C13.9 30 13 29.1 13 28C13 26.9 13.9 26 15 26C15.18 26 15.35 26.02 15.51 26.07L20.07 21.52C20.02 21.36 20 21.18 20 21C20 19.9 20.9 19 22 19C23.1 19 24 19.9 24 21C24 21.18 23.98 21.36 23.93 21.52L26.48 24.07C26.64 24.02 26.82 24 27 24C27.18 24 27.36 24.02 27.52 24.07L31.07 20.51C31.02 20.35 31 20.18 31 20C31 18.9 31.9 18 33 18C34.1 18 35 18.9 35 20Z"
-                fill="#1A1A1A"
-              />
-            </svg>
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="48" height="48" rx="8" fill="#D6FD70" />
+            <path
+              d="M35 20C35 21.1 34.1 22 33 22C32.82 22 32.65 21.98 32.49 21.93L28.93 25.48C28.98 25.64 29 25.82 29 26C29 27.1 28.1 28 27 28C25.9 28 25 27.1 25 26C25 25.82 25.02 25.64 25.07 25.48L22.52 22.93C22.36 22.98 22.18 23 22 23C21.82 23 21.64 22.98 21.48 22.93L16.93 27.49C16.98 27.65 17 27.82 17 28C17 29.1 16.1 30 15 30C13.9 30 13 29.1 13 28C13 26.9 13.9 26 15 26C15.18 26 15.35 26.02 15.51 26.07L20.07 21.52C20.02 21.36 20 21.18 20 21C20 19.9 20.9 19 22 19C23.1 19 24 19.9 24 21C24 21.18 23.98 21.36 23.93 21.52L26.48 24.07C26.64 24.02 26.82 24 27 24C27.18 24 27.36 24.02 27.52 24.07L31.07 20.51C31.02 20.35 31 20.18 31 20C31 18.9 31.9 18 33 18C34.1 18 35 18.9 35 20Z"
+              fill="#1A1A1A"
+            />
+          </svg>
+        </div>
+
+        <div className="row">
+          <div className="col left">
             <h2 className="sub-heading">
               Helping Brisbane businesses grow online
             </h2>
           </div>
-          <div className="col mt80">
+          <div className="col right">
             <p>
               Aaronline Design is committed to helping businesses across
               Brisbane, Australia succeed online through professional web design

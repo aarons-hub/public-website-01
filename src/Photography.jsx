@@ -203,7 +203,7 @@ function Photography() {
       spaceBetween: 12,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 20,
-      speed: 3000,
+      speed: 600,
       loop: false,
       autoplay: {
         enabled: false,
@@ -211,7 +211,7 @@ function Photography() {
         disableOnInteraction: false,
       },
       navigation: {
-        enabled: false,
+        enabled: true,
         nextEl: swiperNextRef.current,
         prevEl: swiperPrevRef.current,
       },
@@ -225,7 +225,7 @@ function Photography() {
         1024: {
           slidesPerView: 4.5,
           spaceBetween: 20,
-          slidesOffsetBefore: 20,
+          slidesOffsetBefore: 0,
           slidesOffsetAfter: 20,
         },
       },
@@ -409,8 +409,10 @@ function Photography() {
                 </div>
               ))}
             </div>
-            <div className="swiper-button-prev" ref={swiperPrevRef}></div>
-            <div className="swiper-button-next" ref={swiperNextRef}></div>
+            <div className="swiper-btns">
+              <div className="swiper-button-prev" ref={swiperPrevRef}></div>
+              <div className="swiper-button-next" ref={swiperNextRef}></div>
+            </div>
           </div>
         </div>
       </div>

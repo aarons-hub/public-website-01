@@ -12,7 +12,7 @@
           "title": "Lime Recruiting",
           "category": "Branding",
           "description": "",
-          "tags": ["Landing page design"],
+          "tags": ["Landing page"],
           "url": "",
           "base-img": "/images/lime-web-004.png",
           "mask-img": "",
@@ -480,7 +480,7 @@
               "left": "23%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(52deg)"
+              "transform": "rotate(51deg)"
             },
             "imageTransform": {
               "width": "35%",
@@ -1104,7 +1104,7 @@
               "left": "23%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(52deg)"
+              "transform": "rotate(51deg)"
             },
             "imageTransform": {
               "width": "35%",
@@ -1673,7 +1673,7 @@
               "left": "23%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(52deg)"
+              "transform": "rotate(51deg)"
             },
             "imageTransform": {
               "width": "35%",

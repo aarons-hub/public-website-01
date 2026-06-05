@@ -199,7 +199,7 @@ function Services() {
       spaceBetween: 12,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 20,
-      speed: 3000,
+      speed: 600,
       loop: false,
       autoplay: {
         enabled: false,
@@ -207,7 +207,7 @@ function Services() {
         disableOnInteraction: false,
       },
       navigation: {
-        enabled: false,
+        enabled: true,
         nextEl: swiperNextRef.current,
         prevEl: swiperPrevRef.current,
       },
@@ -221,7 +221,7 @@ function Services() {
         1024: {
           slidesPerView: 4.5,
           spaceBetween: 20,
-          slidesOffsetBefore: 20,
+          slidesOffsetBefore: 0,
           slidesOffsetAfter: 20,
         },
       },
@@ -318,11 +318,16 @@ function Services() {
         <div className="col left">
           <h1 className="med-heading mt20">Services</h1>
           <h2>Web services</h2>
-          <p>Launching your website is just the beginning.</p>
           <p>
-            We're here for the long haul, taking care of everything behind the
-            scenes so you can focus on running your business.
+            We build and manage WordPress websites that are fast, secure, and
+            easy to update.
           </p>
+          <p>
+            Whether you need a simple refresh or ongoing care, we keep your site
+            running smoothly — so you never have to worry about the technical
+            side.
+          </p>
+
           <div ref={servicesListRef} className="services-list">
             <Link to="/services/web-services" className="service-btn active">
               Web services
@@ -408,8 +413,10 @@ function Services() {
                   </div>
                 ))}
               </div>
-              <div className="swiper-button-prev" ref={swiperPrevRef}></div>
-              <div className="swiper-button-next" ref={swiperNextRef}></div>
+              <div className="swiper-btns">
+                <div className="swiper-button-prev" ref={swiperPrevRef}></div>
+                <div className="swiper-button-next" ref={swiperNextRef}></div>
+              </div>
             </div>
           </div>
         </div>

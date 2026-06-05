@@ -350,7 +350,7 @@ function App() {
           <div className="swiper home-swiper" ref={swiperRootRef}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container one">
                   <div className="content">
                     <img
                       src={`${appBase}images/lime-web-002.png`}
@@ -367,7 +367,7 @@ function App() {
                 </div>
               </div>
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container two">
                   <div className="content">
                     <img
                       src={`${appBase}images/web-reporting.jpg`}
@@ -385,7 +385,7 @@ function App() {
               </div>
 
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container three">
                   <div className="content">
                     <img
                       src={`${appBase}images/wordpress.jpg`}
@@ -403,7 +403,7 @@ function App() {
                 </div>
               </div>
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container four">
                   <div className="content">
                     <img
                       src={`${appBase}images/updates-tile.jpg`}
@@ -420,7 +420,7 @@ function App() {
                 </div>
               </div>
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container six">
                   <div className="content">
                     <img
                       src={`${appBase}images/responsive.jpg`}
@@ -437,7 +437,7 @@ function App() {
                 </div>
               </div>
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container seven">
                   <div className="content">
                     <img
                       src={`${appBase}images/on-brand.jpg`}
@@ -453,7 +453,7 @@ function App() {
                 </div>
               </div>
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container eight">
                   <div className="content">
                     <video
                       className="video"
@@ -476,7 +476,7 @@ function App() {
                 </div>
               </div>
               <div className="swiper-slide">
-                <div className="container">
+                <div className="container nine">
                   <div className="content">
                     <img
                       src={`${appBase}images/web-maintenance.jpg`}

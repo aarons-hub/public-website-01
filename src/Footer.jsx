@@ -108,7 +108,20 @@ function Footer() {
           </div>
 
           <div className="site-footer-brand-wrap">
-            <img src="./ad-logo-03.svg" alt="Aaronline Design Logo" />
+            <NavLink to="/" end>
+              <svg className="logo" viewBox="0 0 70 39">
+                <path
+                  d="M50.25 27.75C54 27.75 58.5 24.75 58.5 19.5C58.5 14.25 54 11.25 50.25 11.25H45.375H39.375L36 6H50.25C57.7058 6 63.75 12.0442 63.75 19.5C63.75 26.9558 57.7058 33 50.25 33H39L42.75 39H50.25C61.0196 39 69.75 30.2696 69.75 19.5C69.75 8.73045 61.0196 0 50.25 0H25.5L36 17.25H46.875H50.25C51.4926 17.25 52.5 18.2574 52.5 19.5C52.5 20.7426 51.4926 21.75 50.25 21.75H32.625L29.25 27.75H50.25Z"
+                  fill="white"
+                />
+                <path d="M25.5 0L33.75 0L8.25 39H0L25.5 0Z" fill="white" />
+                <path
+                  d="M43.7656 39H36.2812L29.25 27.75L22.2188 39H14.7344L29.25 16.5L43.7656 39Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="sr-only">Aaronline Design</span>
+            </NavLink>
           </div>
         </div>
       </footer>
