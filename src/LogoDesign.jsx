@@ -393,6 +393,7 @@ function LogoDesign() {
                       className="base-img-001"
                       src={withBase(item["base-img"])}
                       alt={`id-${item.id}-thumb`}
+                      loading="lazy"
                     />
                     <TransformLayer layer={item["image-one"]} />
                     <TransformLayer layer={item["image-two"]} />
@@ -402,6 +403,7 @@ function LogoDesign() {
                         src={withBase(item["mask-img"])}
                         alt={`id-${item.id}-mask`}
                         className="mix"
+                        loading="lazy"
                       />
                     )}
                   </div>

@@ -412,6 +412,7 @@ function Projects() {
                             src={withBase(thumbnail)}
                             alt={group.name}
                             className="tile-thumb"
+                            loading="lazy"
                           />
                         )}
                       </button>
@@ -512,6 +513,7 @@ function Projects() {
                         className="base-img-001"
                         src={withBase(item["base-img"])}
                         alt={item.id}
+                        loading="lazy"
                       />
                       <TransformLayer layer={item["image-one"]} />
                       <TransformLayer layer={item["image-two"]} />
@@ -531,6 +533,7 @@ function Projects() {
                           src={withBase(item["mask-img"])}
                           alt={`${item.id} mask`}
                           className="mix"
+                          loading="lazy"
                         />
                       )}
                     </div>
@@ -598,6 +601,7 @@ function Projects() {
                           src={withBase(thumbnail)}
                           alt={group.name}
                           className="tile-thumb"
+                          loading="lazy"
                         />
                       )}
                     </button>
