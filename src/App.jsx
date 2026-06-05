@@ -304,24 +304,28 @@ function App() {
             ref={img01}
             className="stage-img-01"
             src={`${appBase}homepage-images/iphone-001.png`}
+            loading="lazy"
             alt="Decorative image"
           />
           <img
             ref={img02}
             className="stage-img-02"
             src={`${appBase}homepage-images/iphone-panel-001.png`}
+            loading="lazy"
             alt="Decorative image"
           />
           <img
             ref={img03}
             className="stage-img-03"
             src={`${appBase}homepage-images/iphone-panel-002.png`}
+            loading="lazy"
             alt="Decorative image"
           />
           <img
             ref={img04}
             className="stage-img-04"
             src={`${appBase}homepage-images/iphone-panel-003.png`}
+            loading="lazy"
             alt="Decorative image"
           />
         </div>
@@ -354,6 +358,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/lime-web-002.png`}
+                      loading="lazy"
                       alt="Swiper slide 1"
                     />
                   </div>
@@ -371,6 +376,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/web-reporting.jpg`}
+                      loading="lazy"
                       alt="Swiper slide 2"
                     />
                   </div>
@@ -389,6 +395,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/wordpress.jpg`}
+                      loading="lazy"
                       alt="Swiper slide 4"
                     />
                   </div>
@@ -407,6 +414,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/updates-tile.jpg`}
+                      loading="lazy"
                       alt="Swiper slide 5"
                     />
                   </div>
@@ -424,6 +432,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/responsive.jpg`}
+                      loading="lazy"
                       alt="Swiper slide 6"
                     />
                   </div>
@@ -441,6 +450,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/on-brand.jpg`}
+                      loading="lazy"
                       alt="Swiper slide 7"
                     />
                   </div>
@@ -480,6 +490,7 @@ function App() {
                   <div className="content">
                     <img
                       src={`${appBase}images/web-maintenance.jpg`}
+                      loading="lazy"
                       alt="Swiper slide 3"
                     />
                   </div>
