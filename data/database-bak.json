@@ -12,7 +12,7 @@
           "title": "Lime Recruiting",
           "category": "Branding",
           "description": "",
-          "tags": ["Landing page design"],
+          "tags": ["Landing page"],
           "url": "",
           "base-img": "/images/lime-web-004.png",
           "mask-img": "",
@@ -58,7 +58,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
-          "featuredWebItem": "",
+          "featuredWebItem": true,
           "title": "Lime Recruiting",
           "category": "Website",
           "tags": [
@@ -480,7 +480,7 @@
               "left": "23%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(52deg)"
+              "transform": "rotate(51deg)"
             },
             "imageTransform": {
               "width": "35%",
@@ -572,6 +572,7 @@
         {
           "id": 8,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Hydromet",
           "category": "Website",
           "description": "",
@@ -789,7 +790,7 @@
         {
           "id": 3,
           "featuredLogoItem": "",
-          "featuredWebItem": "",
+          "featuredWebItem": true,
           "title": "Hydromet",
           "category": "Website",
           "tags": ["Analytics report", "Google Data Studio"],
@@ -1104,7 +1105,7 @@
               "left": "23%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(52deg)"
+              "transform": "rotate(51deg)"
             },
             "imageTransform": {
               "width": "35%",
@@ -1673,7 +1674,7 @@
               "left": "23%",
               "width": "100%",
               "height": "100%",
-              "transform": "rotate(52deg)"
+              "transform": "rotate(51deg)"
             },
             "imageTransform": {
               "width": "35%",
@@ -2251,6 +2252,7 @@
         {
           "id": 2,
           "featuredLogoItem": "",
+          "featuredWebItem": "true",
           "title": "Kate Langford",
           "category": "Website",
           "tags": [
@@ -3669,7 +3671,7 @@
               "transform": "rotateX(0deg) rotateY(0deg)"
             }
           },
-          "description": "Photography project showcasing various lighting techniques and compositions.",
+          "description": "Photography showcasing various lighting techniques and compositions.",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",
@@ -3719,7 +3721,7 @@
               "transform": "rotateX(0deg) rotateY(0deg)"
             }
           },
-          "description": "Photography project showcasing various lighting techniques and compositions.",
+          "description": "Photography showcasing various lighting techniques and compositions.",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",
@@ -3819,7 +3821,7 @@
               "transform": "rotateX(0deg) rotateY(0deg)"
             }
           },
-          "description": "Photography project showcasing various lighting techniques and compositions.",
+          "description": "Photography showcasing various lighting techniques and compositions.",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",
