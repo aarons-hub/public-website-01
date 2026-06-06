@@ -1299,11 +1299,22 @@ section {
     align-items: center;
     justify-content: space-between;
     .horizontal-nav-brand.mobile {
-      img {
-        width: 100%;
-        max-width: 175px;
-        height: auto;
-        display: block;
+      a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        .logo {
+          width: 70px;
+          height: auto;
+        }
+        .sr-only {
+          color: var(--base-white);
+          font-weight: 600;
+          font-size: var(--step-1);
+          line-height: 1;
+        }
       }
     }
     .menu-toggle {
