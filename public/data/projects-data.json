@@ -58,7 +58,7 @@
         {
           "id": 1,
           "featuredLogoItem": "",
-          "featuredWebItem": "",
+          "featuredWebItem": true,
           "title": "Lime Recruiting",
           "category": "Website",
           "tags": [
@@ -557,7 +557,7 @@
               "transform": "rotateX(21deg) rotateY(-7deg)"
             }
           },
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "description": "",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",
@@ -572,6 +572,7 @@
         {
           "id": 8,
           "featuredLogoItem": "",
+          "featuredWebItem": true,
           "title": "Hydromet",
           "category": "Website",
           "description": "",
@@ -789,7 +790,7 @@
         {
           "id": 3,
           "featuredLogoItem": "",
-          "featuredWebItem": "",
+          "featuredWebItem": true,
           "title": "Hydromet",
           "category": "Website",
           "tags": ["Analytics report", "Google Data Studio"],
@@ -2251,6 +2252,7 @@
         {
           "id": 2,
           "featuredLogoItem": "",
+          "featuredWebItem": "true",
           "title": "Kate Langford",
           "category": "Website",
           "tags": [
@@ -3628,6 +3630,116 @@
       ]
     },
     {
+      "name": "Southern Gem Mangoes",
+      "thumbnail": "/images/mangoes-thumb.png",
+      "items": [
+        {
+          "id": 5,
+          "featuredLogoItem": "true",
+          "title": "Southern Gem Mangoes",
+          "category": "Logo design",
+          "tags": ["Logo design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "",
+          "image-one": {
+            "src": "/images/mangoes-card-001.png",
+            "parentWrapper": {
+              "top": "54%",
+              "left": "9.5%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "imageTransform": {
+              "width": "47%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "src": "/images/mangoes-card-002.png",
+            "parentWrapper": {
+              "top": "31.5%",
+              "left": "24%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(32.3deg)"
+            },
+            "imageTransform": {
+              "width": "45.5%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "description": "",
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "I Love Hampers",
+      "thumbnail": "/images/ilh-thumb.png",
+      "items": [
+        {
+          "id": 5,
+          "featuredLogoItem": "true",
+          "title": "I Love Hampers",
+          "category": "Logo design",
+          "tags": ["Logo design"],
+          "url": "",
+          "base-img": "/images/bcard-img-002.jpg",
+          "mask-img": "",
+          "image-one": {
+            "src": "/images/ilh-thumb.png",
+            "parentWrapper": {
+              "top": "54%",
+              "left": "9.5%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(0deg)"
+            },
+            "imageTransform": {
+              "width": "47%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "image-two": {
+            "src": "/images/ilh-thumb-002.png",
+            "parentWrapper": {
+              "top": "31.5%",
+              "left": "24%",
+              "width": "100%",
+              "height": "100%",
+              "transform": "rotate(32.3deg)"
+            },
+            "imageTransform": {
+              "width": "45.5%",
+              "transform": "rotateX(0deg) rotateY(0deg)"
+            }
+          },
+          "description": "",
+          "movieFile": {
+            "videoWrapper": {
+              "top": "7%",
+              "left": "17.7%",
+              "width": "68%",
+              "height": "55%"
+            },
+            "thumbnail": "",
+            "src": ""
+          }
+        }
+      ]
+    },
+    {
       "name": "Photography",
       "thumbnail": "/images/studio-with-photography-lighting.jpg",
       "items": [
@@ -3669,7 +3781,7 @@
               "transform": "rotateX(0deg) rotateY(0deg)"
             }
           },
-          "description": "Photography project showcasing various lighting techniques and compositions.",
+          "description": "Photography showcasing various lighting techniques and compositions.",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",
@@ -3719,7 +3831,7 @@
               "transform": "rotateX(0deg) rotateY(0deg)"
             }
           },
-          "description": "Photography project showcasing various lighting techniques and compositions.",
+          "description": "Photography showcasing various lighting techniques and compositions.",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",
@@ -3819,7 +3931,7 @@
               "transform": "rotateX(0deg) rotateY(0deg)"
             }
           },
-          "description": "Photography project showcasing various lighting techniques and compositions.",
+          "description": "Photography showcasing various lighting techniques and compositions.",
           "movieFile": {
             "videoWrapper": {
               "top": "7%",

@@ -338,6 +338,20 @@ function Photography() {
             Photography
           </Link>
         </div>
+
+        <div className="item-details mt40">
+          <h4 className="heading">{activeItem?.title}</h4>
+          <p className="description">{activeItem?.description}</p>
+          {Array.isArray(activeItem?.tags) && activeItem.tags.length > 0 && (
+            <div className="tag-list" aria-label="Project tags">
+              {activeItem.tags.map((tag) => (
+                <span key={tag} className="tag-pill">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
       <div className="col right mt10">
         <div className="section-inner">
