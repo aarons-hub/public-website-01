@@ -1,6 +1,12 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { Route, Routes, useLocation, BrowserRouter } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+  BrowserRouter,
+} from "react-router-dom";
 import HomePage from "./HomePage.jsx";
 import Projects from "./Projects.jsx";
 import Services from "./Services.jsx";
@@ -120,9 +126,25 @@ function SiteStylesLoader() {
   return null;
 }
 
+function SpaRedirectHandler() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const redirectPath = params.get("p");
+    if (redirectPath) {
+      navigate(redirectPath, { replace: true });
+    }
+  }, []);
+
+  return null;
+}
+
 function AppLayout() {
   return (
     <>
+      <SpaRedirectHandler />
       <CoverBgHeightSync />
       <div className="cover-bg"></div>
       <div className="app-shell">
