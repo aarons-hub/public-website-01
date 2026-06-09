@@ -10,8 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 import Swiper from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import "./Style.scss";
-
 import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
 
 const GA_MEASUREMENT_ID = "G-56ZJCW1W79";
@@ -20,7 +18,7 @@ const appBase = import.meta.env.BASE_URL;
 const isDev = import.meta.env.DEV;
 const PAUSE_SWIPER_AUTOPLAY_IN_DEV = false;
 
-function App() {
+function HomePage() {
   const ctaRef = useMagneticEffectForChildren(".btn", 20, false);
   const submitBtnRef = useMagneticEffectForChildren(".contact-btn", 20, false);
   const location = useLocation();
@@ -357,7 +355,7 @@ function App() {
                 <div className="container one">
                   <div className="content">
                     <img
-                      src={`${appBase}images/lime-web-002.png`}
+                      src={`${appBase}homepage-images/lime-web-002-thumb.png`}
                       loading="lazy"
                       alt="Swiper slide 1"
                     />
@@ -593,4 +591,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;

@@ -1,7 +1,7 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { Route, Routes, useLocation, BrowserRouter } from "react-router-dom";
-import App from "./App.jsx";
+import HomePage from "./HomePage.jsx";
 import Projects from "./Projects.jsx";
 import Services from "./Services.jsx";
 import LogoDesign from "./LogoDesign.jsx";
@@ -15,6 +15,7 @@ import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
 
 const appBase = import.meta.env.BASE_URL;
+const routerBasename = appBase === "/" ? undefined : appBase;
 
 export function RootPageClassName() {
   const location = useLocation();
@@ -109,6 +110,44 @@ function CoverBgHeightSync() {
   return null;
 }
 
+function SiteStylesLoader() {
+  const location = useLocation();
+
+  useEffect(() => {
+    import("./Style.scss");
+  }, [location.pathname]);
+
+  return null;
+}
+
+function AppLayout() {
+  return (
+    <>
+      <CoverBgHeightSync />
+      <div className="cover-bg"></div>
+      <div className="app-shell">
+        <Nav />
+        <main className="app-main">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/services/web-services" element={<Services />} />
+            <Route path="/services/logo-design" element={<LogoDesign />} />
+            <Route path="/services/photography" element={<Photography />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/web-designer-brisbane" element={<WebDesigner />} />
+            <Route path="/map" element={<Map />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}
+
 const rootElement = document.getElementById("root");
 
 if (!rootElement) {
@@ -121,28 +160,10 @@ window.__appRoot = appRoot;
 
 appRoot.render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <RootPageClassName />
-      <CoverBgHeightSync />
-      <div className="cover-bg"></div>
-      <div className="app-shell">
-        <Nav />
-        <main className="app-main">
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/services/web-services" element={<Services />} />
-            <Route path="/services/logo-design" element={<LogoDesign />} />
-            <Route path="/services/photography" element={<Photography />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/web-designer-brisbane" element={<WebDesigner />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <SiteStylesLoader />
+      <AppLayout />
     </BrowserRouter>
   </StrictMode>,
 );
