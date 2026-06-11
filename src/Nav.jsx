@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Style.scss";
-import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
+import {
+  useMagneticEffectForChildren,
+  useButtonFillEffectForChildren,
+} from "./hooks/buttonEffects";
 
 const appBase = import.meta.env.BASE_URL;
 
@@ -9,13 +12,20 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const horizontalNavRef = useMagneticEffectForChildren(
-    ".horizontal-nav-link",
+    ".horizontal-nav-link.magnetic-nav-link, .magnetic-nav-text",
     20,
     false,
   );
+  const navFillRef = useButtonFillEffectForChildren(
+    ".horizontal-nav-link",
+    0.6,
+  );
+  const navBtnFillRef = useButtonFillEffectForChildren(".navBtn", 0.6);
 
   const navLinkClass = ({ isActive }) =>
-    isActive ? "horizontal-nav-link active" : "horizontal-nav-link";
+    isActive
+      ? "horizontal-nav-link magnetic-nav-link active js-fill"
+      : "horizontal-nav-link magnetic-nav-link js-fill";
 
   const servicesNavLinkClass = ({ isActive }) => {
     const isServiceSubRoute =
@@ -23,14 +33,17 @@ function Nav() {
       location.pathname.includes("photography");
 
     return isActive || isServiceSubRoute
-      ? "horizontal-nav-link active"
-      : "horizontal-nav-link";
+      ? "horizontal-nav-link magnetic-nav-link active js-fill"
+      : "horizontal-nav-link magnetic-nav-link js-fill";
   };
 
   return (
     <>
       <nav
-        ref={horizontalNavRef}
+        ref={(node) => {
+          horizontalNavRef.current = node;
+          navFillRef.current = node;
+        }}
         className="horizontal-nav"
         aria-label="Primary"
       >
@@ -52,27 +65,33 @@ function Nav() {
         </div>
         <div className="horizontal-nav-links">
           <NavLink to="/" className={navLinkClass} end>
-            Home
+            <span className="magnetic-nav-text">Home</span>
+            <div className="button-fill"></div>
           </NavLink>
           <NavLink to="/services/web-services" className={servicesNavLinkClass}>
-            Services
+            <span className="magnetic-nav-text">Services</span>
+            <div className="button-fill"></div>
           </NavLink>
           <NavLink to="/projects" className={navLinkClass}>
-            Projects
+            <span className="magnetic-nav-text">Projects</span>
+            <div className="button-fill"></div>
           </NavLink>
           <NavLink to="/web-designer-brisbane" className={navLinkClass}>
-            About
+            <span className="magnetic-nav-text">About</span>
+            <div className="button-fill"></div>
           </NavLink>
           <NavLink to="/pricing" className={navLinkClass}>
-            Pricing
+            <span className="magnetic-nav-text">Pricing</span>
+            <div className="button-fill"></div>
           </NavLink>
         </div>
-        <div className="horizontal-nav-cta">
+        <div ref={navBtnFillRef} className="horizontal-nav-cta">
           <NavLink
             to="/contact"
             className={({ isActive }) => `${navLinkClass({ isActive })} navBtn`}
           >
-            Contact
+            <span className="magnetic-nav-text">Contact</span>
+            <div className="button-fill"></div>
           </NavLink>
         </div>
       </nav>

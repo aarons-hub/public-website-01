@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Masonry from "react-masonry-css";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+
+import Swiper from "swiper";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import { useMagneticEffectForChildren } from "./hooks/buttonEffects";
 
@@ -88,12 +90,6 @@ function getWebThumbnailItems(group) {
   return featuredByFlag;
 }
 
-const masonryBreakpoints = {
-  default: 5,
-  1170: 4,
-  640: 3,
-};
-
 async function loadProjectsData() {
   const requestedPath = "data/projects-data.json";
   const candidateUrls = [
@@ -128,16 +124,17 @@ async function loadProjectsData() {
 function Services() {
   const [groups, setGroups] = useState([]);
   const [activeThumbUid, setActiveThumbUid] = useState("");
-  const [thumbHeights, setThumbHeights] = useState({});
-  const [isCompactThumbLayout, setIsCompactThumbLayout] = useState(false);
-  const heroOuterRef = useRef(null);
+  const swiperRootRef = useRef(null);
+  const swiperPrevRef = useRef(null);
+  const swiperNextRef = useRef(null);
+  const swiperInstanceRef = useRef(null);
   const heroWrapperRef = useRef(null);
+  const swiperWrapperOuterRef = useRef(null);
   const servicesListRef = useMagneticEffectForChildren(
     ".service-btn",
     20,
     false,
   );
-  const thumbSlideRefs = useRef(new Map());
 
   const webItems = useMemo(() => {
     return groups.flatMap((group) => {
@@ -189,149 +186,104 @@ function Services() {
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    if (!webItems.length || !swiperRootRef.current) return undefined;
 
-    const updateLayoutMode = () => {
-      setIsCompactThumbLayout(mediaQuery.matches);
-    };
-
-    updateLayoutMode();
-
-    if (typeof mediaQuery.addEventListener === "function") {
-      mediaQuery.addEventListener("change", updateLayoutMode);
-      return () => mediaQuery.removeEventListener("change", updateLayoutMode);
+    if (swiperInstanceRef.current) {
+      swiperInstanceRef.current.destroy(true, true);
+      swiperInstanceRef.current = null;
     }
 
-    mediaQuery.addListener(updateLayoutMode);
-    return () => mediaQuery.removeListener(updateLayoutMode);
-  }, []);
-
-  useEffect(() => {
-    if (!webItems.length) return undefined;
-
-    let animationFrameId = 0;
-    const assetListeners = [];
-
-    const measureThumbHeights = () => {
-      const nextHeights = {};
-
-      webItems.forEach((item) => {
-        const slideElement = thumbSlideRefs.current.get(item.uid);
-        if (!slideElement) return;
-
-        const height = slideElement.getBoundingClientRect().height;
-        if (height > 0) {
-          nextHeights[item.uid] = height;
-        }
-      });
-
-      setThumbHeights((currentHeights) => {
-        const currentKeys = Object.keys(currentHeights);
-        const nextKeys = Object.keys(nextHeights);
-
-        const sameLength = currentKeys.length === nextKeys.length;
-        const sameValues =
-          sameLength &&
-          nextKeys.every(
-            (key) =>
-              Math.abs((currentHeights[key] ?? 0) - nextHeights[key]) < 0.5,
-          );
-
-        return sameValues ? currentHeights : nextHeights;
-      });
-    };
-
-    const scheduleMeasure = () => {
-      window.cancelAnimationFrame(animationFrameId);
-      animationFrameId = window.requestAnimationFrame(() => {
-        animationFrameId = window.requestAnimationFrame(measureThumbHeights);
-      });
-    };
-
-    const resizeObserver =
-      typeof ResizeObserver !== "undefined"
-        ? new ResizeObserver(scheduleMeasure)
-        : null;
-
-    const observeSlideAssets = () => {
-      thumbSlideRefs.current.forEach((slideElement) => {
-        slideElement.querySelectorAll("img, video").forEach((asset) => {
-          const onAssetReady = scheduleMeasure;
-
-          asset.addEventListener("load", onAssetReady);
-          asset.addEventListener("loadedmetadata", onAssetReady);
-
-          assetListeners.push([asset, onAssetReady]);
-        });
-      });
-    };
-
-    thumbSlideRefs.current.forEach((slideElement) => {
-      resizeObserver?.observe(slideElement);
+    swiperInstanceRef.current = new Swiper(swiperRootRef.current, {
+      modules: [Navigation, Autoplay],
+      slidesPerView: 3.5,
+      spaceBetween: 12,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 20,
+      speed: 600,
+      loop: false,
+      autoplay: {
+        enabled: false,
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        enabled: true,
+        nextEl: swiperNextRef.current,
+        prevEl: swiperPrevRef.current,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 3.5,
+          spaceBetween: 16,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 20,
+        },
+        1024: {
+          slidesPerView: 4.5,
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 20,
+        },
+      },
     });
 
-    scheduleMeasure();
-    observeSlideAssets();
-    window.addEventListener("resize", scheduleMeasure);
-
     return () => {
-      window.cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("resize", scheduleMeasure);
-      assetListeners.forEach(([asset, onAssetReady]) => {
-        asset.removeEventListener("load", onAssetReady);
-        asset.removeEventListener("loadedmetadata", onAssetReady);
-      });
-      resizeObserver?.disconnect();
+      swiperInstanceRef.current?.destroy(true, true);
+      swiperInstanceRef.current = null;
     };
   }, [webItems]);
 
   useEffect(() => {
     let animationFrameId = 0;
 
-    const syncHeroScale = () => {
-      const heroOuterEl = heroOuterRef.current;
+    const syncSwiperOuterWidth = () => {
       const heroWrapperEl = heroWrapperRef.current;
-      if (!heroOuterEl || !heroWrapperEl) return;
+      const swiperOuterEl = swiperWrapperOuterRef.current;
+      if (!heroWrapperEl || !swiperOuterEl) return false;
 
-      // offsetWidth/Height reflect the unscaled CSS layout dimensions
-      const naturalWidth = heroWrapperEl.offsetWidth; // 900px from CSS
-      const naturalHeight = heroWrapperEl.offsetHeight; // aspect-ratio-driven
-      const outerWidth = heroOuterEl.offsetWidth;
+      const heroWidth = heroWrapperEl.getBoundingClientRect().width;
+      if (heroWidth > 0) {
+        swiperOuterEl.style.width = `${heroWidth}px`;
+        return true;
+      }
 
-      if (naturalWidth <= 0 || naturalHeight <= 0 || outerWidth <= 0) return;
-
-      const scale = outerWidth / naturalWidth;
-      heroWrapperEl.style.transform = `scale(${scale})`;
-      heroOuterEl.style.height = `${naturalHeight * scale}px`;
+      return false;
     };
 
-    const scheduleSync = () => {
-      window.cancelAnimationFrame(animationFrameId);
-      animationFrameId = window.requestAnimationFrame(syncHeroScale);
+    const syncWidthWithRetry = (attempt = 0) => {
+      const applied = syncSwiperOuterWidth();
+      if (applied || attempt >= 8) return;
+
+      animationFrameId = window.requestAnimationFrame(() => {
+        syncWidthWithRetry(attempt + 1);
+      });
+    };
+
+    const handleResize = () => {
+      syncWidthWithRetry();
+      swiperInstanceRef.current?.update();
     };
 
     const resizeObserver =
       typeof ResizeObserver !== "undefined"
-        ? new ResizeObserver(scheduleSync)
+        ? new ResizeObserver(() => {
+            syncSwiperOuterWidth();
+            swiperInstanceRef.current?.update();
+          })
         : null;
 
-    // Observe the outer for width changes; observe wrapper for image-load height changes
-    if (heroOuterRef.current) {
-      resizeObserver?.observe(heroOuterRef.current);
-    }
-    if (heroWrapperRef.current) {
-      resizeObserver?.observe(heroWrapperRef.current);
+    if (heroWrapperRef.current && resizeObserver) {
+      resizeObserver.observe(heroWrapperRef.current);
     }
 
-    scheduleSync();
-    window.addEventListener("resize", scheduleSync);
-
+    syncWidthWithRetry();
+    window.addEventListener("resize", handleResize);
     return () => {
       window.cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("resize", scheduleSync);
       resizeObserver?.disconnect();
+      window.removeEventListener("resize", handleResize);
     };
-  }, [activeItem?.uid]);
+  }, []);
 
   const section = useRef(null);
 
@@ -359,21 +311,6 @@ function Services() {
 
     return () => ctx.revert();
   }, []);
-
-  const handleThumbSelect = (uid) => {
-    setActiveThumbUid(uid);
-
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    heroWrapperRef.current?.scrollIntoView({
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-      block: "start",
-    });
-  };
-
-  const thumbsBreakpointCols = isCompactThumbLayout ? 3 : masonryBreakpoints;
 
   return (
     <>
@@ -419,13 +356,9 @@ function Services() {
         </div>
         <div className="col right mt10">
           <div className="section-inner">
-            <div className="hero-outer" ref={heroOuterRef}>
+            <div ref={heroWrapperRef} className="hero-outer">
               {activeItem && (
-                <div
-                  className="hero-wrapper"
-                  key={activeItem.uid}
-                  ref={heroWrapperRef}
-                >
+                <div className="hero-wrapper" key={activeItem.uid}>
                   <img
                     src={withBase(activeItem["base-img"])}
                     alt={`id-${activeItem.id}`}
@@ -444,24 +377,14 @@ function Services() {
               )}
             </div>
           </div>
-          <div className="thumbs-outer-container">
-            <div className="thumbs-inner-container">
-              <Masonry
-                breakpointCols={thumbsBreakpointCols}
-                className="thumbs"
-                columnClassName="thumbs-column"
-              >
+          <div ref={swiperWrapperOuterRef} className="swiper-wrapper-outer">
+            <div className="swiper swiperOneThumbs" ref={swiperRootRef}>
+              <div className="swiper-wrapper">
                 {webItems.map((item) => (
-                  <button
+                  <div
                     key={item.uid}
-                    type="button"
-                    className={`thumb-item${activeItem?.uid === item.uid ? " active" : ""}`}
-                    style={
-                      thumbHeights[item.uid]
-                        ? { height: `${thumbHeights[item.uid]}px` }
-                        : undefined
-                    }
-                    onClick={() => handleThumbSelect(item.uid)}
+                    className={`swiper-slide${activeItem?.uid === item.uid ? " active" : ""}`}
+                    onClick={() => setActiveThumbUid(item.uid)}
                   >
                     <span className="badge">
                       <svg
@@ -481,16 +404,7 @@ function Services() {
                         />
                       </svg>
                     </span>
-                    <div
-                      className="inner-slide"
-                      ref={(node) => {
-                        if (node) {
-                          thumbSlideRefs.current.set(item.uid, node);
-                        } else {
-                          thumbSlideRefs.current.delete(item.uid);
-                        }
-                      }}
-                    >
+                    <div className="inner-slide">
                       <img
                         className="base-img-001"
                         src={withBase(item["base-img"])}
@@ -512,9 +426,13 @@ function Services() {
                         />
                       )}
                     </div>
-                  </button>
+                  </div>
                 ))}
-              </Masonry>
+              </div>
+              <div className="swiper-btns">
+                <div className="swiper-button-prev" ref={swiperPrevRef}></div>
+                <div className="swiper-button-next" ref={swiperNextRef}></div>
+              </div>
             </div>
           </div>
         </div>

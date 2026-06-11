@@ -1,7 +1,56 @@
+import { useEffect, useRef, useState } from "react";
+import Perspective from "perspectivejs";
+
 // CSS perspective transform test for mobile/iPhone validation
 const appBase = import.meta.env.BASE_URL;
 
 export default function PerspectiveTest() {
+  const demoCanvasRef = useRef(null);
+  const [demoError, setDemoError] = useState("");
+
+  useEffect(() => {
+    const canvas = demoCanvasRef.current;
+    if (!canvas) return undefined;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      setDemoError("Unable to get 2D canvas context.");
+      return undefined;
+    }
+
+    let disposed = false;
+    const image = new Image();
+
+    image.onload = () => {
+      if (disposed) return;
+
+      canvas.width = image.width;
+      canvas.height = image.height;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const perspective = new Perspective(ctx, image);
+      perspective.draw([
+        [30, 30], // top-left     [x, y]
+        [image.width - 50, 50], // top-right    [x, y]
+        [image.width - 70, image.height - 30], // bottom-right [x, y]
+        [10, image.height - 10], // bottom-left  [x, y]
+      ]);
+
+      setDemoError("");
+    };
+
+    image.onerror = () => {
+      if (disposed) return;
+      setDemoError("Failed to load demo image for Perspective.js test.");
+    };
+
+    image.src = `${appBase}images/hydromet-lh-001.png`;
+
+    return () => {
+      disposed = true;
+    };
+  }, []);
+
   return (
     <div
       style={{
@@ -12,6 +61,27 @@ export default function PerspectiveTest() {
       }}
     >
       <h2 style={{ marginBottom: "24px" }}>CSS Perspective Test</h2>
+
+      <p style={{ marginBottom: "8px", fontWeight: 600 }}>
+        Perspective.js canvas demo
+      </p>
+      <canvas
+        ref={demoCanvasRef}
+        id="canvas"
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+          border: "1px solid #888",
+          marginBottom: "10px",
+          backgroundColor: "#fff",
+        }}
+      />
+      {demoError && (
+        <p style={{ color: "#b00020", fontSize: "13px", marginBottom: "24px" }}>
+          {demoError}
+        </p>
+      )}
 
       <p style={{ marginBottom: "8px", fontWeight: 600 }}>Base image</p>
       <div

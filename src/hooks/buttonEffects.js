@@ -86,3 +86,124 @@ export const useMagneticEffectForChildren = (
 
   return containerRef;
 };
+
+// Ref-based button fill effect using GSAP scope
+export const useButtonFillEffectWithRef = () => {
+  const buttonRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const button = buttonRef.current;
+      if (!button) return;
+
+      const handleMouseEnter = () => {
+        const fill = button.querySelector(".button-fill");
+
+        if (fill) {
+          gsap.killTweensOf(fill);
+          gsap.fromTo(
+            fill,
+            { y: "120px" },
+            {
+              y: "0px",
+              duration: 0.6,
+              ease: "power2.inOut",
+              overwrite: "auto",
+            },
+          );
+        }
+      };
+
+      const handleMouseLeave = () => {
+        const fill = button.querySelector(".button-fill");
+
+        if (fill) {
+          gsap.killTweensOf(fill);
+          gsap.to(fill, {
+            y: "-120px",
+            duration: 0.6,
+            ease: "power2.inOut",
+            overwrite: "auto",
+          });
+        }
+      };
+
+      button.addEventListener("mouseenter", handleMouseEnter);
+      button.addEventListener("mouseleave", handleMouseLeave);
+
+      // Cleanup handled by useGSAP
+      return () => {
+        button.removeEventListener("mouseenter", handleMouseEnter);
+        button.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    },
+    { scope: buttonRef },
+  );
+
+  return buttonRef;
+};
+
+// Button fill effect for multiple buttons (works like useMagneticEffectForChildren)
+export const useButtonFillEffectForChildren = (
+  buttonSelector = "button",
+  duration = 0.6,
+  additionalDeps = [],
+) => {
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const buttons = Array.from(container.querySelectorAll(buttonSelector));
+      if (!buttons.length) return;
+
+      const listeners = buttons.map((button) => {
+        const handleMouseEnter = () => {
+          const fill = button.querySelector(".button-fill");
+
+          if (fill) {
+            gsap.killTweensOf(fill);
+            gsap.fromTo(
+              fill,
+              { y: "100%" },
+              { y: "0%", duration, ease: "power2.inOut", overwrite: "auto" },
+            );
+          }
+        };
+
+        const handleMouseLeave = () => {
+          const fill = button.querySelector(".button-fill");
+
+          if (fill) {
+            gsap.killTweensOf(fill);
+            gsap.to(fill, {
+              y: "-100%",
+              duration,
+              ease: "power2.inOut",
+              overwrite: "auto",
+            });
+          }
+        };
+
+        button.addEventListener("mouseenter", handleMouseEnter);
+        button.addEventListener("mouseleave", handleMouseLeave);
+
+        return () => {
+          button.removeEventListener("mouseenter", handleMouseEnter);
+          button.removeEventListener("mouseleave", handleMouseLeave);
+        };
+      });
+
+      // Cleanup all listeners
+      return () => listeners.forEach((off) => off());
+    },
+    {
+      scope: containerRef,
+      dependencies: [buttonSelector, duration, ...additionalDeps],
+    },
+  );
+
+  return containerRef;
+};

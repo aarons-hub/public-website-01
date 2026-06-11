@@ -19,6 +19,7 @@ import Privacy from "./Privacy.jsx";
 import Pricing from "./Pricing.jsx";
 import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
+import PerspectiveTest from "./PerspectiveTest.jsx";
 
 const appBase = import.meta.env.BASE_URL;
 const routerBasename = appBase === "/" ? undefined : appBase;
@@ -162,6 +163,7 @@ function AppLayout() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/web-designer-brisbane" element={<WebDesigner />} />
             <Route path="/map" element={<Map />} />
+            <Route path="/perspective-test" element={<PerspectiveTest />} />
           </Routes>
         </main>
         <Footer />
