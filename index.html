@@ -33,25 +33,6 @@
       gtag("js", new Date());
       gtag("config", "G-56ZJCW1W79", { send_page_view: false });
     </script>
-    <script>
-      (function () {
-        var params = new URLSearchParams(window.location.search);
-        var p = params.get("p");
-
-        if (!p) return;
-
-        params.delete("p");
-        var restoredPath = decodeURIComponent(p);
-        var extraQuery = params.toString();
-        var finalPath = extraQuery
-          ? restoredPath +
-            (restoredPath.indexOf("?") === -1 ? "?" : "&") +
-            extraQuery
-          : restoredPath;
-
-        window.history.replaceState(null, "", finalPath);
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
