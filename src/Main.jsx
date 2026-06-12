@@ -14,6 +14,7 @@ import Pricing from "./Pricing.jsx";
 import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
 import PerspectiveTest from "./PerspectiveTest.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const appBase = import.meta.env.BASE_URL;
 const routerBasename = appBase === "/" ? undefined : appBase;
@@ -162,10 +163,12 @@ window.__appRoot = appRoot;
 
 appRoot.render(
   <StrictMode>
-    <BrowserRouter basename={routerBasename}>
-      <RootPageClassName />
-      <SiteStylesLoader />
-      <AppLayout />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter basename={routerBasename}>
+        <RootPageClassName />
+        <SiteStylesLoader />
+        <AppLayout />
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>,
 );

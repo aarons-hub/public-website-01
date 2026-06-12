@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -358,6 +359,14 @@ function Projects() {
 
   return (
     <>
+      <Helmet>
+        <title>Projects | Aaronline Design</title>
+        <meta
+          name="description"
+          content="Explore Aaronline Design's portfolio of web design, development, branding, and digital marketing projects in Brisbane."
+        />
+        <link rel="canonical" href="https://aaronlinedesign.au/projects" />
+      </Helmet>
       <section ref={section} className="projects-hero">
         <div className="col left">
           <h1 className="med-heading mt20">Projects</h1>

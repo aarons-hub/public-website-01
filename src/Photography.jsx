@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -317,122 +318,138 @@ function Photography() {
   }, []);
 
   return (
-    <section ref={section} className="photography pb40">
-      <div className="col left">
-        <h1 className="med-heading mt10">Services</h1>
-        <h2>Photography</h2>
-        <p>Not pretty pictures but powerful persuaders.</p>
-        <p>
-          We believe great photography does both. Our product images are crafted
-          to stop the scroll, build trust, and give your customers every reason
-          to say yes.
-        </p>
-        <div ref={servicesListRef} className="services-list">
-          <Link to="/services/web-services" className="service-btn">
-            Web services
-          </Link>
-          <Link to="/services/logo-design" className="service-btn">
-            Logo design
-          </Link>
-          <Link to="/services/photography" className="service-btn active">
-            Photography
-          </Link>
-        </div>
+    <>
+      <Helmet>
+        <title>Photography | Aaronline Design</title>
+        <meta
+          name="description"
+          content="Explore Aaronline Design's photography services in Brisbane, capturing powerful and persuasive images for your brand."
+        />
+        <link
+          rel="canonical"
+          href="https://aaronlinedesign.au/services/photography"
+        />
+      </Helmet>
+      <section ref={section} className="photography pb40">
+        <div className="col left">
+          <h1 className="med-heading mt10">Services</h1>
+          <h2>Photography</h2>
+          <p>Not pretty pictures but powerful persuaders.</p>
+          <p>
+            We believe great photography does both. Our product images are
+            crafted to stop the scroll, build trust, and give your customers
+            every reason to say yes.
+          </p>
+          <div ref={servicesListRef} className="services-list">
+            <Link to="/services/web-services" className="service-btn">
+              Web services
+            </Link>
+            <Link to="/services/logo-design" className="service-btn">
+              Logo design
+            </Link>
+            <Link to="/services/photography" className="service-btn active">
+              Photography
+            </Link>
+          </div>
 
-        <div className="item-details mt40">
-          <h4 className="heading">{activeItem?.title}</h4>
-          <p className="description">{activeItem?.description}</p>
-          {Array.isArray(activeItem?.tags) && activeItem.tags.length > 0 && (
-            <div className="tag-list" aria-label="Project tags">
-              {activeItem.tags.map((tag) => (
-                <span key={tag} className="tag-pill">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-      <div className="col right mt10">
-        <div className="section-inner">
-          <div ref={heroWrapperRef} className="hero-outer">
-            {activeItem && (
-              <div className="hero-wrapper" key={activeItem.uid}>
-                <img
-                  src={withBase(activeItem["base-img"])}
-                  alt={`id-${activeItem.id}`}
-                />
-                <TransformLayer layer={activeItem["image-one"]} />
-                <TransformLayer layer={activeItem["image-two"]} />
-                <VideoOverlay movieFile={activeItem.movieFile} />
-                {activeItem["mask-img"] && (
-                  <img
-                    src={withBase(activeItem["mask-img"])}
-                    alt={`id-${activeItem.id}-mask`}
-                    className="mix"
-                  />
-                )}
+          <div className="item-details mt40">
+            <h4 className="heading">{activeItem?.title}</h4>
+            <p className="description">{activeItem?.description}</p>
+            {Array.isArray(activeItem?.tags) && activeItem.tags.length > 0 && (
+              <div className="tag-list" aria-label="Project tags">
+                {activeItem.tags.map((tag) => (
+                  <span key={tag} className="tag-pill">
+                    {tag}
+                  </span>
+                ))}
               </div>
             )}
           </div>
         </div>
-        <div ref={swiperWrapperOuterRef} className="swiper-wrapper-outer">
-          <div className="swiper swiperOneThumbs" ref={swiperRootRef}>
-            <div className="swiper-wrapper">
-              {photographyItems.map((item) => (
-                <div
-                  key={item.uid}
-                  className={`swiper-slide${activeItem?.uid === item.uid ? " active" : ""}`}
-                  onClick={() => setActiveThumbUid(item.uid)}
-                >
-                  <span className="badge">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z"
-                        fill="#9acd32"
-                      />
-                      <path
-                        d="M9.33333 19.3332L4 13.9998L6 11.9998L9.33333 15.3332L18 6.6665L20 8.6665L9.33333 19.3332Z"
-                        fill="#000"
-                      />
-                    </svg>
-                  </span>
-                  <div className="inner-slide">
+        <div className="col right mt10">
+          <div className="section-inner">
+            <div ref={heroWrapperRef} className="hero-outer">
+              {activeItem && (
+                <div className="hero-wrapper" key={activeItem.uid}>
+                  <img
+                    src={withBase(activeItem["base-img"])}
+                    alt={`id-${activeItem.id}`}
+                  />
+                  <TransformLayer layer={activeItem["image-one"]} />
+                  <TransformLayer layer={activeItem["image-two"]} />
+                  <VideoOverlay movieFile={activeItem.movieFile} />
+                  {activeItem["mask-img"] && (
                     <img
-                      className="base-img-001"
-                      src={withBase(item["base-img"])}
-                      alt={`id-${item.id}-thumb`}
-                      loading="lazy"
+                      src={withBase(activeItem["mask-img"])}
+                      alt={`id-${activeItem.id}-mask`}
+                      className="mix"
                     />
-                    <TransformLayer layer={item["image-one"]} />
-                    <TransformLayer layer={item["image-two"]} />
-                    <VideoOverlay movieFile={item.movieFile} autoPlay={false} />
-                    {item["mask-img"] && (
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+          <div ref={swiperWrapperOuterRef} className="swiper-wrapper-outer">
+            <div className="swiper swiperOneThumbs" ref={swiperRootRef}>
+              <div className="swiper-wrapper">
+                {photographyItems.map((item) => (
+                  <div
+                    key={item.uid}
+                    className={`swiper-slide${activeItem?.uid === item.uid ? " active" : ""}`}
+                    onClick={() => setActiveThumbUid(item.uid)}
+                  >
+                    <span className="badge">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z"
+                          fill="#9acd32"
+                        />
+                        <path
+                          d="M9.33333 19.3332L4 13.9998L6 11.9998L9.33333 15.3332L18 6.6665L20 8.6665L9.33333 19.3332Z"
+                          fill="#000"
+                        />
+                      </svg>
+                    </span>
+                    <div className="inner-slide">
                       <img
-                        src={withBase(item["mask-img"])}
-                        alt={`id-${item.id}-mask`}
-                        className="mix"
+                        className="base-img-001"
+                        src={withBase(item["base-img"])}
+                        alt={`id-${item.id}-thumb`}
                         loading="lazy"
                       />
-                    )}
+                      <TransformLayer layer={item["image-one"]} />
+                      <TransformLayer layer={item["image-two"]} />
+                      <VideoOverlay
+                        movieFile={item.movieFile}
+                        autoPlay={false}
+                      />
+                      {item["mask-img"] && (
+                        <img
+                          src={withBase(item["mask-img"])}
+                          alt={`id-${item.id}-mask`}
+                          className="mix"
+                          loading="lazy"
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            <div className="swiper-btns">
-              <div className="swiper-button-prev" ref={swiperPrevRef}></div>
-              <div className="swiper-button-next" ref={swiperNextRef}></div>
+                ))}
+              </div>
+              <div className="swiper-btns">
+                <div className="swiper-button-prev" ref={swiperPrevRef}></div>
+                <div className="swiper-button-next" ref={swiperNextRef}></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

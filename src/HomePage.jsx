@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet-async";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -392,6 +393,14 @@ function HomePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Home | Aaronline Design</title>
+        <meta
+          name="description"
+          content="Aaronline Design offers expert web design, website development, branding, and digital marketing services in Brisbane."
+        />
+        <link rel="canonical" href="https://aaronlinedesign.au/" />
+      </Helmet>
       <section ref={intro} className="hero-container">
         <div ref={heading01} className="heading">
           <h1 className="lg-heading mb20">

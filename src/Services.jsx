@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
+import { Helmet } from "react-helmet-async";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -377,6 +378,17 @@ function Services() {
 
   return (
     <>
+      <Helmet>
+        <title>Services | Aaronline Design</title>
+        <meta
+          name="description"
+          content="Explore Aaronline Design's web design, website development, branding, and digital marketing services in Brisbane."
+        />
+        <link
+          rel="canonical"
+          href="https://aaronlinedesign.au/services/web-services"
+        />
+      </Helmet>
       <section ref={section} className="web-design pb40">
         <div className="col left">
           <h1 className="med-heading mt20">Services</h1>

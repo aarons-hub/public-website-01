@@ -1,8 +1,17 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 function WebDesigner() {
   return (
     <>
+      <Helmet>
+        <title>Web Designer | Aaronline Design</title>
+        <meta
+          name="description"
+          content="Aaronline Design is a Brisbane-based web designer focused on helping small businesses succeed online with modern, user-friendly websites."
+        />
+        <link rel="canonical" href="https://aaronlinedesign.au/web-designer" />
+      </Helmet>
       <section className="web-designer-brisbane">
         <div className="row">
           <h1 className="med-heading mt20 white">About Aaronline Design</h1>
