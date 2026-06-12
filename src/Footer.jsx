@@ -66,11 +66,6 @@ function Footer() {
         className="site-footer"
         aria-label="Site footer"
       >
-        <img
-          className="footer-icon"
-          src="./ad-footer-logo-01.svg"
-          alt="Decorative footer logo"
-        />
         <div className="site-footer-inner">
           <div
             ref={footerLinksRef}

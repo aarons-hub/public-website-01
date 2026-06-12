@@ -6,7 +6,6 @@ import Projects from "./Projects.jsx";
 import Services from "./Services.jsx";
 import LogoDesign from "./LogoDesign.jsx";
 import Photography from "./Photography.jsx";
-import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 import WebDesigner from "./WebDesigner.jsx";
 import Privacy from "./Privacy.jsx";
@@ -15,6 +14,7 @@ import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
 import PerspectiveTest from "./PerspectiveTest.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import "./Style.scss";
 
 const appBase = import.meta.env.BASE_URL;
 const routerBasename = appBase === "/" ? undefined : appBase;
@@ -47,7 +47,6 @@ function CoverBgHeightSync() {
       "/services/web-services": "section.web-design",
       "/services/logo-design": "section.logo-design",
       "/services/photography": "section.photography",
-      "/about": "section.about",
       "/contact": "section.contact",
       "/privacy": ".privacy-page section.privacy",
       "/pricing": ".pricing-page section.pricing",
@@ -112,16 +111,6 @@ function CoverBgHeightSync() {
   return null;
 }
 
-function SiteStylesLoader() {
-  const location = useLocation();
-
-  useEffect(() => {
-    import("./Style.scss");
-  }, [location.pathname]);
-
-  return null;
-}
-
 function AppLayout() {
   return (
     <>
@@ -136,7 +125,6 @@ function AppLayout() {
             <Route path="/services/web-services" element={<Services />} />
             <Route path="/services/logo-design" element={<LogoDesign />} />
             <Route path="/services/photography" element={<Photography />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/pricing" element={<Pricing />} />
@@ -166,7 +154,6 @@ appRoot.render(
     <HelmetProvider>
       <BrowserRouter basename={routerBasename}>
         <RootPageClassName />
-        <SiteStylesLoader />
         <AppLayout />
       </BrowserRouter>
     </HelmetProvider>
