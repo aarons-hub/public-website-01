@@ -19,10 +19,16 @@ import "./Style.scss";
 const appBase = import.meta.env.BASE_URL;
 const routerBasename = appBase === "/" ? undefined : appBase;
 
+function normalizePathname(pathname) {
+  if (!pathname || pathname === "/") return "/";
+  return pathname.replace(/\/+$/, "") || "/";
+}
+
 export function RootPageClassName() {
   const location = useLocation();
 
-  const pathname = location.pathname === "/" ? "home" : location.pathname;
+  const normalizedPathname = normalizePathname(location.pathname);
+  const pathname = normalizedPathname === "/" ? "home" : normalizedPathname;
   const pageClass = `${pathname.replace(/^\//, "").replace(/\//g, "-")}-page`;
 
   const rootEl = document.getElementById("root");
@@ -37,6 +43,7 @@ function CoverBgHeightSync() {
   const location = useLocation();
 
   useEffect(() => {
+    const normalizedPathname = normalizePathname(location.pathname);
     const horizontalNavEl = document.querySelector(".horizontal-nav");
     const coverBgEl = document.querySelector(".cover-bg");
     if (!coverBgEl) return undefined;
@@ -54,7 +61,7 @@ function CoverBgHeightSync() {
     };
 
     const getTargetSection = () => {
-      const routeSelector = selectorByPath[location.pathname];
+      const routeSelector = selectorByPath[normalizedPathname];
       return (
         (routeSelector && document.querySelector(routeSelector)) ||
         document.querySelector(".app-main section")
